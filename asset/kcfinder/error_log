@@ -1,0 +1,6 @@
+[15-Dec-2017 07:27:04 UTC] PHP Warning:  include(/../../index.php): failed to open stream: No such file or directory in /home/palembangpro/public_html/asset/kcfinder/conf/config.php on line 19
+[15-Dec-2017 07:27:04 UTC] PHP Warning:  include(): Failed opening '/../../index.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/palembangpro/public_html/asset/kcfinder/conf/config.php on line 19
+[15-Dec-2017 07:27:04 UTC] PHP Fatal error:  Call to undefined function get_instance() in /home/palembangpro/public_html/asset/kcfinder/conf/config.php on line 21
+[23-Dec-2017 04:42:10 UTC] PHP Warning:  include(/../../index.php): failed to open stream: No such file or directory in /home/palembangpro/public_html/asset/kcfinder/conf/config.php on line 19
+[23-Dec-2017 04:42:10 UTC] PHP Warning:  include(): Failed opening '/../../index.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/palembangpro/public_html/asset/kcfinder/conf/config.php on line 19
+[23-Dec-2017 04:42:10 UTC] PHP Fatal error:  Call to undefined function get_instance() in /home/palembangpro/public_html/asset/kcfinder/conf/config.php on line 21
