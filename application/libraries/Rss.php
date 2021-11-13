@@ -2,8 +2,7 @@
 error_reporting(0);
 class rss {
  var $feed;
-     function __construct($feed){
-        $this->feed = $feed;   
+     
      }
 
     function parse(){
