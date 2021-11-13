@@ -1,7 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 error_reporting(0);
 class rss {
-
+ var $feed;
+     function __construct($feed){
+        $this->feed = $feed;   
+     }
 
     function parse(){
         $rss = simplexml_load_file($this->feed);
