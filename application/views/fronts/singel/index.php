@@ -1,30 +1,20 @@
 <!doctype html>
 <html lang="en">
 
-
-
 <!-- START SECTION HEAD -->
-<?php $this->load->view('fronts/head.php')?>
+<?php $this->load->view('fronts/singel/head.php')?>
 <!-- END SECTION HEAD -->
 
 <body class="body-color">
-
-	<!-- <div id="preloader">
-		<div class="spinner">
-			<div class="double-bounce1"></div>
-			<div class="double-bounce2"></div>
-		</div>
-		<div class="preloader-cancel-btn-wraper">
-			<a href="#" class="btn btn-primary preloader-cancel-btn">Cancel Preloader</a>
-		</div>
-	</div> -->
-
-
 	<!-- top bar start -->
-	<section class="top-bar">
+	<section class="top-bar v3">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 align-self-center md-center-item">
+				<div class="col-lg-6 align-self-center">
+					<div class="ts-date">
+						<i class="fa fa-clock-o"></i>
+						Sunday, August 24
+					</div>
 					<div class="ts-temperature">
 						<i class="icon-weather"></i>
 						<span>25.8
@@ -34,20 +24,7 @@
 
 					</div>
 
-					<ul class="ts-top-nav">
-						<li>
-							<a href="#">Blog</a>
-						</li>
-						<li>
-							<a href="#">Forums</a>
-						</li>
-						<li>
-							<a href="#">Contact</a>
-						</li>
-						<li>
-							<a href="#">Advertisement</a>
-						</li>
-					</ul>
+
 
 				</div>
 				<!-- end col-->
@@ -71,9 +48,8 @@
 								<i class="fa fa-vimeo-square"></i>
 							</a>
 						</li>
-						<li class="ts-date">
-							<i class="fa fa-clock-o"></i>
-							Sunday, August 24
+						<li class="ts-subscribe">
+							<a href="#">subscribe</a>
 						</li>
 					</ul>
 				</div>
@@ -87,13 +63,13 @@
 	<!-- end top bar-->
 
 	<!-- ad banner start -->
-	<section class="header-middle">
+	<section class="block-wrapper">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="banner-img">
+					<div class="banner-img text-center">
 						<a href="index.html">
-							<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/banner/banner1.jpg" alt="">
+							<img src="<?php echo base_url()?>asset/frontend/images/banner/banner1.jpg" alt="">
 						</a>
 					</div>
 				</div>
@@ -120,28 +96,13 @@
 				<!-- logo end-->
 				<div class="col-lg-10 header-nav-item">
 					<div class="ts-breaking-news clearfix">
-						<h2 class="breaking-title float-left">
-							<i class="fa fa-bolt"></i> Breaking News :</h2>
+						<h3 class="breaking-title float-left">
 						<div class="breaking-news-content owl-carousel float-left" id="breaking_slider">
-							<div class="breaking-post-content">
-								<p>
-									<a href="#">Netcix cuts out the chill with an integrated personal trainer on running.</a>
-								</p>
-							</div>
-							<div class="breaking-post-content">
-								<p>
-									<a href="#">Parquet Courts on Resisting Nihilism & Why Tourism in Dubai is booming the world.</a>
-								</p>
-							</div>
-							<div class="breaking-post-content">
-								<p>
-									<a href="#">Parquet Courts on Resisting Nihilism & Why Tourism in Dubai is booming the world.</a>
-								</p>
-							</div>
+							
 						</div>
 					</div>
 					<!--nav top end-->
-					<nav class="navigation ts-main-menu ts-menu-sticky navigation-landscape">
+					<nav class="navigation ts-main-menu navigation-landscape">
 						<div class="nav-header">
 							<a class="nav-brand mobile-logo visible-xs" href="index.html">
 								<img src="<?php echo base_url()?>asset/frontend/images/logo/footer_logo.png" alt="">
@@ -222,15 +183,15 @@
 												<li>
 													<a href="health.html">Home Health</a>
 												</li>
-												<li>
+                                    <li>
 													<a href="travel.html">Home Travel</a>
 												</li>
 												<li>
 													<a href="sports.html">Home Sports</a>
-												</li>
-												<li>
-													<a href="personal-blog.html">Personal Blog</a>
-												</li>
+                                    </li>
+                                    <li>
+                                       <a href="personal-blog.html">Personal Blog</a>
+                                    </li>
 											</ul>
 										</div>
 									</div>
@@ -560,60 +521,60 @@
 										<li>
 											<a href="#">Category layout</a>
 											<ul class="nav-dropdown">
-												<li>
-													<a href="category-1.html">Category layout 1</a>
-												</li>
-												<li>
-													<a href="category-2.html">Category layout 2 </a>
-												</li>
-												<li>
-													<a href="category-3.html">Category layout 3</a>
-												</li>
-												<li>
-													<a href="category-4.html">Category layout 4</a>
-												</li>
-												<li>
-													<a href="category-5.html">Category layout 5</a>
-												</li>
-												<li>
-													<a href="category-6.html">Category layout 6</a>
-												</li>
-											</ul>
+                                    <li>
+                                       <a href="category-1.html">Category layout 1</a>
+                                    </li>
+                                    <li>
+                                       <a href="category-2.html">Category layout 2 </a>
+                                    </li>
+                                    <li>
+                                       <a href="category-3.html">Category layout 3</a>
+                                    </li>
+                                    <li>
+                                       <a href="category-4.html">Category layout 4</a>
+                                    </li>
+                                    <li>
+                                       <a href="category-5.html">Category layout 5</a>
+                                    </li>
+                                    <li>
+                                       <a href="category-6.html">Category layout 6</a>
+                                    </li>
+                                 </ul>
 										</li>
 										<li>
 											<a href="#">Posts Formate</a>
 											<ul class="nav-dropdown">
-												<li>
-													<a href="single-post-1.html">Single Post 1</a>
-												</li>
-												<li>
-													<a href="single-post-2.html">Single Post 2 </a>
-												</li>
-												<li>
-													<a href="single-post-3.html">Single Post 3 </a>
-												</li>
-												<li>
-													<a href="single-post-4.html">Single Post 4 </a>
-												</li>
-												<li>
-													<a href="single-post-5.html">Single Post 5</a>
-												</li>
-												<li>
-													<a href="single-post-6.html">Single Post 6</a>
-												</li>
-												<li>
-													<a href="single-post-7.html">Single Post 7</a>
-												</li>
-												<li>
-													<a href="single-post-8.html">Single Post 8</a>
-												</li>
-												<li>
-													<a href="single-post-9.html">Single Post 9</a>
-												</li>
-												<li>
-													<a href="single-post-10.html">Single Post 10</a>
-												</li>
-											</ul>
+                                    <li>
+                                       <a href="single-post-1.html">Single Post 1</a>
+                                    </li>
+                                    <li>
+                                       <a href="single-post-2.html">Single Post 2 </a>
+                                    </li>
+                                    <li>
+                                       <a href="single-post-3.html">Single Post 3 </a>
+                                    </li>
+                                    <li>
+                                       <a href="single-post-4.html">Single Post 4 </a>
+                                    </li>
+                                    <li>
+                                       <a href="single-post-5.html">Single Post 5</a>
+                                    </li>
+                                    <li>
+                                       <a href="single-post-6.html">Single Post 6</a>
+                                    </li>
+                                    <li>
+                                       <a href="single-post-7.html">Single Post 7</a>
+                                    </li>
+                                    <li>
+                                       <a href="single-post-8.html">Single Post 8</a>
+                                    </li>
+                                    <li>
+                                       <a href="single-post-9.html">Single Post 9</a>
+                                    </li>
+                                    <li>
+                                       <a href="single-post-10.html">Single Post 10</a>
+                                    </li>
+                                 </ul>
 										</li>
 										<li>
 											<a href="#">Pages</a>
@@ -622,19 +583,11 @@
 													<a href="author.html">Author</a>
 												</li>
 												<li>
-													<a href="contact.html">Contact Us</a>
-												</li>
-												<li>
-														<a href="login.html">Log In</a>
-												</li>
-												<li>
-														<a href="registration.html">registration</a>
-												</li>
-												<li>
 													<a href="404.html">404 </a>
 												</li>
+
 											</ul>
-										</li><!--Pages end-->
+										</li>
 									</ul>
 								</li>
 
@@ -649,119 +602,205 @@
 	</header>
 	<!-- header nav end-->
 
-	<!-- block post area start-->
-	<section class="block-wrapper mt-15">
+	<!-- single post start -->
+	<section class="single-post-wrapper">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-9 col-md-12">
-					<div id="featured-slider" class="owl-carousel ts-overlay-style ts-featured">
-						<?php
-					 foreach ($berita_headline as $post_new)
-					 {
+				<div class="col-lg-9">
+					<ol class="breadcrumb">
+						<li>
+							<a href="#">
+								<i class="fa fa-home"></i>
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#">Lifestyle</a>
+						</li>
+						<li>Travel</li>
+					</ol>
+					<!-- breadcump end-->
 
-					 ?>
-						<div class="item" style="background-image:url(<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>)">
-							<a class="post-cat ts-orange-bg" href="#"><?php echo $post_new->nama_kategori ?></a>
-							<div class="overlay-post-content">
+					<!-- isi content-->
+					<div class="ts-grid-box content-wrapper single-post">
+						<div class="entry-header">
+							<h2 class="post-title lg"><?php echo "$rows[judul]"; ?></h2>
+							<ul class="post-meta-info">
+								
+								<li class="author">
+									<a href="#">
+										<img src="<?php echo base_url()?>asset/frontend/images/avater/author.png" alt=""> <?php echo "$rows[nama_lengkap]"; ?>
+									</a>
+								</li>
+								<li>
+									<i class="fa fa-clock-o"></i>
+									<?php echo  tgl_indo($rows['tanggal']); ?>
+								</li>
+								<li>
+									<a href="#" class="post-cat ts-yellow-bg"><?php echo "$rows[nama_kategori]"; ?></a>
+								</li>
+								 <li class="active">
+									<i class="icon-fire"></i>
+									<?php echo "$rows[views]"; ?>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- single post header end-->
+						<div class="post-content-area">
+							<div class="post-media post-featured-image">
+								<a href="<?php echo base_url()?>asset/frontend/images/news/travel/travel2.jpg" class="gallery-popup">
+									<img src="<?php echo base_url()?>asset/foto_berita/<?php echo "$rows[gambar]"; ?>" class="img-fluid" alt="">
+								</a>
+							</div>
+							<div class="entry-content">
+								<p class="text-bg"><?php echo "$rows[keterangan_gambar]"; ?></p>
+								
+							
+							
+								
+								<p>
+									<?php echo "$rows[isi_berita]"; ?>
+								</p>
+							
+							
+							
+							
+								
+							</div>
+							<!-- entry content end-->
+						</div>
+						<!-- post content area-->
+						
+						<!-- author box end-->
+					
+						<!-- post navigation end-->
+					</div>
+					<!--single post end -->
+					<div class="comments-form ts-grid-box">
+
+						<h3 class="comments-counter">Comments</h3>
+						
+						
+						</ul>
+						<!-- Comments-list ul end-->
+
+
+						<!-- Form end -->
+					</div>
+					<!-- comment form end-->
+					<div class="ts-grid-box mb-30">
+						<h2 class="ts-title">Most Popular</h2>
+
+						<div class="most-populers owl-carousel">
+							<div class="item">
+								<a class="post-cat ts-yellow-bg" href="#">Travel</a>
+								<div class="ts-post-thumb">
+									<a href="#">
+										<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/travel/travel2.jpg" alt="">
+									</a>
+								</div>
 								<div class="post-content">
-									<h2 class="post-title lg">
-										<a href="#"><?php echo $post_new->judul ?></a>
-									</h2>
-									<ul class="post-meta-info">
-										<li class="author">
-											<a href="#">
-												<img src="<?php echo base_url()?>asset/frontend/images/avater/author1.jpg" alt=""> <?php echo $post_new->nama_lengkap ?>
-											</a>
-										</li>
-										<li>
-											<i class="fa fa-clock-o"></i>
-											March 21, 2019
-										</li>
-
-									</ul>
+									<h3 class="post-title">
+										<a href="#">Tourism in Dubai is booming by international tourist</a>
+									</h3>
+									<span class="post-date-info">
+										<i class="fa fa-clock-o"></i>
+										March 21, 2019
+									</span>
 								</div>
 							</div>
-							<!--/ Featured post end -->
+							<!-- ts-grid-box end-->
 
+							<div class="item">
+								<a class="post-cat ts-blue-light-bg" href="#">Technology</a>
+								<div class="ts-post-thumb">
+									<a href="#">
+										<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/tech/tech1.jpg" alt="">
+									</a>
+								</div>
+								<div class="post-content">
+									<h3 class="post-title">
+										<a href="#">ICOs Hit New Low, but Production Picking Up</a>
+									</h3>
+									<span class="post-date-info">
+										<i class="fa fa-clock-o"></i>
+										March 21, 2019
+									</span>
+								</div>
+							</div>
+							<!-- ts-grid-box end-->
+							<div class="item">
+								<a class="post-cat ts-pink-bg" href="#">Fashion</a>
+								<div class="ts-post-thumb">
+									<a href="#">
+										<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/fashion/fashion1.jpg" alt="">
+									</a>
+								</div>
+								<div class="post-content">
+									<h3 class="post-title">
+										<a href="#">Tourism in Dubai is booming by international tourist</a>
+									</h3>
+									<span class="post-date-info">
+										<i class="fa fa-clock-o"></i>
+										March 21, 2019
+									</span>
+								</div>
+							</div>
+							<!-- ts-grid-box end-->
+							<div class="item">
+								<a class="post-cat ts-pink-bg" href="#">Fashion</a>
+								<div class="ts-post-thumb">
+									<a href="#">
+										<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/fashion/fashion2.jpg" alt="">
+									</a>
+								</div>
+								<div class="post-content">
+									<h3 class="post-title">
+										<a href="#">ICOs Hit New Low, but Production Picking Up</a>
+									</h3>
+									<span class="post-date-info">
+										<i class="fa fa-clock-o"></i>
+										March 21, 2019
+									</span>
+								</div>
+							</div>
+							<!-- ts-grid-box end-->
+							<div class="item">
+								<a class="post-cat ts-pink-bg" href="#">Music</a>
+								<div class="ts-post-thumb">
+									<a href="#">
+										<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/music/music2.jpg" alt="">
+									</a>
+								</div>
+								<div class="post-content">
+									<h3 class="post-title">
+										<a href="#">Tourism in Dubai is booming by international tourist</a>
+									</h3>
+									<span class="post-date-info">
+										<i class="fa fa-clock-o"></i>
+										March 21, 2019
+									</span>
+								</div>
+							</div>
+							<!-- ts-grid-box end-->
 						</div>
-						<!-- Item 1 end -->
-<?php } ?>
+						<!-- most-populers end-->
 					</div>
-					<!-- Featured owl carousel end-->
-				</div>
-				<!-- col end-->
 
-				<div class="col-lg-3">
-					<div class="ts-grid-box ts-grid-content">
-						<a class="post-cat ts-orange-bg" href="#">Travel</a>
-						<div class="ts-post-thumb">
-							<a href="#">
-								<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/travel/travel10.jpg" alt="">
-							</a>
-						</div>
-						<div class="post-content">
-							<h3 class="post-title">
-								<a href="#">The clock is ticking for e-cig companies underage users</a>
-							</h3>
-							<span class="post-date-info">
-								<i class="fa fa-clock-o"></i>
-								March 21, 2019
-							</span>
-						</div>
-					</div>
-					<!-- ts single post item end-->
-					<div class="ts-grid-box ts-grid-content">
-						<a class="post-cat ts-pink-bg" href="#">Music</a>
-						<div class="ts-post-thumb">
-							<a href="#">
-								<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/music/music1.jpg" alt="">
-							</a>
-						</div>
-						<div class="post-content">
-							<h3 class="post-title">
-								<a href="#">Tourism in Dubai is booming by international tourist</a>
-							</h3>
-							<span class="post-date-info">
-								<i class="fa fa-clock-o"></i>
-								March 21, 2019
-							</span>
-						</div>
-					</div>
-					<!-- ts single post item end-->
 				</div>
-				<!-- col end-->
-
-				<div class="col-lg-3">
-
-					<!-- post-list-item end-->
-				</div>
+				<!-- col end -->
+				<!-- START SECTION slider kanan -->
+					<?php $this->load->view('fronts/singel/slider_kanan.php')?>
+					<!-- END SECTION slider kanan -->
+				<!-- right sidebar end-->
 				<!-- col end-->
 			</div>
 			<!-- row end-->
 		</div>
-		<!-- container end-->
+		<!-- container-->
 	</section>
-	<!-- block area end-->
-
-
-
-
-	<!-- Berita Terbaru start-->
-	<?php $this->load->view('fronts/home/terbaru.php')?>
-	<!-- Berita Terbaru End -->
-
-
-	<!-- ad banner 2 start-->
-
-	<!-- ad banner 2 end-->
-
-	<!-- watch now start-->
-
-	<!-- watch now end-->
-
-	<!-- post wraper start-->
-
-	<!-- post wraper end-->
+	<!-- single post end-->
 
 	<!-- footer social list start-->
 	<section class="ts-footer-social-list">
@@ -820,19 +859,43 @@
 	<!-- footer social list end-->
 
 	<!-- newslater start -->
+	<section class="ts-newslatter">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="ts-newslatter-content">
+						<h2>
+							Sign up for the Newsletter
+						</h2>
+						<p>
+							Join our newsletter and get updates in your inbox. We won’t spam you and we respect your privacy.
+						</p>
+					</div>
+				</div>
+				<!-- col end-->
 
+				<div class="col-lg-6 align-self-center">
+					<div class="newsletter-form">
+						<form action="#" method="post" class="media align-items-end">
+							<div class="email-form-group media-body">
+								<i class="fa fa-paper-plane" aria-hidden="true"></i>
+								<input type="email" name="email" id="newsletter-form-email" class="form-control" placeholder="Enter Your Email" autocomplete="off">
+							</div>
+							<div class="d-flex ts-submit-btn">
+								<button class="btn btn-primary">Subscribe</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<!-- newslater end -->
 
 	<!-- footer start -->
 	<?php $this->load->view('fronts/footer.php')?>
 	<!-- footer end -->
-
-
-
-
-	
 </body>
-
 
 
 </html>

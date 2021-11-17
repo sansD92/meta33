@@ -16,7 +16,7 @@ class Artikel extends CI_Controller {
 	public function index()
 	{
    
-			$this->load->view('fronts/singel_artikel/index');
+			$this->load->view('fronts/singel/index');
 	
 
 	
@@ -48,6 +48,7 @@ public function read($id)
 		}
 		
 	}
+
 public function detail(){
 
 			$page1 = 'Y';
@@ -61,16 +62,13 @@ public function detail(){
 				$data['description'] = cetak_meta($row['isi_berita'],0,400);
 				$data['keywords'] = cetak($row['tag']);
 				$data['rows'] = $row;
-				 $data['opini_top'] = $this->db->query("select * from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y'  ORDER BY  id_berita desc limit 5
-			")->result();
-				 $data['cerbung_top'] = $this->db->query("select * from cerbung_db a join users b on a.id_users = b.id_users join kategori_cerbung c on a.id_kategori_cerbung = c.id_kategori_cerbung where status_cerbung = 'Y' ORDER BY  id_cerbung desc limit 5
-			")->result();
+				 
 			
 
 				$dataa = array('views'=>$row['views']+1);
 				$id = array('id_berita' => $row['id_berita']);
 
-				$this->load->view('fronts/singel_artikel/index', $data);
+				$this->load->view('fronts/singel/index', $data);
 				$this->add_count($id);
 			}
 		}

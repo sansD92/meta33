@@ -12,7 +12,7 @@ class Administrator extends CI_Controller {
     /* memanggil function dari masing2 model yang akan digunakan */
 
   }
-     
+
 	function index(){
 		if (isset($_POST['submit'])){
 			$id_users = $this->input->post('a');
@@ -344,9 +344,9 @@ class Administrator extends CI_Controller {
     /* memanggil function dari masing2 model yang akan digunakan */
     $news = $this->Berita_model->get_by_id2($id);
     $data['news']            = $news;
-    
+
     $this->template->load('administrator/template','administrator/mod_berita/view_berita_detail',$data);
- 
+
 }
 }
 
@@ -354,7 +354,7 @@ class Administrator extends CI_Controller {
 		cek_session_akses('listberita',$this->session->id_session);
 		if (isset($_POST['submit'])){
 			$config['upload_path'] = 'asset/foto_berita/';
-	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
+	        $config['allowed_types'] = 'gif|jpg|jpeg|png|PNG|JPG|JPEG';
 	        $config['max_size'] = '3000'; // kb
 	        $this->load->library('upload', $config);
 	        $this->upload->do_upload('k');
@@ -365,7 +365,7 @@ class Administrator extends CI_Controller {
             $this->load->library('image_lib',$config);
             $this->image_lib->watermark();
 
-            if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; } 
+            if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; }
             if ($this->session->level == 'kontributor'){ $status2 = 'Y'; }else{ $status2 = 'Y'; }
 
             if ($this->input->post('j')!=''){
@@ -443,7 +443,7 @@ class Administrator extends CI_Controller {
 		$id = $this->uri->segment(3);
 		if (isset($_POST['submit'])){
 			$config['upload_path'] = 'asset/foto_berita/';
-	        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
+	        $config['allowed_types'] = 'gif|jpg|jpeg|png|PNG|JPG|JPEG';
 	        $config['max_size'] = '3000'; // kb
 	        $this->load->library('upload', $config);
 	        $this->upload->do_upload('k');
@@ -455,7 +455,7 @@ class Administrator extends CI_Controller {
             $this->image_lib->watermark();
 
             if ($this->session->level == 'kontributor'){ $status = 'y'; }else{ $status = 'Y'; }
-             
+
             if ($this->input->post('j')!=''){
                 $tag_seo = $this->input->post('j');
                 $tag=implode(',',$tag_seo);
@@ -574,7 +574,6 @@ class Administrator extends CI_Controller {
 		cek_session_akses('kategoriberita',$this->session->id_session);
 		if (isset($_POST['submit'])){
 			$data = array('nama_kategori'=>$this->db->escape_str($this->input->post('a')),
-                        'id_users'=>$this->session->id_users,
                         'kategori_seo'=>seo_title($this->input->post('a')),
                         'aktif'=>$this->db->escape_str($this->input->post('b')),
                         'sidebar'=>$this->db->escape_str($this->input->post('c')),
@@ -591,7 +590,6 @@ class Administrator extends CI_Controller {
 		$id = $this->uri->segment(3);
 		if (isset($_POST['submit'])){
 			$data = array('nama_kategori'=>$this->db->escape_str($this->input->post('a')),
-                        'id_users'=>$this->session->id_users,
                         'kategori_seo'=>seo_title($this->input->post('a')),
                         'aktif'=>$this->db->escape_str($this->input->post('b')),
                         'sidebar'=>$this->db->escape_str($this->input->post('c')),
@@ -2430,9 +2428,9 @@ class Administrator extends CI_Controller {
                         'id_users'=>$this->session->id_users,
                         'kategori_seo_cerbung'=>seo_title($this->input->post('a')),
                         'status_kategori_cerbung'=>$this->db->escape_str($this->input->post('b'))
-                       
+
                     );
-                    
+
             $this->model_app->insert('kategori_cerbung',$data);
             redirect('administrator/kategoricerbung');
         }else{
@@ -2498,8 +2496,8 @@ class Administrator extends CI_Controller {
             $this->template->load('administrator/template','administrator/mod_tag_cerbung/view_tag_cerbung_tambah');
         }
 
-       
-    
+
+
 
 function delete_tagcerbung(){
         cek_session_akses('tagberita',$this->session->id_session);
@@ -2552,9 +2550,9 @@ function delete_tagcerbung(){
                         'id_users'=>$this->session->id_users,
                         'kategori_seo_usia'=>seo_title($this->input->post('a')),
                         'waktu'=>date('Y-m-d'),
-                       
+
                     );
-                    
+
             $this->model_app->insert('kategori_usia',$data);
             redirect('administrator/kategoriusia');
         }else{
@@ -2602,7 +2600,7 @@ function delete_tagcerbung(){
         }else{
             $data['record'] = $this->model_app->view_where_ordering('cerbung_db',array('id_users'=>$this->session->id_users),'id_cerbung','DESC');
         }
-        
+
         $this->template->load('administrator/template','administrator/mod_cerbung/view_cerbung',$data);
     }
 
@@ -2647,7 +2645,7 @@ function delete_tagcerbung(){
             $tags = implode(",", $tags2);
             if ($hasil['file_name']==''){
                     $data = array('id_kategori_cerbung'=>$this->db->escape_str($this->input->post('a')),
-                                   
+
                                     'id_users'=>$this->session->id_users,
                                     'judul_cerbung'=>$this->input->post('b'),
                                     'judul_cerbung_seo'=>seo_title($this->input->post('b')),
@@ -2664,7 +2662,7 @@ function delete_tagcerbung(){
                                     'status_cerbung'=>$status);
             }else{
                     $data = array('id_kategori_cerbung'=>$this->db->escape_str($this->input->post('a')),
-                                   
+
                                     'id_users'=>$this->session->id_users,
                                     'judul_cerbung'=>$this->input->post('b'),
                                     'judul_cerbung_seo'=>seo_title($this->input->post('b')),
@@ -2735,7 +2733,7 @@ function delete_tagcerbung(){
 
             if ($hasil['file_name']==''){
                     $data = array('id_kategori_cerbung'=>$this->db->escape_str($this->input->post('a')),
-                                    
+
                                     'judul_cerbung'=>$this->input->post('b'),
                                     'judul_cerbung_seo'=>seo_title($this->input->post('b')),
                                      'pratinjau_cerbung'=>$this->input->post('d'),
@@ -2804,9 +2802,9 @@ function delete_tagcerbung(){
     $cerbung = $this->Cerbung_model->get_by_id($id);
     $data['cerbung']            = $cerbung;
     $data['cerbungbab']            = $this->Cerbung_model->get_by_id2($id);
-    
+
     $this->template->load('administrator/template','administrator/mod_cerbung/view_cerbung_detail',$data);
- 
+
 }
 }
  function delete_cerbung(){
@@ -2834,10 +2832,10 @@ function add_bab($id)
 
 public function simpan_cerbung_bab()
      {
-        
+
         $id = $this->input->post('id_cerbung');
          $cerbung = $this->Cerbung_model->get_by_id_($id);
-         
+
              $seo = seo_title($this->input->post('b'));
               if ($this->session->level == 'kontributor'){ $status_bab = 'N'; }else{ $status_bab = 'Y'; }
               if ($this->session->level == 'kontributor'){ $status_lang_bab = 'y'; }else{ $status_lang_bab = 'Y'; }
@@ -2854,14 +2852,14 @@ public function simpan_cerbung_bab()
 
              );
 
-            
+
              $this->Cerbung_model->insert_bab($data);
- 
-            
+
+
              redirect('administrator/detailscerbung/' . $id);
 
      }
-     
+
       function detailscerbungbab($id){
 
 
@@ -2872,9 +2870,9 @@ public function simpan_cerbung_bab()
     /* memanggil function dari masing2 model yang akan digunakan */
     $cerbung_bab = $this->Cerbung_model->get_by_id_bab($id);
     $data['cerbung_bab']            = $cerbung_bab;
-    
+
     $this->template->load('administrator/template','administrator/mod_cerbung/view_cerbung_bab_detail',$data);
- 
+
 }
 }
 
@@ -2910,7 +2908,7 @@ public function simpan_cerbung_bab()
         $where = array('id_cerbung' => $this->uri->segment(3));
         $this->model_app->update('cerbung_db', $data, $where);
         redirect($_SERVER['HTTP_REFERER']);
-    
+
 
 }
 function edit_cerbung_bab(){
@@ -2919,14 +2917,14 @@ function edit_cerbung_bab(){
         $id = $this->uri->segment(3);
         if (isset($_POST['submit'])){
             $data = array('judul_cerbung_bab'=>$this->db->escape_str($this->input->post('a')),
-                     
+
                         'judul_cerbung_bab_seo'=>$seo.'-'.date("dmYHis"),
                         'id_cerbung'=>$this->db->escape_str($this->input->post('t')),
                         'isi_cerbung'=>$this->input->post('b')
-                       
+
                                             );
             $where = array('id_cerbung_bab' => $this->input->post('id'));
-            
+
             $this->model_app->update('cerbung_bab_db', $data, $where);
             redirect('administrator/detailscerbung/' .$this->input->post('t'));
         }else{
@@ -2938,7 +2936,7 @@ function edit_cerbung_bab(){
             $data = array('rows' => $proses);
             $this->template->load('administrator/template','administrator/mod_cerbung/view_cerbung_bab_edit',$data);
         }
-    
+
 }
 function delete_cerbung_bab(){
         if ($this->session->level=='admin'){
@@ -2948,9 +2946,9 @@ function delete_cerbung_bab(){
         }
         $this->model_app->delete('cerbung_bab_db',$id);
         redirect($_SERVER['HTTP_REFERER']);
-    
-    
-    
+
+
+
 }
 
 
@@ -2965,7 +2963,7 @@ function listidentitasweb(){
     }
 
 function detailsidentitas($id){
-        
+
 
         $row = $this->Identitas_web_model->get_by_identitas($id);
     /* melakukan pengecekan data, apabila ada maka akan ditampilkan */
@@ -2974,9 +2972,9 @@ function detailsidentitas($id){
     /* memanggil function dari masing2 model yang akan digunakan */
     $identitas = $this->Identitas_web_model->get_by_identitas($id);
     $data['identitas']            = $identitas;
-    
+
     $this->template->load('administrator/template','administrator/mod_identitas_web/view_identitas_detail',$data);
- 
+
 }
 }
 function edit_identitas_web(){
@@ -2986,10 +2984,10 @@ function edit_identitas_web(){
                         'syarat_db'=>$this->input->post('b'),
                        'faq_db'=>$this->input->post('c'),
                         'pedoman_db'=>$this->input->post('d')
-                       
+
                                             );
             $where = array('id_identitas_web' => $this->input->post('id'));
-            
+
             $this->model_app->update('identitas_web', $data, $where);
             redirect('administrator/detailsidentitas/' .$this->input->post('id'));
         }else{
@@ -3002,6 +3000,6 @@ function edit_identitas_web(){
             $this->template->load('administrator/template','administrator/mod_identitas_web/view_identitas_edit',$data);
         }
 
-    
+
 }
 }

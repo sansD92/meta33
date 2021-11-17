@@ -17,11 +17,16 @@
 
 						<div class="post-list">
 							<!-- ts title end-->
+							 <?php
+       foreach ($berita_terbaru as $post_new)
+       {
+         $jdl = character_limiter($post_new->judul,30);
+          ?>
 							<div class="row mb-10">
 								<div class="col-md-4">
 									<div class="ts-post-thumb">
 										<a href="#">
-											<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/foods/food11.jpg" alt="">
+											<img class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
 										</a>
 									</div>
 								</div>
@@ -29,147 +34,28 @@
 								<div class="col-md-8">
 									<div class="post-content">
 										<h3 class="post-title md">
-											<a href="#">Decentralized Bitcoin Exchange Hodl Hodl to Launch OTC Desk for Large Traders</a>
+											<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a>
 										</h3>
 										<ul class="post-meta-info">
 											<li>
-												<a href="">Devid Ronald</a>
+											<a class="post-cat ts-orange-bg" href="#"><?php echo $post_new->nama_kategori ?></a></li>
+											<li>
+												<a href=""><?php echo $post_new->nama_lengkap ?></a>
 											</li>
 											<li>
 												<i class="fa fa-clock-o"></i>
-												March 21, 2019
+												 <?php echo tgl_indo($post_new->tanggal) ?>
 											</li>
+											
 										</ul>
-										<p>
-											Black farmers in the US’s South faced with the continued failure their efforts to run farm their launched a lawsuit claiming
-											that “white racism” is to blame for their inability to their produce crop yields.
+									
 										</p>
 									</div>
 								</div>
 							</div>
+							 <?php } ?>
 							<!-- row end-->
-							<div class="row mb-10">
-								<div class="col-md-4">
-									<div class="ts-post-thumb">
-										<a href="#">
-											<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/foods/food12.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<!-- col lg end-->
-								<div class="col-md-8">
-									<div class="post-content">
-										<h3 class="post-title md">
-											<a href="#">The clock is ticking for e-cig companies to block underage e-cig companies users</a>
-										</h3>
-										<ul class="post-meta-info">
-											<li>
-												<a href="">Devid Ronald</a>
-											</li>
-											<li>
-												<i class="fa fa-clock-o"></i>
-												March 21, 2019
-											</li>
-										</ul>
-										<p>
-											Black farmers in the US’s South faced with the continued failure their efforts to run farm their launched a lawsuit claiming
-											that “white racism” is to blame for their inability to their produce crop yields.
-										</p>
-									</div>
-								</div>
-							</div>
-							<!-- row end-->
-							<div class="row mb-10">
-								<div class="col-md-4">
-									<div class="ts-post-thumb">
-										<a href="#">
-											<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/foods/food13.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<!-- col lg end-->
-								<div class="col-md-8">
-									<div class="post-content">
-										<h3 class="post-title md">
-											<a href="#">Fashion Week continues with its penultimate day featuring looks from Marc Jacobs and more.</a>
-										</h3>
-										<ul class="post-meta-info">
-											<li>
-												<a href="">Devid Ronald</a>
-											</li>
-											<li>
-												<i class="fa fa-clock-o"></i>
-												March 21, 2019
-											</li>
-										</ul>
-										<p>
-											Black farmers in the US’s South faced with the continued failure their efforts to run farm their launched a lawsuit claiming
-											that “white racism” is to blame for their inability to their produce crop yields.
-										</p>
-									</div>
-								</div>
-							</div>
-							<!-- row end-->
-							<div class="row mb-10">
-								<div class="col-md-4">
-									<div class="ts-post-thumb">
-										<a href="#">
-											<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/foods/food14.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<!-- col lg end-->
-								<div class="col-md-8">
-									<div class="post-content">
-										<h3 class="post-title md">
-											<a href="#">Retro prawn cocktail – straight from the 80’s! easy lemon rice (yellow rice)</a>
-										</h3>
-										<ul class="post-meta-info">
-											<li>
-												<a href="">Devid Ronald</a>
-											</li>
-											<li>
-												<i class="fa fa-clock-o"></i>
-												March 21, 2019
-											</li>
-										</ul>
-										<p>
-											Black farmers in the US’s South faced with the continued failure their efforts to run farm their launched a lawsuit claiming
-											that “white racism” is to blame for their inability to their produce crop yields.
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="row mb-10">
-								<div class="col-md-4">
-									<div class="ts-post-thumb">
-										<a href="#">
-											<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/foods/food1.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<!-- col lg end-->
-								<div class="col-md-8">
-									<div class="post-content">
-										<h3 class="post-title md">
-											<a href="#">Week continues with its penultimate day featuring looks from Marc Jacobs and more.</a>
-										</h3>
-										<ul class="post-meta-info">
-											<li>
-												<a href="">Devid Ronald</a>
-											</li>
-											<li>
-												<i class="fa fa-clock-o"></i>
-												March 21, 2019
-											</li>
-										</ul>
-										<p>
-											Black farmers in the US’s South faced with the continued failure their efforts to run farm their launched a lawsuit claiming
-											that “white racism” is to blame for their inability to their produce crop yields.
-										</p>
-									</div>
-								</div>
-							</div>
+							
 						</div>
 
 
@@ -181,12 +67,16 @@
 						<!-- END SECTION pilihan -->
 						<br>
 						<div class="post-list">
-							<!-- ts title end-->
+							 <?php
+       foreach ($berita_terbaru2 as $post_new)
+       {
+         $jdl = character_limiter($post_new->judul,30);
+          ?>
 							<div class="row mb-10">
 								<div class="col-md-4">
 									<div class="ts-post-thumb">
 										<a href="#">
-											<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/foods/food11.jpg" alt="">
+											<img class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
 										</a>
 									</div>
 								</div>
@@ -194,147 +84,26 @@
 								<div class="col-md-8">
 									<div class="post-content">
 										<h3 class="post-title md">
-											<a href="#">Decentralized Bitcoin Exchange Hodl Hodl to Launch OTC Desk for Large Traders</a>
+											<a href="#"><?php echo $post_new->judul ?></a>
 										</h3>
 										<ul class="post-meta-info">
 											<li>
-												<a href="">Devid Ronald</a>
+											<a class="post-cat ts-orange-bg" href="#"><?php echo $post_new->nama_kategori ?></a></li>
+											<li>
+												<a href=""><?php echo $post_new->nama_lengkap ?></a>
 											</li>
 											<li>
 												<i class="fa fa-clock-o"></i>
-												March 21, 2019
+												 <?php echo tgl_indo($post_new->tanggal) ?>
 											</li>
+											
 										</ul>
-										<p>
-											Black farmers in the US’s South faced with the continued failure their efforts to run farm their launched a lawsuit claiming
-											that “white racism” is to blame for their inability to their produce crop yields.
+									
 										</p>
 									</div>
 								</div>
 							</div>
-							<!-- row end-->
-							<div class="row mb-10">
-								<div class="col-md-4">
-									<div class="ts-post-thumb">
-										<a href="#">
-											<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/foods/food12.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<!-- col lg end-->
-								<div class="col-md-8">
-									<div class="post-content">
-										<h3 class="post-title md">
-											<a href="#">The clock is ticking for e-cig companies to block underage e-cig companies users</a>
-										</h3>
-										<ul class="post-meta-info">
-											<li>
-												<a href="">Devid Ronald</a>
-											</li>
-											<li>
-												<i class="fa fa-clock-o"></i>
-												March 21, 2019
-											</li>
-										</ul>
-										<p>
-											Black farmers in the US’s South faced with the continued failure their efforts to run farm their launched a lawsuit claiming
-											that “white racism” is to blame for their inability to their produce crop yields.
-										</p>
-									</div>
-								</div>
-							</div>
-							<!-- row end-->
-							<div class="row mb-10">
-								<div class="col-md-4">
-									<div class="ts-post-thumb">
-										<a href="#">
-											<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/foods/food13.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<!-- col lg end-->
-								<div class="col-md-8">
-									<div class="post-content">
-										<h3 class="post-title md">
-											<a href="#">Fashion Week continues with its penultimate day featuring looks from Marc Jacobs and more.</a>
-										</h3>
-										<ul class="post-meta-info">
-											<li>
-												<a href="">Devid Ronald</a>
-											</li>
-											<li>
-												<i class="fa fa-clock-o"></i>
-												March 21, 2019
-											</li>
-										</ul>
-										<p>
-											Black farmers in the US’s South faced with the continued failure their efforts to run farm their launched a lawsuit claiming
-											that “white racism” is to blame for their inability to their produce crop yields.
-										</p>
-									</div>
-								</div>
-							</div>
-							<!-- row end-->
-							<div class="row mb-10">
-								<div class="col-md-4">
-									<div class="ts-post-thumb">
-										<a href="#">
-											<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/foods/food14.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<!-- col lg end-->
-								<div class="col-md-8">
-									<div class="post-content">
-										<h3 class="post-title md">
-											<a href="#">Retro prawn cocktail – straight from the 80’s! easy lemon rice (yellow rice)</a>
-										</h3>
-										<ul class="post-meta-info">
-											<li>
-												<a href="">Devid Ronald</a>
-											</li>
-											<li>
-												<i class="fa fa-clock-o"></i>
-												March 21, 2019
-											</li>
-										</ul>
-										<p>
-											Black farmers in the US’s South faced with the continued failure their efforts to run farm their launched a lawsuit claiming
-											that “white racism” is to blame for their inability to their produce crop yields.
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="row mb-10">
-								<div class="col-md-4">
-									<div class="ts-post-thumb">
-										<a href="#">
-											<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/foods/food1.jpg" alt="">
-										</a>
-									</div>
-								</div>
-								<!-- col lg end-->
-								<div class="col-md-8">
-									<div class="post-content">
-										<h3 class="post-title md">
-											<a href="#">Week continues with its penultimate day featuring looks from Marc Jacobs and more.</a>
-										</h3>
-										<ul class="post-meta-info">
-											<li>
-												<a href="">Devid Ronald</a>
-											</li>
-											<li>
-												<i class="fa fa-clock-o"></i>
-												March 21, 2019
-											</li>
-										</ul>
-										<p>
-											Black farmers in the US’s South faced with the continued failure their efforts to run farm their launched a lawsuit claiming
-											that “white racism” is to blame for their inability to their produce crop yields.
-										</p>
-									</div>
-								</div>
-							</div>
+							 <?php } ?>
 						</div>
 
 						<div class="ts-pagination text-center mb-20">

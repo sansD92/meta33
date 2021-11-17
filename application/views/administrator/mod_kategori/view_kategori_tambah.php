@@ -12,7 +12,7 @@
                   <tbody>
                     <input type='hidden' name='id' value=''>
                     <tr><th width='120px' scope='row'>Nama Kategori</th>    <td><input type='text' class='form-control' name='a' required></td></tr>
-                    <tr><th width='120px' scope='row'>code icon</th>    <td><input type='text' class='form-control' name='d' placeholder='buka link untuk icon: http://ionicons.com/' required ></td></tr>
+                    
                     <tr><th scope='row'>Aktif</th>                          <td><input type='radio' name='b' value='Y' checked> Ya &nbsp; <input type='radio' name='b' value='N'> Tidak</td></tr>
                     <tr><th scope='row'>Posisi</th>                         <td><input type='number' class='form-control' name='c'></td></tr>
                   </tbody>
