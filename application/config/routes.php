@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'main/index';
 // $route['404_override'] = 'Notfound';
 $route['translate_uri_dashes'] = FALSE;
-$route['ybw/(:any)'] = "administrator";
+$route['mt1/(:any)'] = "administrator";
 $route['sitemap\.xml'] = "sitemap";
 $route['detail/(:num)/(:any)'] = "artikel/detail/$1/$2";
 $route['novel-detail/(:num)/(:any)'] = "novel/detail/$1/$2";

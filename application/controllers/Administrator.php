@@ -175,56 +175,84 @@ class Administrator extends CI_Controller {
 
 	// Controller Modul Menu Website
 
-	function menuwebsite(){
-		cek_session_akses('menuwebsite',$this->session->id_session);
-		$data['record'] = $this->model_app->view_ordering('menu','urutan','ASC');
-		$this->template->load('administrator/template','administrator/mod_menu/view_menu',$data);
-	}
-
-	function tambah_menuwebsite(){
-		cek_session_akses('menuwebsite',$this->session->id_session);
-		if (isset($_POST['submit'])){
-			$data = array('id_parent'=>$this->db->escape_str($this->input->post('b')),
-                            'nama_menu'=>$this->db->escape_str($this->input->post('c')),
-                            'link'=>$this->db->escape_str($this->input->post('a')),
-                            'position'=>$this->db->escape_str($this->input->post('d')),
-                            'urutan'=>$this->db->escape_str($this->input->post('e')));
-			$this->model_app->insert('menu',$data);
-			redirect('administrator/menuwebsite');
-		}else{
-			$proses = $this->model_app->view_where_ordering('menu', array('position' => 'Bottom'), 'id_menu','DESC');
-			$data = array('record' => $proses);
-			$this->template->load('administrator/template','administrator/mod_menu/view_menu_tambah',$data);
-		}
-	}
-
-	function edit_menuwebsite(){
-		cek_session_akses('menuwebsite',$this->session->id_session);
-		$id = $this->uri->segment(3);
-		if (isset($_POST['submit'])){
-			$data = array('id_parent'=>$this->db->escape_str($this->input->post('b')),
-                            'nama_menu'=>$this->db->escape_str($this->input->post('c')),
-                            'link'=>$this->db->escape_str($this->input->post('a')),
-                            'position'=>$this->db->escape_str($this->input->post('d')),
-                            'urutan'=>$this->db->escape_str($this->input->post('e')),
-                            'aktif'=>$this->db->escape_str($this->input->post('f')));
-			$where = array('id_menu' => $this->input->post('id'));
-			$this->model_app->update('menu', $data, $where);
-			redirect('administrator/menuwebsite');
-		}else{
-			$menu_utama = $this->model_app->view_where_ordering('menu', array('position' => 'Bottom'), 'id_menu','DESC');
-			$proses = $this->model_app->edit('menu', array('id_menu' => $id))->row_array();
-			$data = array('rows' => $proses, 'record' => $menu_utama);
-			$this->template->load('administrator/template','administrator/mod_menu/view_menu_edit',$data);
-		}
-	}
-
-	function delete_menuwebsite(){
+    function menuwebsite(){
         cek_session_akses('menuwebsite',$this->session->id_session);
-		$id = array('id_menu' => $this->uri->segment(3));
-		$this->model_app->delete('menu',$id);
-		redirect('administrator/menuwebsite');
-	}
+        $data['record'] = $this->db->query("SELECT * FROM menu order by position, urutan");
+        $data['halaman'] = $this->model_app->view_ordering('halamanstatis','id_halaman','DESC');
+        $data['kategori'] = $this->model_app->view_ordering('kategori','id_kategori','DESC');
+        $this->template->load('administrator/template','administrator/mod_menu/view_menu',$data);
+    }
+
+    function save_menuwebsite(){
+        cek_session_akses('menuwebsite',$this->session->id_session);
+        $link = $_POST['link'].$_POST['page'].$_POST['kategori'];
+        if($_POST['id'] != ''){
+            $this->db->query("UPDATE menu SET nama_menu = '".$_POST['label']."', link  = '".$link."' where id_menu = '".$_POST['id']."' ");
+            $arr['type']  = 'edit';
+            $arr['label'] = $_POST['label'];
+            $arr['link']  = $_POST['link'];
+            $arr['page']  = $_POST['page'];
+            $arr['kategori']  = $_POST['kategori'];
+            $arr['id']    = $_POST['id'];
+        }else{
+            $row = $this->db->query("SELECT max(urutan)+1 as urutan FROM menu")->row_array();
+            $this->db->query("INSERT into menu VALUES('','0','".$_POST['label']."', '".$link."','Ya','Bottom','".$row['urutan']."')");
+            $id = $this->db->insert_id();
+            $arr['menu'] = '<li class="dd-item dd3-item" data-id="'.$id.'" >
+                                <div class="dd-handle dd3-handle Bottom"></div>
+                                <div class="dd3-content"><span id="label_show'.$id.'">'.$_POST['label'].'</span>
+                                    <span class="span-right">/<span id="link_show'.$id.'">'.$link.'</span> &nbsp;&nbsp; 
+                                        <a href="'.base_url().'/'.$this->uri->segment(1).'/posisi_menuwebsite/'.$id.'" style="cursor:pointer"><i class="fa fa-chevron-circle-up text-success"></i></a> &nbsp; 
+                                        <a class="edit-button" id="'.$id.'" label="'.$_POST['label'].'" link="'.$_POST['link'].'" ><i class="fa fa-pencil"></i></a> &nbsp; 
+                                        <a class="del-button" id="'.$id.'"><i class="fa fa-trash"></i></a>
+                                    </span> 
+                                </div>';
+            $arr['type'] = 'add';
+        }
+        print json_encode($arr);
+    }
+
+    function save(){
+        $data = json_decode($_POST['data']);
+        function parseJsonArray($jsonArray, $parentID = 0) {
+          $return = array();
+          foreach ($jsonArray as $subArray) {
+            $returnSubSubArray = array();
+            if (isset($subArray->children)) {
+                $returnSubSubArray = parseJsonArray($subArray->children, $subArray->id);
+            }
+
+            $return[] = array('id' => $subArray->id, 'parentID' => $parentID);
+            $return = array_merge($return, $returnSubSubArray);
+          }
+          return $return;
+        }
+        $readbleArray = parseJsonArray($data);
+
+        $i=0;
+        foreach($readbleArray as $row){
+          $i++;
+            $this->db->query("UPDATE menu SET id_parent = '".$row['parentID']."', urutan = '".$i."' where id_menu = '".$row['id']."' ");
+        }
+    }
+
+    function posisi_menuwebsite(){
+        cek_session_akses('menuwebsite',$this->session->id_session);
+        $cek = $this->model_app->view_where('menu',array('id_menu'=>$this->uri->segment(3)))->row_array();
+        $posisi = ($cek['position'] == 'Top' ? 'Bottom' : 'Top');
+        $data = array('position'=>$posisi);
+        $where = array('id_menu' => $this->uri->segment(3));
+        $this->model_app->update('menu', $data, $where);
+        redirect($this->uri->segment(1).'/menuwebsite1');
+    }
+
+    function delete_menuwebsite(){
+        cek_session_akses('menuwebsite',$this->session->id_session);
+        $idm = array('id_menu' => $this->input->post('id'));
+        $this->model_app->delete('menu',$idm);
+        $idm = array('id_parent' => $this->input->post('id'));
+        $this->model_app->delete('menu',$idm);
+    }
 
 
 	// Controller Modul Halaman Baru

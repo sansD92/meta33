@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Site Title- -->
-	<title>Vinazine - Multi-Concept News, Magazine and Blog HTML Template</title>
+	<title>Metasatu.com</title>
 
 	<!-- CSS
    ==================================================== -->
@@ -59,5 +59,6 @@
 	  top: 0;
 	 
 	}
+
 	</style>
 </head>

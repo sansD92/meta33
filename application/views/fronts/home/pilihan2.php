@@ -20,13 +20,13 @@
         <div class="item">
           <a class="post-cat ts-orange-bg" href="#"><?php echo $post_new->nama_kategori ?></a>
           <div class="ts-post-thumb">
-            <a href="#">
+            <a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
               <img style="height:100px"class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
             </a>
           </div>
           <div class="post-content">
             <h3 class="post-title">
-              <a href="#"><?php echo $jdl ?></a>
+              <a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $jdl ?></a>
             </h3>
             <span class="post-date-info">
               <i class="fa fa-clock-o"></i>

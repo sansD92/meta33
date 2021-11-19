@@ -75,7 +75,7 @@
 							<div class="row mb-10">
 								<div class="col-md-4">
 									<div class="ts-post-thumb">
-										<a href="#">
+										<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
 											<img class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
 										</a>
 									</div>
@@ -84,7 +84,7 @@
 								<div class="col-md-8">
 									<div class="post-content">
 										<h3 class="post-title md">
-											<a href="#"><?php echo $post_new->judul ?></a>
+											<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a>
 										</h3>
 										<ul class="post-meta-info">
 											<li>
