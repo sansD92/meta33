@@ -9,6 +9,13 @@
 	<!-- Site Title- -->
 	<title>Metasatu.com</title>
 
+
+	 <!-- Facebook -->
+        <meta property="og:title" content="Metasatu">
+        <meta property="og:site_name" content="metasatu.com">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="https://metasatu.com">
+        <meta property="og:image" content="<?php echo base_url()?>asset/frontend/images/logo/META2.png">
 	<!-- CSS
    ==================================================== -->
 	<!-- Bootstrap -->

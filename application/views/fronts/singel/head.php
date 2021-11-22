@@ -7,8 +7,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Site Title- -->
-	<title>Vinazine - Multi-Concept News, Magazine and Blog HTML Template</title>
+	<title><?php echo "$title"; ?> Metasatu</title>
+	<meta name="site_url" content="<?php echo base_url()?>detail/<?php echo "$rows[id_berita]"; ?>/<?php echo "$rows[judul_seo]"; ?>">
+	<meta name="description" content="<?php echo "$description"; ?>">
+	<meta name="keywords" content="<?php echo "$keywords"; ?>,<?php echo "$rows[nama_kategori]"; ?>">
 
+	<!-- Facebook -->
+        <meta property="og:title" content="<?php echo "$title"; ?>">
+        <meta property="og:site_name" content="Metasatu.com">
+        <meta property="og:description" content="<?php echo "$title"; ?> - Risalahmisteri.com">
+        <meta property="og:url" content="<?php echo base_url()?>detail/<?php echo "$rows[id_berita]"; ?>/<?php echo "$rows[judul_seo]"; ?>">
+        <meta property="og:image" content="<?php echo base_url()?>asset/foto_berita/<?php echo "$rows[gambar]"; ?>">
+        <meta property="og:type" content="article">
 	<!-- CSS
    ==================================================== -->
 	<!-- Bootstrap -->
@@ -59,6 +69,6 @@
 	  top: 0;
 	 
 	}
-	
+
 	</style>
 </head>
