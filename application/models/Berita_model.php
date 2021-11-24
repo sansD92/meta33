@@ -340,6 +340,31 @@ return $this->db->get('Video')->num_rows();
     $query = $this->db->get($this->table,$per_page,$dari);
     return $query->result();
   }
+
+  function get_all_terbaru2($per_page,$dari)
+  {
+    $this->db->offset(3);
+    $this->db->where('headline', 'Y');
+    $this->db->or_where('pilihan', 'Y');
+    $this->db->or_where('status', 'Y');
+    $this->db->order_by($this->id, 'DESC');
+    $this->db->join('kategori', 'kategori.id_kategori = berita.id_kategori','inner');
+    $this->db->join('users', 'users.id_users = berita.id_users','inner');
+    $query = $this->db->get($this->table,$per_page,$dari);
+    return $query->result();
+  }
+  function get_all_terbaru22($per_page,$dari)
+  {
+    $this->db->offset(6);
+    $this->db->where('headline', 'Y');
+    $this->db->or_where('pilihan', 'Y');
+    $this->db->or_where('status', 'Y');
+    $this->db->order_by($this->id, 'DESC');
+    $this->db->join('kategori', 'kategori.id_kategori = berita.id_kategori','inner');
+    $this->db->join('users', 'users.id_users = berita.id_users','inner');
+    $query = $this->db->get($this->table,$per_page,$dari);
+    return $query->result();
+  }
   // get all
   function get_cari_berita($per_page,$dari,$cari_berita)
   {
@@ -361,6 +386,7 @@ $data=$hasil->num_rows();
 return $data;
 }
 function total_rows() {
+
   return $this->db->get($this->table)->num_rows();
 }
   function total_rows2($cari_berita){

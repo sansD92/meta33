@@ -235,6 +235,7 @@ if ($this->session->level==''){
       return this.href == url;
     }).closest('.treeview').addClass('active');
   </script>
+
   <script>
 
    <?php
@@ -251,6 +252,13 @@ if ($this->session->level==''){
                 singleFieldNode: $('#j')
             });
 			</script>
+      <?php if ($this->uri->segment('2')!='menuwebsite'){ ?>
+  <!--<script>
+    /* CKEDITOR.replace('editor1' ,{
+      filebrowserImageBrowseUrl : '<?php // echo base_url('asset/kcfinder'); ?>'
+    }); */
+  </script>-->
+<?php } ?>
   </body>
 </html>
 <?php } ?>

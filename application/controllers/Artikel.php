@@ -207,101 +207,7 @@ public function detail(){
 			$this->load->view('fronts/kategori/index', $data);
 		}
 	}
-	public function pilihan()
-	{
-		$data['title'] = " $row[nama_kategori] Artikel";
-		$this->load->library('pagination');
-		$page1 = 'Y';
-		/* menghitung jumlah total data */
-		$jumlah = $this->Berita_model->total_rows();
-
-		// Mengatur base_url
-		$config['base_url'] = base_url().'artikel/pilihan/halaman/';
-		//menghitung total baris
-		$config['total_rows'] = $jumlah;
-		//mengatur total data yang tampil per halamannya
-		$config['per_page'] = 6	;
-		// tag pagination bootstrap
-		$config['full_tag_open']    = "<ul class='pagination'>";
-		$config['full_tag_close']   = "</ul>";
-		$config['num_tag_open']     = "<li>";
-		$config['num_tag_close']    = "</li>";
-		$config['cur_tag_open']     = "<li class='disabled'><li class='active'><a href='#'>";
-		$config['cur_tag_close']    = "<span class='sr-only'></span></a></li>";
-		$config['next_link']        = "Selanjutnya";
-		$config['next_tag_open']    = "<li>";
-		$config['next_tagl_close']  = "</li>";
-		$config['prev_link']        = "Sebelumnya";
-		$config['prev_tag_open']    = "<li>";
-		$config['prev_tagl_close']  = "</li>";
-		$config['first_link']       = "Awal";
-		$config['first_tag_open']   = "<li>";
-		$config['first_tagl_close'] = "</li>";
-		$config['last_link']        = 'Terakhir';
-		$config['last_tag_open']    = "<li>";
-		$config['last_tagl_close']  = "</li>";
-
-		// mengambil uri segment ke-4
-		$dari = $this->uri->segment('4');
-		/* memanggil model untuk ditampilkan pada masing2 modul*/
-		 $data['opini_top'] = $this->db->query("select * from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y'  ORDER BY  id_berita desc limit 7
-			")->result();
-	     $data['cerbung_top'] = $this->db->query("select * from cerbung_db a join users b on a.id_users = b.id_users join kategori_cerbung c on a.id_kategori_cerbung = c.id_kategori_cerbung where status_cerbung = 'Y' ORDER BY  id_cerbung desc limit 5
-			")->result();
-		$data['pilihan'] = $this->db->query("select * from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where   a.status = 'Y'  and  pilihan = 'Y'  ORDER BY  id_berita desc limit 5
-			")->result();
-		$data['post_terbaru'] 						= $this->Berita_model->get_all_pilihan($config['per_page'],$dari);
-		$this->pagination->initialize($config);
-		$this->load->view('fronts/artikel/pilihan/index', $data);
-	}
-
-	public function headline()
-	{
-		$data['title'] = " HEADLINE";
-		$this->load->library('pagination');
-		$page1 = 'Y';
-		/* menghitung jumlah total data */
-		$jumlah = $this->Berita_model->total_rows();
-
-		// Mengatur base_url
-		$config['base_url'] = base_url().'artikel/headline/halaman/';
-		//menghitung total baris
-		$config['total_rows'] = $jumlah;
-		//mengatur total data yang tampil per halamannya
-		$config['per_page'] = 6	;
-		// tag pagination bootstrap
-		$config['full_tag_open']    = "<ul class='pagination'>";
-		$config['full_tag_close']   = "</ul>";
-		$config['num_tag_open']     = "<li>";
-		$config['num_tag_close']    = "</li>";
-		$config['cur_tag_open']     = "<li class='disabled'><li class='active'><a href='#'>";
-		$config['cur_tag_close']    = "<span class='sr-only'></span></a></li>";
-		$config['next_link']        = "Selanjutnya";
-		$config['next_tag_open']    = "<li>";
-		$config['next_tagl_close']  = "</li>";
-		$config['prev_link']        = "Sebelumnya";
-		$config['prev_tag_open']    = "<li>";
-		$config['prev_tagl_close']  = "</li>";
-		$config['first_link']       = "Awal";
-		$config['first_tag_open']   = "<li>";
-		$config['first_tagl_close'] = "</li>";
-		$config['last_link']        = 'Terakhir';
-		$config['last_tag_open']    = "<li>";
-		$config['last_tagl_close']  = "</li>";
-
-		// mengambil uri segment ke-4
-		$dari = $this->uri->segment('4');
-		/* memanggil model untuk ditampilkan pada masing2 modul*/
-		 $data['opini_top'] = $this->db->query("select * from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y'  ORDER BY  id_berita desc limit 7
-			")->result();
-	     $data['cerbung_top'] = $this->db->query("select * from cerbung_db a join users b on a.id_users = b.id_users join kategori_cerbung c on a.id_kategori_cerbung = c.id_kategori_cerbung where status_cerbung = 'Y' ORDER BY  id_cerbung desc limit 5
-			")->result();
-		$data['pilihan'] = $this->db->query("select * from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where   a.status = 'Y'  and  pilihan = 'Y'  ORDER BY  id_berita desc limit 5
-			")->result();
-		$data['post_terbaru'] 						= $this->Berita_model->get_all_headline($config['per_page'],$dari);
-		$this->pagination->initialize($config);
-		$this->load->view('fronts/artikel/headline/index', $data);
-	}
+	
 	  function add_count($id)
     {
         // load cookie helper
@@ -320,4 +226,94 @@ public function detail(){
             $this->Berita_model->update_counter(urldecode($id));
         }
     }
+
+    public function cari() {
+
+		//Get Total Records Count
+		$this->db->select("*");
+		$this->db->join('kategori', 'kategori.id_kategori = berita.id_kategori','inner');
+		$this->db->from("berita");
+		if (!empty($_GET['pageFilter'])) {
+				$this->db->like('judul', $_GET['pageFilter']);
+		}
+		$cityRecordsCount = $this->db->get();
+
+		$totalRecords = $cityRecordsCount->num_rows();
+		$limit = 9999;
+
+		if (!empty($_GET['pageFilter'])) {
+				$config["base_url"] = base_url('artikel/cari?pageFilter=' . $_GET['pageFilter']);
+		} else {
+				$config["base_url"] = base_url('artikel/cari?pageFilter=');
+		}
+
+		$config["total_rows"] = $totalRecords;
+		$config["per_page"] = $limit;
+		$config['use_page_numbers'] = TRUE;
+		$config['page_query_string'] = TRUE;
+		$config['enable_query_strings'] = TRUE;
+		$config['num_links'] = 2;
+		$config['full_tag_open']    = "<ul class='pagination'>";
+		$config['full_tag_close']   = "</ul>";
+		$config['num_tag_open']     = "<li>";
+		$config['num_tag_close']    = "</li>";
+		$config['cur_tag_open']     = "<li class='disabled'><li class='active'><a href='#'>";
+		$config['cur_tag_close']    = "<span class='sr-only'></span></a></li>";
+		$config['next_link']        = "Selanjutnya";
+		$config['next_tag_open']    = "<li>";
+		$config['next_tagl_close']  = "</li>";
+		$config['prev_link']        = "Sebelumnya";
+		$config['prev_tag_open']    = "<li>";
+		$config['prev_tagl_close']  = "</li>";
+		$config['first_link']       = "Awal";
+		$config['first_tag_open']   = "<li>";
+		$config['first_tagl_close'] = "</li>";
+		$config['last_link']        = 'Terakhir';
+		$config['last_tag_open']    = "<li>";
+		$config['last_tagl_close']  = "</li>";
+
+		$this->pagination->initialize($config);
+		$str_links = $this->pagination->create_links();
+		$links = explode('&nbsp;', $str_links);
+
+		$offset = 0;
+
+		if (!empty($_GET['per_page'])) {
+				$pageNo = $_GET['per_page'];
+				$offset = ($pageNo - 1) * $limit;
+
+		}
+
+
+		//Get actual result from all records with pagination
+		$this->db->select("*,users.id_users as users");
+		$this->db->from("berita");
+		$this->db->order_by('tanggal', 'DESC');
+		$this->db->join('users', 'users.id_users = berita.id_users','inner');
+		$this->db->join('kategori', 'kategori.id_kategori = berita.id_kategori','inner');
+
+		if (!empty($_GET['pageFilter'])) {
+				$this->db->like('judul', $_GET['pageFilter']);
+
+		}
+		$this->db->limit($limit, $offset);
+		$cityRecords = $this->db->get();
+		$page1 = 'Y';
+		 
+
+		$this->load->view('fronts/pencarian/index',  $data=array(
+				'totalResult' => $totalRecords,
+				'results' => $cityRecords->result(),
+				'links' => $links,
+				'penulis' => $this->db->query("SELECT *, a.id_users as users FROM berita a JOIN users b ON a.id_users = b.id_users WHERE id_berita IN (SELECT max(id_berita) FROM berita WHERE STATUS = 'Y' GROUP BY id_users) ORDER BY id_berita DESC LIMIT 12
+			")->result(),
+				
+				$data['berita_pilihan'] = $this->db->query("select *, a.id_users as users from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y' and pilihan = 'Y' ORDER BY  id_berita desc limit 4
+			")->result(),
+
+				
+
+		));
+
+	}	
 }

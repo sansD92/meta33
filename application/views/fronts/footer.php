@@ -16,28 +16,34 @@
 						<li class="ts-facebook">
 							<a href="#">
 								
-								<span>Redaksi</span>
+								<span>Tentang Kami</span>
 							</a>
 						</li>
 						<li class="ts-google-plus">
 							<a href="#">
 								
-								<span>Kontak Kami</span>
+								<span>Pedoman Media Cyber</span>
 							</a>
 						</li>
 						<li class="ts-twitter">
 							<a href="#">
-								<span>Biro</span>
+								<span>Facebook</span>
 							</a>
 						</li>
 						<li class="ts-pinterest">
 							<a href="#">
-								<span>Jaringan</span>
+								<span>Instagram</span>
 							</a>
 						</li>
 						<li class="ts-linkedin">
 							<a href="#">
-								<span>Pedoman Media Cyber</span>
+								<span>YouTube</span>
+							</a>
+
+						</li>
+						<li class="ts-linkedin">
+							<a href="#">
+								<span>Tiktok</span>
 							</a>
 
 						</li>

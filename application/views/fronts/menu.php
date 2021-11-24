@@ -27,10 +27,10 @@
 										<div class="nav-search-button">
 											<i class="icon icon-search"></i>
 										</div>
-										<form>
+										<form action="<?php echo base_url()?>artikel/cari">
 											<span class="nav-search-close-button" tabindex="0">✕</span>
 											<div class="nav-search-inner">
-												<input type="search" name="search" placeholder="Type and hit ENTER">
+												<input class="search_field" type="search" name="pageFilter" placeholder="Cari Berita">
 											</div>
 										</form>
 									</div>

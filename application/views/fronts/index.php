@@ -88,12 +88,12 @@
 									<ul class="post-meta-info">
 										<li class="author">
 											<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
-												<img src="<?php echo base_url()?>asset/frontend/images/avater/author1.jpg" alt=""> <?php echo $post_new->nama_lengkap ?>
+												<img src="<?php echo base_url()?>asset/foto_user/<?php echo $post_new->foto ?>"> <?php echo $post_new->nama_lengkap ?>
 											</a>
 										</li>
 										<li>
 											<i class="fa fa-clock-o"></i>
-											March 21, 2019
+											<?php echo tgl_indo($post_new->tanggal) ?>
 										</li>
 
 									</ul>

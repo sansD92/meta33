@@ -68,7 +68,7 @@
 						<br>
 						<div class="post-list">
 							 <?php
-       foreach ($berita_terbaru2 as $post_new)
+       foreach ($berita_terbaru22 as $post_new)
        {
          $jdl = character_limiter($post_new->judul,30);
           ?>
@@ -76,7 +76,7 @@
 								<div class="col-md-4">
 									<div class="ts-post-thumb">
 										<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
-											<img class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
+											<img style="height: 150px; width: 100%;"class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
 										</a>
 									</div>
 								</div>
@@ -109,37 +109,10 @@
 						<div class="ts-pagination text-center mb-20">
 							<ul class="pagination">
 								<li>
-									<a href="#">
-										<i class="fa fa-angle-double-left"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="fa fa-angle-left"></i>
-									</a>
-								</li>
-								<li class="active">
-									<a href="#">1</a>
-								</li>
-								<li>
-									<a href="#">2</a>
-								</li>
-								<li>
-									<a href="#">3</a>
-								</li>
-								<li>
-									<a href="#">4</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="fa fa-angle-right"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="fa fa-angle-double-right"></i>
-									</a>
-								</li>
+										<?php
+  echo $this->pagination->create_links();
+  ?>
+									</li>
 							</ul>
 						</div>
 

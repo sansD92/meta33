@@ -175,15 +175,33 @@ class Administrator extends CI_Controller {
 
 	// Controller Modul Menu Website
 
-    function menuwebsite(){
-        cek_session_akses('menuwebsite',$this->session->id_session);
+	function menuwebsite(){
+		cek_session_akses('menuwebsite',$this->session->id_session);
         $data['record'] = $this->db->query("SELECT * FROM menu order by position, urutan");
         $data['halaman'] = $this->model_app->view_ordering('halamanstatis','id_halaman','DESC');
+		$data['record'] = $this->model_app->view_ordering('menu','urutan','ASC');
         $data['kategori'] = $this->model_app->view_ordering('kategori','id_kategori','DESC');
-        $this->template->load('administrator/template','administrator/mod_menu/view_menu',$data);
-    }
+		$this->template->load('administrator/template','administrator/mod_menu/view_menu',$data);
+	}
 
-    function save_menuwebsite(){
+	function tambah_menuwebsite(){
+		cek_session_akses('menuwebsite',$this->session->id_session);
+		if (isset($_POST['submit'])){
+			$data = array('id_parent'=>$this->db->escape_str($this->input->post('b')),
+                            'nama_menu'=>$this->db->escape_str($this->input->post('c')),
+                            'link'=>$this->db->escape_str($this->input->post('a')),
+                            'position'=>$this->db->escape_str($this->input->post('d')),
+                            'urutan'=>$this->db->escape_str($this->input->post('e')));
+			$this->model_app->insert('menu',$data);
+			redirect('administrator/menuwebsite');
+		}else{
+			$proses = $this->model_app->view_where_ordering('menu', array('position' => 'Bottom'), 'id_menu','DESC');
+			$data = array('record' => $proses);
+			$this->template->load('administrator/template','administrator/mod_menu/view_menu_tambah',$data);
+		}
+	}
+
+	function save_menuwebsite(){
         cek_session_akses('menuwebsite',$this->session->id_session);
         $link = $_POST['link'].$_POST['page'].$_POST['kategori'];
         if($_POST['id'] != ''){
@@ -253,6 +271,7 @@ class Administrator extends CI_Controller {
         $idm = array('id_parent' => $this->input->post('id'));
         $this->model_app->delete('menu',$idm);
     }
+
 
 
 	// Controller Modul Halaman Baru
