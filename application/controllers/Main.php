@@ -47,6 +47,10 @@ class Main extends CI_Controller {
 			")->result();
 			$data['berita_pilihan'] = $this->db->query("select *, a.id_users as users from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y' and pilihan = 'Y' ORDER BY  id_berita desc limit 4
 			")->result();
+			$data['berita_indepth'] = $this->db->query("select *, a.id_users as users from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y' and indepth = 'Y' ORDER BY  id_berita desc limit 1
+			")->result();
+			$data['berita_wawancara'] = $this->db->query("select *, a.id_users as users from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y' and wawancara = 'Y' ORDER BY  id_berita desc limit 1
+			")->result();
 
 			$data['berita_terbaru'] = $this->db->query("select *, a.id_users as users from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y' and pilihan = 'N' and headline = 'N' ORDER BY  id_berita desc limit 3
 			")->result();
@@ -105,10 +109,29 @@ class Main extends CI_Controller {
 			")->result();
 
 			
-			$data['berita_terbaru22'] 						= $this->Berita_model->get_all_terbaru2($config['per_page'],$dari);
+			$data['berita_terbaru22'] 						= $this->Berita_model->get_all_terbaru22($config['per_page'],$dari);
 		$this->pagination->initialize($config);
 			$this->load->view('fronts/index2',$data);
 		}
 
+public function pedomanmediacyber()
+		{
+	    /* memanggil model untuk ditampilkan pada masing2 modul*/
+			 
+	   $data['identitas_web'] = $this->db->query("select * from identitas_web  ORDER BY  id_identitas_web asc limit 1
+			")->result();
 
+	    /* memanggil view yang telah disiapkan dan passing data dari model ke view*/
+			$this->load->view('fronts/about/pedoman_media',$data);
+		}
+		public function tentangkami()
+		{
+	    /* memanggil model untuk ditampilkan pada masing2 modul*/
+			 
+	   $data['identitas_web'] = $this->db->query("select * from identitas_web  ORDER BY  id_identitas_web asc limit 1
+			")->result();
+
+	    /* memanggil view yang telah disiapkan dan passing data dari model ke view*/
+			$this->load->view('fronts/about/tentangkami',$data);
+		}
 	}

@@ -14,35 +14,35 @@
 				<div class="col-lg-8 align-self-center">
 					<ul class="footer-social">
 						<li class="ts-facebook">
-							<a href="#">
+							<a href="<?php echo base_url("identitas/tentangkami") ?>" target="_blank">
 								
 								<span>Tentang Kami</span>
 							</a>
 						</li>
 						<li class="ts-google-plus">
-							<a href="#">
+							<a href="<?php echo base_url("identitas/pedomanmediacyber") ?> "target="_blank">
 								
 								<span>Pedoman Media Cyber</span>
 							</a>
 						</li>
 						<li class="ts-twitter">
-							<a href="#">
+							<a href="https://www.facebook.com/metasatudotcom" target="_blank">
 								<span>Facebook</span>
 							</a>
 						</li>
 						<li class="ts-pinterest">
-							<a href="#">
+							<a href="#" target="_blank">
 								<span>Instagram</span>
 							</a>
 						</li>
 						<li class="ts-linkedin">
-							<a href="#">
+							<a href="#" target="_blank">
 								<span>YouTube</span>
 							</a>
 
 						</li>
 						<li class="ts-linkedin">
-							<a href="#">
+							<a href="#" target="_blank">
 								<span>Tiktok</span>
 							</a>
 

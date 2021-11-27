@@ -58,3 +58,5 @@ $route['detail/(:num)/(:any)'] = "artikel/detail/$1/$2";
 $route['novel-detail/(:num)/(:any)'] = "novel/detail/$1/$2";
 $route['novel-detail-isi/(:num)/(:any)'] = "novel/detail_isi/$1/$2";
 $route['(:any)'] = "berita/read/$1";
+$route['identitas/tentangkami'] = "main/tentangkami";
+$route['identitas/pedomanmediacyber'] = "main/pedomanmediacyber";

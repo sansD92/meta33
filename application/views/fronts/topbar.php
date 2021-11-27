@@ -5,10 +5,10 @@
 					
 					<ul class="ts-top-nav">
 						<li>
-							<a href="#">Risalah Misteri</a>
+							<a href="https://risalahmisteri.com/" target="_blank">Risalah Misteri</a>
 						</li>
 						<li>
-							<a href="#">Suara Konsumen</a>
+							<a href="https://suarakonsumen.co/" target="_blank">Suara Konsumen</a>
 						</li>
 						<li>
 							<a href="#">Litera Cafe</a>

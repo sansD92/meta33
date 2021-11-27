@@ -443,7 +443,7 @@ class Administrator extends CI_Controller {
                     $data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'id_users'=>$this->session->id_users,
                                     'judul'=>$this->input->post('b'),
-                                    'judul_seo'=>seo_title($this->input->post('b')),
+                                    'judul_seo'=>seo_title($this->input->post('b')).date('sHi'),
                                     'headline'=>$this->db->escape_str($this->input->post('e')),
                                     'isi_berita'=>$this->input->post('h'),
                                     'keterangan_gambar'=>$this->input->post('ket'),
@@ -460,7 +460,7 @@ class Administrator extends CI_Controller {
                     $data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'id_users'=>$this->session->id_users,
                                     'judul'=>$this->input->post('b'),
-                                    'judul_seo'=>seo_title($this->input->post('b')),
+                                    'judul_seo'=>seo_title($this->input->post('b')).date('sHi'),
                                     'headline'=>$this->db->escape_str($this->input->post('e')),
                                     'isi_berita'=>$this->input->post('h'),
                                     'keterangan_gambar'=>$this->input->post('ket'),
@@ -492,13 +492,23 @@ class Administrator extends CI_Controller {
 			$config['upload_path'] = 'asset/foto_berita/';
 	        $config['allowed_types'] = 'gif|jpg|jpeg|png|PNG|JPG|JPEG';
 	        $config['max_size'] = '3000'; // kb
+            $config['encrypt_name'] = TRUE;
+
 	        $this->load->library('upload', $config);
 	        $this->upload->do_upload('k');
 	        $hasil=$this->upload->data();
-
+            $new_name = time().$_FILES["userfiles"]['name'];
+$config['file_name'] = $new_name;
             $config['source_image'] = 'asset/foto_berita/'.$hasil['file_name'];
-
+            $config['create_thumb']= FALSE;
+                $config['maintain_ratio']= FALSE;
+                $config['quality']= '50%';
+                $config['width']= 600;
+                $config['height']= 400;
+                
+                
             $this->load->library('image_lib',$config);
+            $this->image_lib->resize();
             $this->image_lib->watermark();
 
             if ($this->session->level == 'kontributor'){ $status = 'y'; }else{ $status = 'Y'; }
@@ -603,7 +613,51 @@ class Administrator extends CI_Controller {
 		$this->model_app->delete('berita',$id);
 		redirect('administrator/listnews');
 	}
+    function publish_headline(){
+        cek_session_akses('publish',$this->session->id_session);
+        if ($this->uri->segment(4)=='Y'){
+            $data = array('headline'=>'N');
+        }else{
+            $data = array('headline'=>'Y');
+        }
+        $where = array('id_berita' => $this->uri->segment(3));
+        $this->model_app->update('berita', $data, $where);
+        redirect($_SERVER['HTTP_REFERER']);
+    }
+    function publish_pilihan(){
+        cek_session_akses('publish',$this->session->id_session);
+        if ($this->uri->segment(4)=='Y'){
+            $data = array('pilihan'=>'N');
+        }else{
+            $data = array('pilihan'=>'Y');
+        }
+        $where = array('id_berita' => $this->uri->segment(3));
+        $this->model_app->update('berita', $data, $where);
+        redirect($_SERVER['HTTP_REFERER']);
+    }
+    function publish_indepth(){
+        cek_session_akses('publish',$this->session->id_session);
+        if ($this->uri->segment(4)=='Y'){
+            $data = array('indepth'=>'N');
+        }else{
+            $data = array('indepth'=>'Y');
+        }
+        $where = array('id_berita' => $this->uri->segment(3));
+        $this->model_app->update('berita', $data, $where);
+        redirect($_SERVER['HTTP_REFERER']);
+    }
 
+    function publish_wawancara(){
+        cek_session_akses('publish',$this->session->id_session);
+        if ($this->uri->segment(4)=='Y'){
+            $data = array('wawancara'=>'N');
+        }else{
+            $data = array('wawancara'=>'Y');
+        }
+        $where = array('id_berita' => $this->uri->segment(3));
+        $this->model_app->update('berita', $data, $where);
+        redirect($_SERVER['HTTP_REFERER']);
+    }
 
 	// Controller Modul Kategori Berita
 
@@ -1338,12 +1392,12 @@ class Administrator extends CI_Controller {
             $hasil=$this->upload->data();
             if ($hasil['file_name']==''){
                 $data = array('judul'=>$this->db->escape_str($this->input->post('a')),
-                                'id_users'=>$this->session->id_users,
+                               
                                 'url'=>$this->input->post('b'),
                                 'tgl_posting'=>date('Y-m-d'));
             }else{
                 $data = array('judul'=>$this->db->escape_str($this->input->post('a')),
-                                'id_users'=>$this->session->id_users,
+                                
                                 'url'=>$this->input->post('b'),
                                 'gambar'=>$hasil['file_name'],
                                 'tgl_posting'=>date('Y-m-d'));
@@ -1367,12 +1421,12 @@ class Administrator extends CI_Controller {
             $hasil=$this->upload->data();
             if ($hasil['file_name']==''){
                 $data = array('judul'=>$this->db->escape_str($this->input->post('a')),
-                                'id_users'=>$this->session->id_users,
+                                
                                 'url'=>$this->input->post('b'),
                                 'tgl_posting'=>date('Y-m-d'));
             }else{
                 $data = array('judul'=>$this->db->escape_str($this->input->post('a')),
-                                'id_users'=>$this->session->id_users,
+                                
                                 'url'=>$this->input->post('b'),
                                 'gambar'=>$hasil['file_name'],
                                 'tgl_posting'=>date('Y-m-d'));
@@ -1400,6 +1454,17 @@ class Administrator extends CI_Controller {
         }
         $this->model_app->delete('iklanatas',$id);
         redirect('administrator/iklanatas');
+    }
+    function publish_iklanatas(){
+         cek_session_akses('publish',$this->session->id_session);
+        if ($this->uri->segment(4)=='Y'){
+            $data = array('status_iklan'=>'N');
+        }else{
+            $data = array('status_iklan'=>'Y');
+        }
+        $where = array('id_iklanatas' => $this->uri->segment(3));
+        $this->model_app->update('iklanatas', $data, $where);
+        redirect($_SERVER['HTTP_REFERER']);
     }
 
 

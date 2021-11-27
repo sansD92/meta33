@@ -110,41 +110,55 @@
 				<!-- col end-->
 
 				<div class="col-lg-3">
+					<?php
+					 foreach ($berita_indepth as $post_new)
+					 {
+
+					 ?>
 					<div class="ts-grid-box ts-grid-content">
-						<a class="post-cat ts-orange-bg" href="#">Travel</a>
+						<a class="post-cat ts-orange-bg" href="#">Fokus</a>
 						<div class="ts-post-thumb">
-							<a href="#">
-								<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/travel/travel10.jpg" alt="">
+							<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
+								<img class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
 							</a>
 						</div>
 						<div class="post-content">
 							<h3 class="post-title">
-								<a href="#">The clock is ticking for e-cig companies underage users</a>
+								<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a>
 							</h3>
 							<span class="post-date-info">
 								<i class="fa fa-clock-o"></i>
-								March 21, 2019
+								<?php echo tgl_indo($post_new->tanggal) ?>
 							</span>
 						</div>
 					</div>
+					<?php } ?>
 					<!-- ts single post item end-->
+
+					<?php
+					 foreach ($berita_wawancara as $post_new)
+					 {
+
+					 ?>
 					<div class="ts-grid-box ts-grid-content">
-						<a class="post-cat ts-pink-bg" href="#">Music</a>
+						<a class="post-cat ts-pink-bg" href="#">Sorot</a>
 						<div class="ts-post-thumb">
-							<a href="#">
-								<img class="img-fluid" src="<?php echo base_url()?>asset/frontend/images/news/music/music1.jpg" alt="">
+							<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
+								<img class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
 							</a>
 						</div>
 						<div class="post-content">
 							<h3 class="post-title">
-								<a href="#">Tourism in Dubai is booming by international tourist</a>
+								<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a>
 							</h3>
 							<span class="post-date-info">
 								<i class="fa fa-clock-o"></i>
-								March 21, 2019
+								<?php echo tgl_indo($post_new->tanggal) ?>
+								
 							</span>
 						</div>
 					</div>
+					<?php } ?>
 					<!-- ts single post item end-->
 				</div>
 				<!-- col end-->
