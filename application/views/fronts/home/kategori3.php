@@ -4,14 +4,14 @@
       <div class="col-lg-6">
         <div class="ts-title-item">
             <h2 class="ts-cat-title ">
-              <a href="<?php echo base_url("artikel/kategori/olahraga ") ?>"><span>Olahraga</span></a>
+             <a href="<?php echo base_url("artikel/kategori/gaya-hidup ") ?>"><span>Gaya Hidup</span></a>
             </h2>
           </div><!-- Title end -->
         <div class="post-list-box ts-list-post-box ts-grid-content">
 
 
  <?php
-       foreach ($olaraga as $post_new)
+       foreach ($gayahidup as $post_new)
        {
          $jdl = character_limiter($post_new->judul,30);
           ?>
@@ -39,7 +39,7 @@
       <div class="col-lg-6">
         <div class="ts-title-item">
             <h2 class="ts-cat-title ">
-              <a href="<?php echo base_url("artikel/kategori/viral ") ?>"><span>Viral</span></a>
+              <a href="<?php echo base_url("artikel/kategori/showbiz ") ?>"><span>Showbiz</span></a>
             </h2>
           </div><!-- Title end -->
         <div class="post-list-box ts-list-post-box ts-grid-content">
@@ -47,7 +47,7 @@
 
 
          <?php
-       foreach ($muda as $post_new)
+       foreach ($showbiz as $post_new)
        {
          $jdl = character_limiter($post_new->judul,30);
           ?>

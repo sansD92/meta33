@@ -69,24 +69,21 @@
 									</ul>
 								</li>
 									<li>
-									<a href="#">SOROT</a>
+									<a href="#">Poros</a>
 									<ul class="nav-dropdown">
 										<li>
 											<a href="<?php echo base_url("artikel/kategori/politik") ?>">Politik</a>
 											
 										</li>
 										<li>
-											<a href="<?php echo base_url("artikel/kategori/parlemen") ?>">Parlemen</a>
+											<a href="<?php echo base_url("artikel/kategori/hukum") ?>">Hukum</a>
 											
 										</li>
 										<li>
-											<a href="<?php echo base_url("artikel/kategori/pilpres") ?>">Pilpres</a>
+											<a href="<?php echo base_url("artikel/kategori/keamanan") ?>">Keamanan</a>
 											
 										</li>
-										<li>
-											<a href="<?php echo base_url("artikel/kategori/pilkada") ?>">Pilkada</a>
-											
-										</li>
+										
 										
 									<!--Pages end-->
 									</ul>
@@ -134,17 +131,25 @@
 									</ul>
 								</li>
 								<li>
-									<a href="#">FEATURES</a>
+									<a href="#">Swara</a>
 									<ul class="nav-dropdown">
+										<li>
+											<a href="<?php echo base_url("artikel/kategori/feature") ?>">Feature</a>
+											
+										</li>
 										<li>
 											<a href="<?php echo base_url("artikel/kategori/humaniora") ?>">Humaniora</a>
 											
 										</li>
+										
 										<li>
 											<a href="<?php echo base_url("artikel/kategori/budaya") ?>">Budaya</a>
 											
 										</li>
-										
+										<li>
+											<a href="<?php echo base_url("artikel/kategori/komunitas") ?>">Komunitas</a>
+											
+										</li>
 										
 									<!--Pages end-->
 									</ul>

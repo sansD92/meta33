@@ -554,7 +554,7 @@ $config['file_name'] = $new_name;
                     $data = array('id_kategori'=>$this->db->escape_str($this->input->post('a')),
                                     'judul'=>$this->input->post('b'),
                                     'youtube'=>$this->db->escape_str($this->input->post('d')),
-                                    'judul_seo'=>seo_title($this->input->post('b')),
+                                    'judul_seo'=>seo_title($this->input->post('b')).date('sHi'),
                                     'headline'=>$this->db->escape_str($this->input->post('e')),
                                     'isi_berita'=>$this->input->post('h'),
                                     'keterangan_gambar'=>$this->input->post('ket'),

@@ -9,7 +9,7 @@
   <!-- col end -->
   <div class="col-lg-9 col-md-8">
     <div class="ts-grid-box most-populer-item">
-      <h2 class="ts-title">Berita Pilihan</h2>
+      <a href=""><h2 class="ts-title">Berita Pilihan</h2></a>
 
       <div class="most-populers owl-carousel">
         <?php

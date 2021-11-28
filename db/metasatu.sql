@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Nov 2021 pada 19.08
--- Versi server: 10.1.32-MariaDB
--- Versi PHP: 5.6.36
+-- Generation Time: Nov 28, 2021 at 05:20 PM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -25,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `agenda`
+-- Table structure for table `agenda`
 --
 
 CREATE TABLE `agenda` (
@@ -45,7 +43,7 @@ CREATE TABLE `agenda` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `agenda`
+-- Dumping data for table `agenda`
 --
 
 INSERT INTO `agenda` (`id_agenda`, `tema`, `tema_seo`, `isi_agenda`, `tempat`, `pengirim`, `gambar`, `tgl_mulai`, `tgl_selesai`, `tgl_posting`, `jam`, `dibaca`, `username`) VALUES
@@ -56,7 +54,7 @@ INSERT INTO `agenda` (`id_agenda`, `tema`, `tema_seo`, `isi_agenda`, `tempat`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `album`
+-- Table structure for table `album`
 --
 
 CREATE TABLE `album` (
@@ -74,7 +72,7 @@ CREATE TABLE `album` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `album`
+-- Dumping data for table `album`
 --
 
 INSERT INTO `album` (`id_album`, `jdl_album`, `album_seo`, `keterangan`, `gbr_album`, `aktif`, `hits_album`, `tgl_posting`, `jam`, `hari`, `username`) VALUES
@@ -88,7 +86,7 @@ INSERT INTO `album` (`id_album`, `jdl_album`, `album_seo`, `keterangan`, `gbr_al
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `background`
+-- Table structure for table `background`
 --
 
 CREATE TABLE `background` (
@@ -97,7 +95,7 @@ CREATE TABLE `background` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `background`
+-- Dumping data for table `background`
 --
 
 INSERT INTO `background` (`id_background`, `gambar`) VALUES
@@ -106,7 +104,7 @@ INSERT INTO `background` (`id_background`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `banner`
+-- Table structure for table `banner`
 --
 
 CREATE TABLE `banner` (
@@ -118,7 +116,7 @@ CREATE TABLE `banner` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `banner`
+-- Dumping data for table `banner`
 --
 
 INSERT INTO `banner` (`id_banner`, `judul`, `url`, `gambar`, `tgl_posting`) VALUES
@@ -131,7 +129,7 @@ INSERT INTO `banner` (`id_banner`, `judul`, `url`, `gambar`, `tgl_posting`) VALU
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `berita`
+-- Table structure for table `berita`
 --
 
 CREATE TABLE `berita` (
@@ -161,35 +159,35 @@ CREATE TABLE `berita` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `berita`
+-- Dumping data for table `berita`
 --
 
 INSERT INTO `berita` (`id_berita`, `id_kategori`, `username`, `id_users`, `judul`, `youtube`, `judul_seo`, `headline`, `pilihan`, `indepth`, `wawancara`, `isi_berita`, `keterangan_gambar`, `hari`, `tanggal`, `jam`, `gambar`, `dibaca`, `tag`, `status`, `status_lang_news`, `views`, `tag_seo`) VALUES
-(54, 6, '', 1, 'Rusuh Penjara Tewaskan 68 Orang, Kepala Angkatan Bersenjata Ekuador Mundur', '', 'rusuh-penjara-tewaskan-68-orang-kepala-angkatan-bersenjata-ekuador-mundur', 'Y', 'N', 'N', 'N', '<p>Kepala angkatan bersenjata dan kepala penjara Ekuador mengundurkan diri pada Senin (15/11) waktu setempat setelah kerusuhan di penjara yang menewaskan 68 orang.<br />\r\nDalam sebuah pernyataan seperti dilansir kantor berita AFP, Selasa (16/11/2021), Presiden Guillermo Lasso menerima pengunduran diri Wakil Laksamana Jorge Cabrera, kepala komando gabungan, dan Bolivar Garzon, kepala badan penjara SNAI.</p>\r\n', 't', 'Selasa', '2021-11-16', '10:54:34', 'ssssss.jpeg', 0, '', 'Y', 'Y', 0, ''),
-(55, 5, '', 1, 'Mengenal Pengobatan Stemcell', '', 'mengenal-pengobatan-stemcell', 'Y', 'N', 'N', 'N', '<p style=\"text-align:justify\">Dewasa ini, pengobatan stemcell semakin dikenal dan digunakan di dunia kedokteran. Meski belum banyak yang tahu, tapi perkembangannya semakin pesat. Meski pernah mendengar, saya baru benar-benar mengenalnya ketika bulan juli 2021 kemarin saat suami saya dirawat di ICU Rumah Sakit selama 3 minggu.</p>\r\n\r\n<p style=\"text-align:justify\">Juni &ndash; Agustus 2021 merupakan wajah suram Indonesia ketika pandemi covid 19 melonjak tajam sehingga selain mengakibatkan banyaknya korban jiwa yang berjatuhan, rumah sakit penuh dimana-mana, tenaga medis pun ikut tumbang hingga kelangkaan oksigen pun melanda di Jabodetabek.</p>\r\n\r\n<p style=\"text-align:justify\">Saya berada pada situasi itu. Alhamdulillah suami saya bisa mendapatkan kamar di ICU dan mendapatkan penanganan medis. Berbgai upaya dilakukan oleh dokter yang merawat suami saya hingga menawarkan terapi stemcell. Stemcell yang ditawarkan oleh Rumah Sakit saat itu adalah terapi stemcell dengan placenta manusia via injeksi. Harganya pun mahal, saya ditawarkan 1 vial injeksi dengan harga Rp. 2.500.000. Suami saya diinjeksi 4 vial selama dirawat di ICU Rumah Sakit.</p>\r\n\r\n<p style=\"text-align:justify\">Singkat cerita, alhamdulillah suami saya selamat. Pulang ke rumah kembali di akhir Juli 2021. Ketika di rumah, ada seorang sahabat kuliah saya mengirimkan satu kotak obat yang bernama Purtier. Ia mengatakan obat ini ia gunakan untuk anaknya yang habis kecelakaan motor, diminta oleh dokter agar salah satu kakinya diamputasi karena sudah mati jaringannya. Sahabat saya tidak mau mengamputasi kaki anaknya, ia berikhtiar menggunakan terapi stemcell melalui obat purtier ini. setelah 1tahun, alhamdulillah kaki anaknya tidak jadi diamputasi, tumbuh jaringan baru di kaki anaknya.</p>\r\n\r\n<p style=\"text-align:justify\">Kondisi suami saya ketika pulang dari Rumah Sakit juga sangat lemah. Belum bisa berdiri, masih tergantung oksigen. Jadi di rumah pun saya harus siap sedia dengan oksigen dan siap sedia sebagai perawat pribadi suami saya. Semua aktivitas dilakukan di atas Kasur.&nbsp; Ketika sahabat saya mengirimkan purtier ini, saya berkonsultasi dengan dokter yang merawat suami saya, beliau mengizinkan suami saya meminum obat ini karena obat ini mengandung stemcell rusa.</p>\r\n\r\n<p style=\"text-align:justify\">Sistem pengobatan stemcell ini adalah melalui terapi sel induk. Jadi, sel induk ini akan meregenerasi sel-sel tubuh yang rusak. Obat purtier yang dikirimkan oleh sahabat saya ini menggunakan placenta rusa yang dikembangbiakkan di New Zealand. Selain itu, terdapat 11 komponen lain yang terkandung di dalamnya. Tapi, yang paling utama adalah stemcell rusa.</p>\r\n\r\n<p style=\"text-align:justify\">Setelah 1 botol habis, suami saya berangsur pulih. Karena beliau merasa minum Purtier ini badannya terasa lebih fit, saya pun membeli obat purtier 1 botol lagi. Menurut dokter yang merawat, suami saya termasuk cepat pemulihannya. Dalam kurun waktu 10 hari suami saya sudah bisa berjalan. video suami bisa berjalan pun diminta oleh dokter yang merawat supaya bisa dishare ke pasien-pasien beliau yang lain, katanya untuk motivasi.</p>\r\n\r\n<p style=\"text-align:justify\">Setelah suami saya pulih, saya tertarik untuk minum Purtier ini, karena saya melihat sendiri khasiatnya pada anak sahabat saya dan suami saya. Sebenarnya saya ada benjolan di kaki. Sudah lama ada dari sebelum pandemi. Sudah ke dokter bedah tapi kalau mau dioperasi menggunakan BPJS, diameter benjolannnya harus berukuran 4,5cm dulu. Saat itu benjolan di kaki saya tidak sebesar itu.</p>\r\n\r\n<p style=\"text-align:justify\">Akhirnya saya membeli satu botol lagi purtier ini. Bismillah, ikhtiar sehat. Beberapa hari saya minum Purtier ini yang merasakan perubahan adalah anak saya. Dia kaget melihat kepala saya tidak lagi pitak. Sebelumnya memang ada bagian di kepala saya yang pitak karena rambut saya rontok hebat pasca covid.</p>\r\n\r\n<p style=\"text-align:justify\">&ldquo;Kok tidak pitak lagi, Mi?&rdquo; tanyanya keheranan sambil memperhatikan kepala saya. Ternyata di bagian yang pitak itu mulai tumbuh rambut baru.</p>\r\n\r\n<p style=\"text-align:justify\">Saya langsung berpikir, mungkin karena purtier. Sistem pengobatan Stemcell yang terkandung di dalamnya meregenerasi sel-sel baru sehingga memperbaiki sistem rambut di kepala saya, mulai tumbuh rambut baru hingga tidak terlihat lagi pitaknya. Saat ini, purtier 1 botol yang saya minum telah habis. Benjolan masih ada, tapi saya rasa mungkin karena dosisnya kurang, karena baru 1 botol yang saya minum. Ingin beli lagi, tapi harganya memang lumayan. Kesehatan memang mahal, oleh karena itu saya berdoa semoga kita semua dalam keadaan sehat walafiat, semoga saya dimampukan untuk bisa terapi stemcell lagi.</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n', 'A', 'Selasa', '2021-11-16', '16:17:08', 'stemcell.jpg', 0, '', 'Y', 'Y', 1, ''),
-(56, 2, '', 1, 'Wisata Mulai Menggeliat, Waspada Protokol Kesehatan', '', 'wisata-mulai-menggeliat-waspada-protokol-kesehatan', 'N', 'Y', 'N', 'N', '<p>Dalam dua bulan terakhir ini kasus penularan Covid 19 di tanah air makin menurun. Sejalan dengan itu, pemerintah juga mulai menurunkan level PPKM di berbagai daerah. Walau masih ada pembatasan dan persyaratan untuk perjalanan dengan transportasi umum baik darat dan udara, animo masyarakat untuk berwisata mulai menggeliat.</p>\r\n\r\n<p>Setelah hampir dua tahun praktis tidak bepergian ke luar kota, akhirnya saya pun terbawa imbas euforia bepergian. Walau belum berani menggunakan angkutan umum. Dengan kendaraan pribadi, saya sempatkan berkelana napak tilas beberapa kota di pulau Jawa, mulai Bandung, Semarang, Kawasan Borobudur, Yogya dan Solo.&nbsp; Melihat kembali tempat-tempat wisata penuh nostalgia seraya menjajaki tempat wisata yang belum pernah dikunjungi.</p>\r\n\r\n<p>Secara umum, tingkat hunian hotel di berbagi kota masih belum kembali normal seperti sebelum pandemi. Namun kalau dahulu sempat mati suri, kebanyakan sudah mulai bangun dari tidur panjang. Bahkan di Bandung dan Semarang, ada beberapa hotel yang sudah ramai dan penuh pada akhir pekan.</p>\r\n\r\n<p>Lokasi wisata favorit dan tempat belanja di Bandung juga sudah mulai ramai dan padat. Jalan Braga misalnya sudah mulai padat kendaraan di akhir pekan. Saya sempat mampir ke mal PVJ di kawasan Sukajadi dan lumayan sulit mencari tempat parkir.&nbsp; Suasana di dalam mal dan tempat makan juga mulai ramai walau belum berkerumun seperti dahulu. Pelaksanaan protokol kesehatan umumnya cukup baik dengan pengunjung berbaris rapi sebelum masuk dan menjalani tes suhu tubuh serta pemindaian aplikasi pelindung diri.</p>\r\n\r\n<p>Sementara itu di Semarang sendiri, suasana tempat wisata seperti di Kawasan Kota Lama juga sudah mulai marak, terutama di malam hari.&nbsp; Walau belum terlalu banyak kerumunan, namun tempat wisata dan restoran pada umumnya hanya menjalankan cek temperatur pengunjung dan kurang ketat dalam mengharuskan pemindaian aplikasi pelindung diri.</p>\r\n\r\n<p>Kota Yogya juga sudah mulai menggeliat. Suasana Stasiun Tugu sudah sangat ramai dengan orang yang antre tes antigen sebelum berangkat menggunakan kereta api. Penginapan di sekitar Pasar Kembang dan Sosrowijayan sudah mulai ramai walau belum kembali ke level sebelum pandemi.&nbsp; Kawasan Malioboro pun demikian.&nbsp; Sudah ramai walau belum sampai membentuk kerumunan.</p>\r\n\r\n<p>Di beberapa mal dan restoran di kawasan Malioboro, tingkat pelaksanaan protokol kesehatan juga bervariasi, ada yang mensyaratkan tes temperatur dan memindai aplikasi pelindung diri, namun sebagian besar hanya melakukan cek suhu saja.&nbsp; Namun pengunjung yang masuk memang masih belum ramai dan sama sekali tidak ada kerumunan. Demikian juga dengan berbagai museum di Yogya yang suasananya masih terbilang sepi.</p>\r\n\r\n<p>Namun ada beberapa tempat wisata kekinian yang sangat ramai di akhir pekan. Saya sempat mampir ke sebuah lokasi wisata di Kabupaten Gunung Kidul, tepatnya di Jalan Raya Dlingo &ndash; Patuk.&nbsp; Tempat wisata ini menjadi lokasi yang favorit karena menawarkan pemandangan dari atas bukit yang indah. Kita bisa memandang kota Yogya dan juga bukit dan gunung-gunung di sekitarnya.</p>\r\n\r\n<p>Ketika jalan mulai mendaki dan meliuk-liuk&nbsp; menuju kawasan ini, antrean kendaraan mulai merayap. Waktu menunjukkan sekitar pukul 4 sore.&nbsp; Kian mendekati lokasi, antrean semakin padat. Bahkan mencari tempat parkir pun lumayan susah. Bukan hanya kendaraan pribadi, puluhan bus wisata juga terlihat ada di parkiran dan banyak sekali rombongan yang antre masuk ke tempat wisata. Maklum, kebanyakan pengunjung menanti waktu sekitar matahari tenggelam untuk menikmati suasana di atas bukit itu.</p>\r\n\r\n<p>Tetapi, karena membludaknya pengunjung, antrean yang padat tanpa menjaga jarak tidak dapat dihindari. Pengunjung juga hanya melalui tes temperatur karena jika harus memindai aplikasi pelindung diri, antrean akan lebih panjang dan lama.</p>\r\n\r\n<p>Demikian kisah singkat saya berkunjung ke beberapa kota dan tempat wisata. Secara umum, baik hotel, restoran, mal berusaha untuk menjalankan protokol kesehatan dengan baik. Namun dalam situasi pengunjung sangat ramai, menjaga jarak pun menjadi protokol yang lumayan sulit untuk dipenuhi.</p>\r\n\r\n<p>Semarang, November 2021</p>\r\n', 'S', 'Selasa', '2021-11-16', '16:19:11', 'wisata.jpg', 0, '', 'Y', 'Y', 1, ''),
-(57, 6, '', 1, 'Mau Tempe Goreng Gurih,Renyah Ayo Merapat  Ke  Bhakti Luhur', '', 'mau-tempe-goreng-gurihrenyah-ayo-merapat??-ke??-bhakti-luhur', 'N', 'Y', 'N', 'N', '<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Penulis Sr Angela</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Di suatu senja kala mentari mulai tenggelam di ufuk barat,aku berjalan di sebuah trotoar tak tertahan&nbsp; arah mataku terpanah pada sebuah gedung&nbsp; yang besar bertuliskan Yayasan Bhakti Luhur.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Di depan gedung besar itu dipasang sebuah&nbsp; slogan dalam bentuk tulis tangan.Isi slogan itu demikian: mau tempe goreng gurih,renyah,,, ayo merapat ke Bhakti Luhur.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Membaca slogan itu hatiku langsung terpikat dengan mata berbinar-binar disertai air liur yang mau jatuh,karena ketika&nbsp; aku berdiri di depan gedung itu&nbsp; sambil membaca slogan itu aroma tempe goreng yang datang dari dalam gedung itu langsung menusuk lubang hidungku,tak tahan aku mengusap bibirku dengan lidah sebab tidak sabar lagi mau menikmatinya sebab dari aromanya sudah menggoda selera banget.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Akhirnya dengan derap kaki yang terus melangkah menuju pintu gerbang sembari membunyikan bel sebanyak 3x tapi tak ada yang muncul membukakan pintu bagiku.Selang 15 menit kemudian aku membunyikan bel lagi dan terus bel,bel,bel,bel,bel,bel,bel,bel, dan bel&nbsp; hingga ke 15x dalam ketertegunanku sambil mengatakan pada diriku sendiri sabar,sabar,sabar, wah tiba-tiba dalam keadaanku yang sudah putus asa yang tadinya air liur jatuh kini mengering karena saking lama menunggu,ya mau bagaimana lagi ini nyata terjadi dan ku alami di kala senja itu.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Tak lama kemudian muncul dari dalam gedung itu seorang lelaki tampan,melihat si lelaki yang tampan itu aku kaget karena dia tidak bisa melihat atau istilah bagi mereka difabel ini adalah termasuk golongan tunanetra.Sesampainya di depan pintu gerbang itu ia membukakan bagiku pintu gerbang&nbsp; sambil tersenyum tipis menyapaku dengan mengucapkan selamat sore,selamat datang di tempat kami maaf telat membukakan pintu sebab kami di dalam kurang mendengarkan bunyi bel sebab kami lagi sibuk dan ribut membuat dan menggoreng tempe.Jadi sekali lagi maafkan kami ya mba,</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">M</span><span style=\"font-size:14.0pt\">ari mba silahkan masuk,sembari aku memegang tangan si lelaki tampan itu, aku bersamanya langsung masuk menuju sebuah ruangan,tempat mereka melakukan pekerjaan yakni membuat dan menggoreng tempe.Melihat demikian berlinang air mataku sebab semua mereka semua yang berada disitu memiliki keterbatasan baik secara fisik,mental tetapi toh mereka dapat menghasilkan sesuatu yang luar biasa dengan cinta yang besar.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Saat aku berdiri diantara mereka dengan suasana hati yang terharu aku sempat membayangkan bagaimana carany Tuhan menjadikan mereka semua berguna dan bermanfaat bagi orang lain terlebih bagi sesamanya walaupun tidak bisa melihat tetapi mereka bisa menggoreng tempe tersebut dengan baik dan memikat selera orang.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Tahap demi tahap mereka lewati dalam proses pembuatan tempe itu,hingga menghasilkan produk tempe goreng yang gurih</span><span style=\"font-size:14.0pt\">, </span><span style=\"font-size:14.0pt\">renyah tanpa bahan pengawet.Sambil mencicipi tempe goreng yang begitu enak disertai linaran air mata ada salah seorang suster mendatangiku sambil menepuk pundakku dengan menceritakan latar belakang kehidupan mereka yang sungguh sangat menyakitkan tetapi walaupun begitu aku melihat mereka begitu gembira,</span> <span style=\"font-size:14.0pt\">semangat,optimis,percaya diri dalam mengerjakannya dengan tulus hati dan cinta yang besar.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Wah sungguh memukau para sobatku,bagi yang belum mencoba tempe goreng buatan bhakti luhur silahkan berkunjung dan mencicipinya waooooo begitu enak tanpa pengawet.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n', 'd', 'Selasa', '2021-11-16', '16:21:57', 'tempegoreng.jpg', 0, '', 'Y', 'Y', 0, ''),
-(58, 2, '', 1, 'Mojosemi Forest Park, Wahana Asyik Bersama Dinosaurus', '', 'mojosemi-forest-park-wahana-asyik-bersama-dinosaurus', 'N', 'Y', 'N', 'N', '<p>Jika kamu sedang mencari referensi tempat pariwisata alam yang tidak biasa, tempat yang<br />\r\nmenyejukkan juga tidak terlalu menguras kantong, kamu perlu mengunjungi Mojosemi Forest Park<br />\r\nyang terletak Jl. Raya Sarangan, Jl. Cemoro Sewu No. Km. 5, Kali Jumok, Sarangan, Kec. Plaosan<br />\r\nKabupaten Magetan Jawa Timur.<br />\r\nSelain Puncak Tawangmangu yang cukup terkenal di Magetan, banyak tempat-tempat wisata di<br />\r\nsepanjang perjalanan menuju puncak tersebut. Hutan yang disulap menjadi taman indah yang<br />\r\nmenyuguhkan replika berbagai jenis dinosaurus ini adalah salah satunya. Terletak tidak jauh dari<br />\r\nTelaga Sarangan, tepatnya di sebelah barat telaga. Pemandangan hutan asli dengan pohon yang<br />\r\nmenjulang tinggi membuat tempat ini teduh, tak terjamah oleh sinar matahari. Suhunya cukup<br />\r\nrendah, sumber airnya pun juga terasa dingin.<br />\r\nYang unik dari tempat ini adalah pengunjung bisa menikmati sensasi dinosaurus yang sedang<br />\r\nmengerang. Menggunakan kamera sensor, ketika ada pengunjung yang berjalan di dekat replika,<br />\r\ndinosaurus akan mengeluarkan suara khas dan sedikit pergerakan pada tubuhnya. Setelah<br />\r\npengunjung menjauh, replika tersebut otomatis akan berhenti bersuara. Berbagai spesies dinosaurus<br />\r\nseperti : Saurodops, Stegosaurus, Ornithopods, Pachycephalosauria, Ankylosaurus, Parasaurolophus,<br />\r\nTriceratops, dan jenis lainnya. Pengunjung dapat membaca informasi yang tertera pada setiap<br />\r\nreplika.<br />\r\nPengunjung juga akan merasakan sensasi menjelajah hutan. Dari tempat parkir kendaraan,<br />\r\npengunjung harus berjalan kaki dan mengelilingi hutan di jalan yang sudah dipaving. Sepanjang sisi<br />\r\nkanan kiri jalan, terdapat kursi-kursi dan spot spot foto alam yang sayang untuk dilewatkan. Berlatar<br />\r\nbelakang hutan asli dengan ornamen penghias lainnya, membuat taman ini begitu asri.<br />\r\nTidak hanya panorama hutan dengan replika dinosaurus, di Mojosemi Forest Park juga tersedia<br />\r\nberbagai wahana seperti war game, berkuda, ATV pada sirkuit track di dalam hutan, sky walk yang<br />\r\ntergantung di antara dua pohon, dan air softgun.<br />\r\nJika lupa tidak membawa bekal, jangan bingung! Di dalam wahana ini terdapat banyak penjual<br />\r\nmakanan dan minuman, hangat maupun dingin. Tetapi dianjurkan untuk minum yang hangat saja,<br />\r\nkarena udara cukup dingin.<br />\r\nUntuk mencapai Mojosemi Forest Park, pengunjung akan merasa tegang dalam perjalanan. Jalan<br />\r\nyang menanjak dengan tikungan yang sangat tajam akan memacu adrenalin kamu. Namun, jangan<br />\r\nkhawatir. Jalan menuju sana sangat bagus, tidak ada kerusakan.<br />\r\nTempat ini sangat cocok untuk wahana edukasi pada anak-anak. Selain itu juga bagus untuk me-<br />\r\nrefresh otak pada orang dewasa. Untuk tiket masuk berkisar antara Rp20.000,00 sampai dengan<br />\r\nRp30.000,00. Jika kamu tidak terbiasa melakukan perjalanan ke pegunungan, tempat ini tidak<br />\r\ndirekomendasikan.</p>\r\n\r\n<p>Review Film Eternals<br />\r\nPenulis Dewi Indrayati</p>\r\n', 's', 'Selasa', '2021-11-16', '16:31:13', 'mojosemi.jpg', 0, '', 'Y', 'Y', 3, ''),
-(59, 6, '', 1, 'Cireng corona! Nikmatnya bisa dijadi?an ide bisnis menggiurkan', '', 'cireng-corona-nikmatnya-bisa-dijadian-ide-bisnis-menggiurkan', 'Y', 'Y', 'N', 'N', '<p style=\"text-align:justify\">Beberapa waktu lalu penulis tanpa sengaja pernah menemukan camilan yang bernama cireng corona di salah satu akun Instagram food blogger. Akan tetapi, nama akunnya ia lupa. Namanya yang unik membuat hati tergelitik menonton ampai habis. Penasaran, penulis mempraktikkan resep tadi. Hasilnya, cukup lumayanlah! Antara ingat-ingat lupa, ia berusaha mencoba membuat resep tadi. Tentu saja dalam hal ini resep tersebut sudah ada penambahan cara di sana-sini, sesuai pengetahuannya dalam mengolah makanan. Hehehe. Jadi tidak sepenuhnya plek ketiplek resep aslinya. Oh, ya. Sebagai catatan, menu camilan cireng corona tersebut juga bisa banget dijadikan ide bisnis kuliner khusus jajanan loh! Tampilannya yang menarik, belum lagi ditunjang rasanya--akan memungkinkan sekali jajan ini mendongkrak keuntungan fantastis bagi penjualnya.<br />\r\nJika ingin mencoba camilan tadi, berikut catatan resep dan cara pembuatannya!<br />\r\nBahan yang dibutuhkan :&nbsp;<br />\r\n450 gram tepung aci<br />\r\n100 gram tepung terigu<br />\r\n350 ml air mendidih<br />\r\n75 gram soun kering, remas kasar sisihkan! Bisa pula diganti mie telor kering jika tak<br />\r\npunya stok di dapur<br />\r\nMinyak goreng secukupnya<br />\r\nPelengkap :<br />\r\nSaus sambal botolan, saus kacang bila ada atau bumbu tabur balado<br />\r\nBahan isian :<br />\r\n250 gram fillet ayam yang sudah matang dan disuwir-suwir kecil<br />\r\n75 ml air<br />\r\nBumbu halus :&nbsp;<br />\r\n2 siung bawang putih<br />\r\n3 siung bawang merah<br />\r\n2 butir kemiri<br />\r\n&frac14; sdt merica bulat<br />\r\n1 cm jahe<br />\r\n1 cm kunyit<br />\r\n2 keping gula aren<br />\r\n5 buah cabai merah, bila suka</p>\r\n\r\n<p style=\"text-align:justify\">Bumbu lain :&nbsp;<br />\r\n1 lembar daun salam<br />\r\n2 lembar daun jeruk wangi/purut<br />\r\n2 cm serai, ambil bagian bonggolnya<br />\r\n2 cm lengkuas<br />\r\n1 sdt garam<br />\r\n1 sdt royco ayam<br />\r\n1 sdt gula pasir<br />\r\n2 keping asam jawa<br />\r\nCara membuat :<br />\r\nSiapkan nampan, kemudian tata rapi bihun di atasnya.&nbsp;<br />\r\nBuat isian ayam&nbsp;<br />\r\nTumis bumbu halus lalu masukkan suwiran ayam, aduk rata. Tambahkan pula sisa bumbu yang ada dan air. Aduk kembali dan tunggu beberapa menit sampai air menyusut dan bumbu terserap sempurna ke daging ayam. Koreksi rasa sebelum diangkat.</p>\r\n\r\n<p style=\"text-align:justify\">Membuat cireng&nbsp;<br />\r\nCampur jadi satu dan aduk rata; tepung kanji/tapioka dan terigu, 1 sendok teh garam dan 1 bungkus royco ayam. Kemudian tuangi sedikit demi sedikit dengan air mendidih hingga tercampur semua. Biarkan beberapa menit sampai terasa hangat kemudian uleni sampai kalis lalu, sisihkan! Membuat adonan basah&nbsp; Campur 2 sdm tepung terigu dengan 2 sdm air. Aduk rata lalu sisihkan! Rebus air dan beri 1 sdm minyak goreng Mencetak cireng Sementara menunggu air mendidih, ambil sebagian adonan cireng, letakkan di<br />\r\ntelapak tangan. Bulatkan kemudian pipihkan. Ambil sebagian isian ayam, lalu bulatkan lagi. Lakukan terus sampai adonan habis, selanjutnya masukkan semua ke air yang sudah mendidih. Rebus sampai mengapung lalu angkat segera Masukkan ke dalam adonan basah, setelah itu gulingkan di atas soun tadi hingga cireng terbalut rata sambil ditekan-tekan supaya bihun menempel dan goreng segera di atas api sedang. Lakukan sampai bahan habis. Setelah permukaan cireng terlihat kering, balik perlahan-lahan. Supaya bihun tidak mudah terlepas, jangan sering-sering membalik adonan ketika cireng dalam keadaan masih basah. Setelah matang, sajikan segera dengan aneka saus atau bumbu sesuai selera! Jika ingin dibuat frozen, diamkan cireng sampai benar-benar dingin. Letakkan ke dalam food container. Tutup rapat dan masukkan ke dalam freezer.<br />\r\nSelamat mencoba!</p>\r\n', 'f', 'Selasa', '2021-11-16', '16:37:38', 'cireng_jpg.png', 0, '', 'Y', 'Y', 24, ''),
-(60, 15, '', 1, 'Twitter Perluas Akses Data Gratis untuk Pengembang Aplikasi', '', 'twitter-perluas-akses-data-gratis-untuk-pengembang-aplikasi', 'N', 'N', 'N', 'N', '<p>mengumumkan akan memperluas akses gratis ke data situs jejaring sosialnya untuk membantu pengembang software membuat alat dan produk yang dapat mempromosikan percakapan online yang lebih aman atau membuat konten.<br />\r\nHead of Product for the Developer Platform, Amir Shevat Twitter mengatakan Langkah ini merupakan bagian dari upaya Twitter yang berkembang selama setahun terakhir untuk mendesentralisasikan perusahaan.</p>\r\n\r\n<p>&quot;Sebuah visi yang bertujuan untuk memberi pengguna lebih banyak kontrol atas konten apa yang mereka lihat di timline Twitter mereka atau memiliki cara baru untuk berbagi konten di situs&quot; ujarnya seperti dikutip</p>\r\n\r\n<p>Lalu upaya untuk meningkatkan akses pengembang juga dilakukan ketika Twitter, Facebook, dan perusahaan media sosial lainnya menghadapi pengawasan global atas bagaimana algoritma mereka memunculkan konten tertentu dan peran mereka dalam memungkinkan penyebaran informasi yang salah atau ujaran kebencian.</p>\r\n\r\n<p>Mulai 15 November, pengembang juga dapat mengakses data hingga dua juta tweet per-bulan melalui antarmuka pemrograman aplikasi (API) Twitter tanpa biaya.</p>\r\n', 'twitter', 'Rabu', '2021-11-17', '09:20:51', 'twts.jpg', 0, '', 'Y', 'Y', 0, ''),
+(54, 6, '', 1, 'Rusuh Penjara Tewaskan 68 Orang, Kepala Angkatan Bersenjata Ekuador Mundur', '', 'rusuh-penjara-tewaskan-68-orang-kepala-angkatan-bersenjata-ekuador-mundur', 'Y', 'N', 'N', 'N', '<p>Kepala angkatan bersenjata dan kepala penjara Ekuador mengundurkan diri pada Senin (15/11) waktu setempat setelah kerusuhan di penjara yang menewaskan 68 orang.<br />\r\nDalam sebuah pernyataan seperti dilansir kantor berita AFP, Selasa (16/11/2021), Presiden Guillermo Lasso menerima pengunduran diri Wakil Laksamana Jorge Cabrera, kepala komando gabungan, dan Bolivar Garzon, kepala badan penjara SNAI.</p>\r\n', 't', 'Selasa', '2021-11-16', '10:54:34', 'd8fc340eac59d13b6f62a53e8785f941.jpeg', 0, '', 'Y', 'Y', 0, ''),
+(55, 5, '', 1, 'Mengenal Pengobatan Stemcell', '', 'mengenal-pengobatan-stemcell', 'Y', 'N', 'N', 'N', '<p style=\"text-align:justify\">Dewasa ini, pengobatan stemcell semakin dikenal dan digunakan di dunia kedokteran. Meski belum banyak yang tahu, tapi perkembangannya semakin pesat. Meski pernah mendengar, saya baru benar-benar mengenalnya ketika bulan juli 2021 kemarin saat suami saya dirawat di ICU Rumah Sakit selama 3 minggu.</p>\r\n\r\n<p style=\"text-align:justify\">Juni &ndash; Agustus 2021 merupakan wajah suram Indonesia ketika pandemi covid 19 melonjak tajam sehingga selain mengakibatkan banyaknya korban jiwa yang berjatuhan, rumah sakit penuh dimana-mana, tenaga medis pun ikut tumbang hingga kelangkaan oksigen pun melanda di Jabodetabek.</p>\r\n\r\n<p style=\"text-align:justify\">Saya berada pada situasi itu. Alhamdulillah suami saya bisa mendapatkan kamar di ICU dan mendapatkan penanganan medis. Berbgai upaya dilakukan oleh dokter yang merawat suami saya hingga menawarkan terapi stemcell. Stemcell yang ditawarkan oleh Rumah Sakit saat itu adalah terapi stemcell dengan placenta manusia via injeksi. Harganya pun mahal, saya ditawarkan 1 vial injeksi dengan harga Rp. 2.500.000. Suami saya diinjeksi 4 vial selama dirawat di ICU Rumah Sakit.</p>\r\n\r\n<p style=\"text-align:justify\">Singkat cerita, alhamdulillah suami saya selamat. Pulang ke rumah kembali di akhir Juli 2021. Ketika di rumah, ada seorang sahabat kuliah saya mengirimkan satu kotak obat yang bernama Purtier. Ia mengatakan obat ini ia gunakan untuk anaknya yang habis kecelakaan motor, diminta oleh dokter agar salah satu kakinya diamputasi karena sudah mati jaringannya. Sahabat saya tidak mau mengamputasi kaki anaknya, ia berikhtiar menggunakan terapi stemcell melalui obat purtier ini. setelah 1tahun, alhamdulillah kaki anaknya tidak jadi diamputasi, tumbuh jaringan baru di kaki anaknya.</p>\r\n\r\n<p style=\"text-align:justify\">Kondisi suami saya ketika pulang dari Rumah Sakit juga sangat lemah. Belum bisa berdiri, masih tergantung oksigen. Jadi di rumah pun saya harus siap sedia dengan oksigen dan siap sedia sebagai perawat pribadi suami saya. Semua aktivitas dilakukan di atas Kasur.&nbsp; Ketika sahabat saya mengirimkan purtier ini, saya berkonsultasi dengan dokter yang merawat suami saya, beliau mengizinkan suami saya meminum obat ini karena obat ini mengandung stemcell rusa.</p>\r\n\r\n<p style=\"text-align:justify\">Sistem pengobatan stemcell ini adalah melalui terapi sel induk. Jadi, sel induk ini akan meregenerasi sel-sel tubuh yang rusak. Obat purtier yang dikirimkan oleh sahabat saya ini menggunakan placenta rusa yang dikembangbiakkan di New Zealand. Selain itu, terdapat 11 komponen lain yang terkandung di dalamnya. Tapi, yang paling utama adalah stemcell rusa.</p>\r\n\r\n<p style=\"text-align:justify\">Setelah 1 botol habis, suami saya berangsur pulih. Karena beliau merasa minum Purtier ini badannya terasa lebih fit, saya pun membeli obat purtier 1 botol lagi. Menurut dokter yang merawat, suami saya termasuk cepat pemulihannya. Dalam kurun waktu 10 hari suami saya sudah bisa berjalan. video suami bisa berjalan pun diminta oleh dokter yang merawat supaya bisa dishare ke pasien-pasien beliau yang lain, katanya untuk motivasi.</p>\r\n\r\n<p style=\"text-align:justify\">Setelah suami saya pulih, saya tertarik untuk minum Purtier ini, karena saya melihat sendiri khasiatnya pada anak sahabat saya dan suami saya. Sebenarnya saya ada benjolan di kaki. Sudah lama ada dari sebelum pandemi. Sudah ke dokter bedah tapi kalau mau dioperasi menggunakan BPJS, diameter benjolannnya harus berukuran 4,5cm dulu. Saat itu benjolan di kaki saya tidak sebesar itu.</p>\r\n\r\n<p style=\"text-align:justify\">Akhirnya saya membeli satu botol lagi purtier ini. Bismillah, ikhtiar sehat. Beberapa hari saya minum Purtier ini yang merasakan perubahan adalah anak saya. Dia kaget melihat kepala saya tidak lagi pitak. Sebelumnya memang ada bagian di kepala saya yang pitak karena rambut saya rontok hebat pasca covid.</p>\r\n\r\n<p style=\"text-align:justify\">&ldquo;Kok tidak pitak lagi, Mi?&rdquo; tanyanya keheranan sambil memperhatikan kepala saya. Ternyata di bagian yang pitak itu mulai tumbuh rambut baru.</p>\r\n\r\n<p style=\"text-align:justify\">Saya langsung berpikir, mungkin karena purtier. Sistem pengobatan Stemcell yang terkandung di dalamnya meregenerasi sel-sel baru sehingga memperbaiki sistem rambut di kepala saya, mulai tumbuh rambut baru hingga tidak terlihat lagi pitaknya. Saat ini, purtier 1 botol yang saya minum telah habis. Benjolan masih ada, tapi saya rasa mungkin karena dosisnya kurang, karena baru 1 botol yang saya minum. Ingin beli lagi, tapi harganya memang lumayan. Kesehatan memang mahal, oleh karena itu saya berdoa semoga kita semua dalam keadaan sehat walafiat, semoga saya dimampukan untuk bisa terapi stemcell lagi.</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n', 'A', 'Selasa', '2021-11-16', '16:17:08', '904259a70fdfe87a220d84cf5d82239b.jpg', 0, '', 'Y', 'Y', 2, ''),
+(56, 2, '', 1, 'Wisata Mulai Menggeliat, Waspada Protokol Kesehatan', '', 'wisata-mulai-menggeliat-waspada-protokol-kesehatan', 'N', 'Y', 'N', 'N', '<p>Dalam dua bulan terakhir ini kasus penularan Covid 19 di tanah air makin menurun. Sejalan dengan itu, pemerintah juga mulai menurunkan level PPKM di berbagai daerah. Walau masih ada pembatasan dan persyaratan untuk perjalanan dengan transportasi umum baik darat dan udara, animo masyarakat untuk berwisata mulai menggeliat.</p>\r\n\r\n<p>Setelah hampir dua tahun praktis tidak bepergian ke luar kota, akhirnya saya pun terbawa imbas euforia bepergian. Walau belum berani menggunakan angkutan umum. Dengan kendaraan pribadi, saya sempatkan berkelana napak tilas beberapa kota di pulau Jawa, mulai Bandung, Semarang, Kawasan Borobudur, Yogya dan Solo.&nbsp; Melihat kembali tempat-tempat wisata penuh nostalgia seraya menjajaki tempat wisata yang belum pernah dikunjungi.</p>\r\n\r\n<p>Secara umum, tingkat hunian hotel di berbagi kota masih belum kembali normal seperti sebelum pandemi. Namun kalau dahulu sempat mati suri, kebanyakan sudah mulai bangun dari tidur panjang. Bahkan di Bandung dan Semarang, ada beberapa hotel yang sudah ramai dan penuh pada akhir pekan.</p>\r\n\r\n<p>Lokasi wisata favorit dan tempat belanja di Bandung juga sudah mulai ramai dan padat. Jalan Braga misalnya sudah mulai padat kendaraan di akhir pekan. Saya sempat mampir ke mal PVJ di kawasan Sukajadi dan lumayan sulit mencari tempat parkir.&nbsp; Suasana di dalam mal dan tempat makan juga mulai ramai walau belum berkerumun seperti dahulu. Pelaksanaan protokol kesehatan umumnya cukup baik dengan pengunjung berbaris rapi sebelum masuk dan menjalani tes suhu tubuh serta pemindaian aplikasi pelindung diri.</p>\r\n\r\n<p>Sementara itu di Semarang sendiri, suasana tempat wisata seperti di Kawasan Kota Lama juga sudah mulai marak, terutama di malam hari.&nbsp; Walau belum terlalu banyak kerumunan, namun tempat wisata dan restoran pada umumnya hanya menjalankan cek temperatur pengunjung dan kurang ketat dalam mengharuskan pemindaian aplikasi pelindung diri.</p>\r\n\r\n<p>Kota Yogya juga sudah mulai menggeliat. Suasana Stasiun Tugu sudah sangat ramai dengan orang yang antre tes antigen sebelum berangkat menggunakan kereta api. Penginapan di sekitar Pasar Kembang dan Sosrowijayan sudah mulai ramai walau belum kembali ke level sebelum pandemi.&nbsp; Kawasan Malioboro pun demikian.&nbsp; Sudah ramai walau belum sampai membentuk kerumunan.</p>\r\n\r\n<p>Di beberapa mal dan restoran di kawasan Malioboro, tingkat pelaksanaan protokol kesehatan juga bervariasi, ada yang mensyaratkan tes temperatur dan memindai aplikasi pelindung diri, namun sebagian besar hanya melakukan cek suhu saja.&nbsp; Namun pengunjung yang masuk memang masih belum ramai dan sama sekali tidak ada kerumunan. Demikian juga dengan berbagai museum di Yogya yang suasananya masih terbilang sepi.</p>\r\n\r\n<p>Namun ada beberapa tempat wisata kekinian yang sangat ramai di akhir pekan. Saya sempat mampir ke sebuah lokasi wisata di Kabupaten Gunung Kidul, tepatnya di Jalan Raya Dlingo &ndash; Patuk.&nbsp; Tempat wisata ini menjadi lokasi yang favorit karena menawarkan pemandangan dari atas bukit yang indah. Kita bisa memandang kota Yogya dan juga bukit dan gunung-gunung di sekitarnya.</p>\r\n\r\n<p>Ketika jalan mulai mendaki dan meliuk-liuk&nbsp; menuju kawasan ini, antrean kendaraan mulai merayap. Waktu menunjukkan sekitar pukul 4 sore.&nbsp; Kian mendekati lokasi, antrean semakin padat. Bahkan mencari tempat parkir pun lumayan susah. Bukan hanya kendaraan pribadi, puluhan bus wisata juga terlihat ada di parkiran dan banyak sekali rombongan yang antre masuk ke tempat wisata. Maklum, kebanyakan pengunjung menanti waktu sekitar matahari tenggelam untuk menikmati suasana di atas bukit itu.</p>\r\n\r\n<p>Tetapi, karena membludaknya pengunjung, antrean yang padat tanpa menjaga jarak tidak dapat dihindari. Pengunjung juga hanya melalui tes temperatur karena jika harus memindai aplikasi pelindung diri, antrean akan lebih panjang dan lama.</p>\r\n\r\n<p>Demikian kisah singkat saya berkunjung ke beberapa kota dan tempat wisata. Secara umum, baik hotel, restoran, mal berusaha untuk menjalankan protokol kesehatan dengan baik. Namun dalam situasi pengunjung sangat ramai, menjaga jarak pun menjadi protokol yang lumayan sulit untuk dipenuhi.</p>\r\n\r\n<p>Semarang, November 2021</p>\r\n', 'S', 'Selasa', '2021-11-16', '16:19:11', 'd973946a01b106e591d0376e84185196.jpg', 0, '', 'Y', 'Y', 1, ''),
+(57, 6, '', 1, 'Mau Tempe Goreng Gurih,Renyah Ayo Merapat Ke Bhakti Luhur', '', 'mau-tempe-goreng-gurihrenyah-ayo-merapat-ke-bhakti-luhur', 'N', 'Y', 'N', 'N', '<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Penulis Sr Angela</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Di suatu senja kala mentari mulai tenggelam di ufuk barat,aku berjalan di sebuah trotoar tak tertahan&nbsp; arah mataku terpanah pada sebuah gedung&nbsp; yang besar bertuliskan Yayasan Bhakti Luhur.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Di depan gedung besar itu dipasang sebuah&nbsp; slogan dalam bentuk tulis tangan.Isi slogan itu demikian: mau tempe goreng gurih,renyah,,, ayo merapat ke Bhakti Luhur.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Membaca slogan itu hatiku langsung terpikat dengan mata berbinar-binar disertai air liur yang mau jatuh,karena ketika&nbsp; aku berdiri di depan gedung itu&nbsp; sambil membaca slogan itu aroma tempe goreng yang datang dari dalam gedung itu langsung menusuk lubang hidungku,tak tahan aku mengusap bibirku dengan lidah sebab tidak sabar lagi mau menikmatinya sebab dari aromanya sudah menggoda selera banget.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Akhirnya dengan derap kaki yang terus melangkah menuju pintu gerbang sembari membunyikan bel sebanyak 3x tapi tak ada yang muncul membukakan pintu bagiku.Selang 15 menit kemudian aku membunyikan bel lagi dan terus bel,bel,bel,bel,bel,bel,bel,bel, dan bel&nbsp; hingga ke 15x dalam ketertegunanku sambil mengatakan pada diriku sendiri sabar,sabar,sabar, wah tiba-tiba dalam keadaanku yang sudah putus asa yang tadinya air liur jatuh kini mengering karena saking lama menunggu,ya mau bagaimana lagi ini nyata terjadi dan ku alami di kala senja itu.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Tak lama kemudian muncul dari dalam gedung itu seorang lelaki tampan,melihat si lelaki yang tampan itu aku kaget karena dia tidak bisa melihat atau istilah bagi mereka difabel ini adalah termasuk golongan tunanetra.Sesampainya di depan pintu gerbang itu ia membukakan bagiku pintu gerbang&nbsp; sambil tersenyum tipis menyapaku dengan mengucapkan selamat sore,selamat datang di tempat kami maaf telat membukakan pintu sebab kami di dalam kurang mendengarkan bunyi bel sebab kami lagi sibuk dan ribut membuat dan menggoreng tempe.Jadi sekali lagi maafkan kami ya mba,</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">M</span><span style=\"font-size:14.0pt\">ari mba silahkan masuk,sembari aku memegang tangan si lelaki tampan itu, aku bersamanya langsung masuk menuju sebuah ruangan,tempat mereka melakukan pekerjaan yakni membuat dan menggoreng tempe.Melihat demikian berlinang air mataku sebab semua mereka semua yang berada disitu memiliki keterbatasan baik secara fisik,mental tetapi toh mereka dapat menghasilkan sesuatu yang luar biasa dengan cinta yang besar.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Saat aku berdiri diantara mereka dengan suasana hati yang terharu aku sempat membayangkan bagaimana carany Tuhan menjadikan mereka semua berguna dan bermanfaat bagi orang lain terlebih bagi sesamanya walaupun tidak bisa melihat tetapi mereka bisa menggoreng tempe tersebut dengan baik dan memikat selera orang.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Tahap demi tahap mereka lewati dalam proses pembuatan tempe itu,hingga menghasilkan produk tempe goreng yang gurih</span><span style=\"font-size:14.0pt\">, </span><span style=\"font-size:14.0pt\">renyah tanpa bahan pengawet.Sambil mencicipi tempe goreng yang begitu enak disertai linaran air mata ada salah seorang suster mendatangiku sambil menepuk pundakku dengan menceritakan latar belakang kehidupan mereka yang sungguh sangat menyakitkan tetapi walaupun begitu aku melihat mereka begitu gembira,</span> <span style=\"font-size:14.0pt\">semangat,optimis,percaya diri dalam mengerjakannya dengan tulus hati dan cinta yang besar.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.0pt\">Wah sungguh memukau para sobatku,bagi yang belum mencoba tempe goreng buatan bhakti luhur silahkan berkunjung dan mencicipinya waooooo begitu enak tanpa pengawet.</span></p>\r\n\r\n<p>&nbsp;</p>\r\n', 'd', 'Selasa', '2021-11-16', '16:21:57', '373a0e7a13f5225710dc72002dab379c.jpg', 0, '', 'Y', 'Y', 1, ''),
+(58, 2, '', 1, 'Mojosemi Forest Park, Wahana Asyik Bersama Dinosaurus', '', 'mojosemi-forest-park-wahana-asyik-bersama-dinosaurus', 'N', 'Y', 'N', 'N', '<p>Jika kamu sedang mencari referensi tempat pariwisata alam yang tidak biasa, tempat yang<br />\r\nmenyejukkan juga tidak terlalu menguras kantong, kamu perlu mengunjungi Mojosemi Forest Park<br />\r\nyang terletak Jl. Raya Sarangan, Jl. Cemoro Sewu No. Km. 5, Kali Jumok, Sarangan, Kec. Plaosan<br />\r\nKabupaten Magetan Jawa Timur.<br />\r\nSelain Puncak Tawangmangu yang cukup terkenal di Magetan, banyak tempat-tempat wisata di<br />\r\nsepanjang perjalanan menuju puncak tersebut. Hutan yang disulap menjadi taman indah yang<br />\r\nmenyuguhkan replika berbagai jenis dinosaurus ini adalah salah satunya. Terletak tidak jauh dari<br />\r\nTelaga Sarangan, tepatnya di sebelah barat telaga. Pemandangan hutan asli dengan pohon yang<br />\r\nmenjulang tinggi membuat tempat ini teduh, tak terjamah oleh sinar matahari. Suhunya cukup<br />\r\nrendah, sumber airnya pun juga terasa dingin.<br />\r\nYang unik dari tempat ini adalah pengunjung bisa menikmati sensasi dinosaurus yang sedang<br />\r\nmengerang. Menggunakan kamera sensor, ketika ada pengunjung yang berjalan di dekat replika,<br />\r\ndinosaurus akan mengeluarkan suara khas dan sedikit pergerakan pada tubuhnya. Setelah<br />\r\npengunjung menjauh, replika tersebut otomatis akan berhenti bersuara. Berbagai spesies dinosaurus<br />\r\nseperti : Saurodops, Stegosaurus, Ornithopods, Pachycephalosauria, Ankylosaurus, Parasaurolophus,<br />\r\nTriceratops, dan jenis lainnya. Pengunjung dapat membaca informasi yang tertera pada setiap<br />\r\nreplika.<br />\r\nPengunjung juga akan merasakan sensasi menjelajah hutan. Dari tempat parkir kendaraan,<br />\r\npengunjung harus berjalan kaki dan mengelilingi hutan di jalan yang sudah dipaving. Sepanjang sisi<br />\r\nkanan kiri jalan, terdapat kursi-kursi dan spot spot foto alam yang sayang untuk dilewatkan. Berlatar<br />\r\nbelakang hutan asli dengan ornamen penghias lainnya, membuat taman ini begitu asri.<br />\r\nTidak hanya panorama hutan dengan replika dinosaurus, di Mojosemi Forest Park juga tersedia<br />\r\nberbagai wahana seperti war game, berkuda, ATV pada sirkuit track di dalam hutan, sky walk yang<br />\r\ntergantung di antara dua pohon, dan air softgun.<br />\r\nJika lupa tidak membawa bekal, jangan bingung! Di dalam wahana ini terdapat banyak penjual<br />\r\nmakanan dan minuman, hangat maupun dingin. Tetapi dianjurkan untuk minum yang hangat saja,<br />\r\nkarena udara cukup dingin.<br />\r\nUntuk mencapai Mojosemi Forest Park, pengunjung akan merasa tegang dalam perjalanan. Jalan<br />\r\nyang menanjak dengan tikungan yang sangat tajam akan memacu adrenalin kamu. Namun, jangan<br />\r\nkhawatir. Jalan menuju sana sangat bagus, tidak ada kerusakan.<br />\r\nTempat ini sangat cocok untuk wahana edukasi pada anak-anak. Selain itu juga bagus untuk me-<br />\r\nrefresh otak pada orang dewasa. Untuk tiket masuk berkisar antara Rp20.000,00 sampai dengan<br />\r\nRp30.000,00. Jika kamu tidak terbiasa melakukan perjalanan ke pegunungan, tempat ini tidak<br />\r\ndirekomendasikan.</p>\r\n\r\n<p>Review Film Eternals<br />\r\nPenulis Dewi Indrayati</p>\r\n', 's', 'Selasa', '2021-11-16', '16:31:13', 'mojosemi.jpg', 0, '', 'Y', 'Y', 4, ''),
+(59, 6, '', 1, 'Cireng corona! Nikmatnya bisa dijadi?an ide bisnis menggiurkan', '', 'cireng-corona-nikmatnya-bisa-dijadian-ide-bisnis-menggiurkan', 'Y', 'Y', 'N', 'N', '<p style=\"text-align:justify\">Beberapa waktu lalu penulis tanpa sengaja pernah menemukan camilan yang bernama cireng corona di salah satu akun Instagram food blogger. Akan tetapi, nama akunnya ia lupa. Namanya yang unik membuat hati tergelitik menonton ampai habis. Penasaran, penulis mempraktikkan resep tadi. Hasilnya, cukup lumayanlah! Antara ingat-ingat lupa, ia berusaha mencoba membuat resep tadi. Tentu saja dalam hal ini resep tersebut sudah ada penambahan cara di sana-sini, sesuai pengetahuannya dalam mengolah makanan. Hehehe. Jadi tidak sepenuhnya plek ketiplek resep aslinya. Oh, ya. Sebagai catatan, menu camilan cireng corona tersebut juga bisa banget dijadikan ide bisnis kuliner khusus jajanan loh! Tampilannya yang menarik, belum lagi ditunjang rasanya--akan memungkinkan sekali jajan ini mendongkrak keuntungan fantastis bagi penjualnya.<br />\r\nJika ingin mencoba camilan tadi, berikut catatan resep dan cara pembuatannya!<br />\r\nBahan yang dibutuhkan :&nbsp;<br />\r\n450 gram tepung aci<br />\r\n100 gram tepung terigu<br />\r\n350 ml air mendidih<br />\r\n75 gram soun kering, remas kasar sisihkan! Bisa pula diganti mie telor kering jika tak<br />\r\npunya stok di dapur<br />\r\nMinyak goreng secukupnya<br />\r\nPelengkap :<br />\r\nSaus sambal botolan, saus kacang bila ada atau bumbu tabur balado<br />\r\nBahan isian :<br />\r\n250 gram fillet ayam yang sudah matang dan disuwir-suwir kecil<br />\r\n75 ml air<br />\r\nBumbu halus :&nbsp;<br />\r\n2 siung bawang putih<br />\r\n3 siung bawang merah<br />\r\n2 butir kemiri<br />\r\n&frac14; sdt merica bulat<br />\r\n1 cm jahe<br />\r\n1 cm kunyit<br />\r\n2 keping gula aren<br />\r\n5 buah cabai merah, bila suka</p>\r\n\r\n<p style=\"text-align:justify\">Bumbu lain :&nbsp;<br />\r\n1 lembar daun salam<br />\r\n2 lembar daun jeruk wangi/purut<br />\r\n2 cm serai, ambil bagian bonggolnya<br />\r\n2 cm lengkuas<br />\r\n1 sdt garam<br />\r\n1 sdt royco ayam<br />\r\n1 sdt gula pasir<br />\r\n2 keping asam jawa<br />\r\nCara membuat :<br />\r\nSiapkan nampan, kemudian tata rapi bihun di atasnya.&nbsp;<br />\r\nBuat isian ayam&nbsp;<br />\r\nTumis bumbu halus lalu masukkan suwiran ayam, aduk rata. Tambahkan pula sisa bumbu yang ada dan air. Aduk kembali dan tunggu beberapa menit sampai air menyusut dan bumbu terserap sempurna ke daging ayam. Koreksi rasa sebelum diangkat.</p>\r\n\r\n<p style=\"text-align:justify\">Membuat cireng&nbsp;<br />\r\nCampur jadi satu dan aduk rata; tepung kanji/tapioka dan terigu, 1 sendok teh garam dan 1 bungkus royco ayam. Kemudian tuangi sedikit demi sedikit dengan air mendidih hingga tercampur semua. Biarkan beberapa menit sampai terasa hangat kemudian uleni sampai kalis lalu, sisihkan! Membuat adonan basah&nbsp; Campur 2 sdm tepung terigu dengan 2 sdm air. Aduk rata lalu sisihkan! Rebus air dan beri 1 sdm minyak goreng Mencetak cireng Sementara menunggu air mendidih, ambil sebagian adonan cireng, letakkan di<br />\r\ntelapak tangan. Bulatkan kemudian pipihkan. Ambil sebagian isian ayam, lalu bulatkan lagi. Lakukan terus sampai adonan habis, selanjutnya masukkan semua ke air yang sudah mendidih. Rebus sampai mengapung lalu angkat segera Masukkan ke dalam adonan basah, setelah itu gulingkan di atas soun tadi hingga cireng terbalut rata sambil ditekan-tekan supaya bihun menempel dan goreng segera di atas api sedang. Lakukan sampai bahan habis. Setelah permukaan cireng terlihat kering, balik perlahan-lahan. Supaya bihun tidak mudah terlepas, jangan sering-sering membalik adonan ketika cireng dalam keadaan masih basah. Setelah matang, sajikan segera dengan aneka saus atau bumbu sesuai selera! Jika ingin dibuat frozen, diamkan cireng sampai benar-benar dingin. Letakkan ke dalam food container. Tutup rapat dan masukkan ke dalam freezer.<br />\r\nSelamat mencoba!</p>\r\n', 'f', 'Selasa', '2021-11-16', '16:37:38', 'cireng_jpg.png', 0, '', 'Y', 'Y', 25, ''),
+(60, 15, '', 1, 'Twitter Perluas Akses Data Gratis untuk Pengembang Aplikasi', '', 'twitter-perluas-akses-data-gratis-untuk-pengembang-aplikasi', 'N', 'N', 'N', 'N', '<p>mengumumkan akan memperluas akses gratis ke data situs jejaring sosialnya untuk membantu pengembang software membuat alat dan produk yang dapat mempromosikan percakapan online yang lebih aman atau membuat konten.<br />\r\nHead of Product for the Developer Platform, Amir Shevat Twitter mengatakan Langkah ini merupakan bagian dari upaya Twitter yang berkembang selama setahun terakhir untuk mendesentralisasikan perusahaan.</p>\r\n\r\n<p>&quot;Sebuah visi yang bertujuan untuk memberi pengguna lebih banyak kontrol atas konten apa yang mereka lihat di timline Twitter mereka atau memiliki cara baru untuk berbagi konten di situs&quot; ujarnya seperti dikutip</p>\r\n\r\n<p>Lalu upaya untuk meningkatkan akses pengembang juga dilakukan ketika Twitter, Facebook, dan perusahaan media sosial lainnya menghadapi pengawasan global atas bagaimana algoritma mereka memunculkan konten tertentu dan peran mereka dalam memungkinkan penyebaran informasi yang salah atau ujaran kebencian.</p>\r\n\r\n<p>Mulai 15 November, pengembang juga dapat mengakses data hingga dua juta tweet per-bulan melalui antarmuka pemrograman aplikasi (API) Twitter tanpa biaya.</p>\r\n', 'twitter', 'Rabu', '2021-11-17', '09:20:51', 'e40a861ef031fdbbdb31814701e64c07.jpg', 0, '', 'Y', 'Y', 0, ''),
 (61, 16, '', 1, 'Review Samsung Galaxy A52s: HP Tahan Air yang Puas Pakainya', '', 'review-samsung-galaxy-a52s-hp-tahan-air-yang-puas-pakainya', 'N', 'N', 'N', 'N', '<p>Samsung punya jagoan di kelas menengah yang patut dipertimbangkan untuk dimiliki. HP yang dimaksud adalah Galaxy A52s, harga Rp 6 jutaan punya fitur yang komplit sehingga memuaskan saat digunakan.</p>\r\n\r\n<p>Bodi Tahan Air<br />\r\nSecara tampilan masih sama dengan Galaxy A52. Pun begitu tetap menarik, apalagi varian hijau mint yang detikINET review kali ini.</p>\r\n\r\n<p>Cover bagian belakang bermaterial polycarbonate, tapi saat dipandang masih terkesan premium. Ini berkat pengadopsian lapisan matte yang tak saja enak dipandang namun juga nyaman saat digenggam serta bebas noda sidik jari.</p>\r\n\r\n<p>Galaxy A52s tidak begitu tebal jadi bisa erat digenggam, selain itu bobotnya pun terhitung ringan. Lantaran dimensi yang tidak begitu lapang bikin pengoperasian dengan satu tangan begitu gampang, selain itu masih muat ketika disimpan di saku celana jeans.</p>\r\n\r\n<p>Kendati sekarang eranya earphone TWS, HP ini masih masih memiliki jack audi0 3,5 mm di bagian bawah. Ya walaupun earphone kabelnya sendiri sudah tidak disertakan dalam paket penjualan.</p>\r\n\r\n<p>Sama seperti pendahulunya, Galaxy A52s memiliki sertifikasi IP67 untuk ketahanan air. Fitur ini sangatlah penting, apalagi belakangan hujan sudah sering menguyur berbagai wilayah di Indonesia, sehingga mengurangi was-was ketika HP ini basah kehujanan saat sedang dalam perjalanan.</p>\r\n', 'ds', 'Rabu', '2021-11-17', '09:37:50', 'as2.JPG', 0, '', 'Y', 'Y', 0, ''),
 (62, 15, '', 1, 'Kominfo Siapkan 6,7 Juta Set Top Box Gratis TV Digital', '', 'kominfo-siapkan-67-juta-set-top-box-gratis-tv-digital', 'N', 'N', 'N', 'N', '<p>Menteri Komunikasi dan Informatika (Menkominfo) Johnny G. Plate menyebutkan bahwa Kementerian Komunikasi dan Informatika (Kominfo) tengah menyiapkan mekanisme pembagian set top box (STB) gratis TV digital.<br />\r\nBantuan set top box gratis tersebut agar memudahkan masyarakat mendapatkan siaran TV digital saat TV analog dihentikan. Migrasi TV analog ke digital atau Analog Switch Off (ASO) akan dilakukan tahun depan.</p>\r\n\r\n<p>Menkominfo mengungkapkan 6,7 juta set top box disiapkan untuk keluarga miskin. Bantuan tersebut berasal dari pemerintah dan penyelenggara multipleksing.</p>\r\n\r\n<p>&quot;Set top box ini kita perkirakan untuk keluarga miskin sekitar 6,7 juta STB bagi 6,7 televisi yang dimiliki oleh rakyat miskin. Untuk STB ini yang sedang kita siapkan agar 6,7 juta itu tersedia pada waktunya sesuai dengan tahapan ASO paling lambat tanggal 2 November 2022,&quot; ujar Menkominfo, Selasa (16/11/2021).</p>\r\n\r\n<p>Johnny menjelaskan, penerima bantuan ini berdasarkan kriteria serta mekanisme pelaksanaan pembagian STB gratis tengah disiapkan. Hasil penghitungan sementara dengan mengacu pada Data Terpadu Kesejahteraan Sosial dari Kementerian Sosial.</p>\r\n\r\n<p>Menurut Menkominfo, sebanyak 6,7 juta set top box gratis TV digital itu akan dibagikan langsung kepada warga yang memenuhi syarat. Selanjutnya, STB dipasang ke televisi analog yang belum memiliki standar DVB T2 agar bisa menerima siaran televisi digital.</p>\r\n\r\n<p>&quot;Jadi lebih dari sekadar bagi-bagi (set top box gratis), karena harus dipasang dan di-install di perangkat televisi masing-masing. Seperti misalnya, di rumah kalau pakai Indihome atau pakai layanan internet itu kan ada perangkat connector-nya, sama kira-kira seperti itu ada perangkat connector-nya yang memungkinkan menerima siaran digital,&quot; jelasnya.</p>\r\n\r\n<p>Semula penghentian TV analog ini dilakukan pada 17 Agustus 2021, hanya kebijakan tersebut terhambat kurangnya sosialisasi kepada masyarakat sampai pandemi COVID-19, pada akhirnya pemerintah menunda proses migrasi penyiaran tersebut.</p>\r\n\r\n<p>Kominfo telah menetapkan suntik mati TV analog ini dilakukan dalam tiga tahap. Tahap 1 pada 30 April 2022, Tahap 2 pada 25 Agustus 2022, dan Tahap 3 pada 2 November 2022.</p>\r\n', 'AS', 'Rabu', '2021-11-17', '10:12:30', 'ASASASD.jpeg', 0, '', 'Y', 'Y', 0, ''),
 (63, 15, '', 1, 'Induk Startup Kripto Luno Diguyur Rp 9,9 Triliun!', '', 'induk-startup-kripto-luno-diguyur-rp-99-triliun', 'N', 'N', 'N', 'N', '<p>Digital Currency Group (DCG), perusahaan yang menaungi platform perdagangan kripto Luno yang beroperasi di Indonesia, baru saja mendapatkan pendanaan terbaru, salah satu sumber berasal dari Google.<br />\r\nDCG telah menyelesaikan putaran investasi kedua/sekunder (secondary investment round) senilai lebih dari USD 700 juta atau setara Rp 9,9 triliun yang menjadikan valuasi perusahaan senilai USD 10 miliar atau Rp 142,4 triliun</p>\r\n\r\n<p>Vision Fund II dan Latin American Fund dari Softbank memimpin sindikasi investor ekuitas, termasuk Capital G milik Google, Ribbit Capital, GIC, Tribe Capital, dan Emory University untuk membeli saham DCG.</p>\r\n\r\n<p>Meski memiliki kurang lebih dari 30 karyawan, DCG telah berinvestasi di lebih dari 200 perusahaan blockchain di lebih dari 30 negara di dunia.</p>\r\n\r\n<p>Secara keseluruhan, termasuk menghitung anak-anak perusahaan, DCG mempunyai lebih dari 1.000 karyawan yang tersebar di 10 kota di empat benua.Pendapatan DCG mengklaim akan melampaui Rp 14,2 triliun (sekitar USD miliar) per tahun 2021.</p>\r\n\r\n<p>Anak-anak perusahaan DCG meliputi, Luno merupakan platform jual-beli aset digital yang berfokus melayani pengguna di negara-negara berkembang, terutama di Afrika, Asia, dan Eropa.</p>\r\n\r\n<p>Kemudian Grayscale Investments perusahaan pengelola aset mata uang digital, Genesis yang merupakan broket mata uang digital, Foundery sebagai perusahaan penambangan bitcoin dan aset digital, CoinDesk sebuah perusahaan media keuangan, data, indeks, dan manajemen acara, dan TradeBlock merupakan platform perdagangan dan data tingkat intitusional.</p>\r\n\r\n<p>Terakhir, DCG sedang membangun anak perusahaan baru yang akan diluncurkan pada 2022.</p>\r\n\r\n<p>Dalam keterangan resmi yang diterima detikINET, Rabu (17/11/2021) DCG akan terus menangkap peluang-peluang di pasaran terkait bentuk investasi baru dalam token digital dan aset digital yang kian beragam</p>\r\n\r\n<p>Selain itu, membangun tim kredit untuk mengembangkan tawaran dana pinjaman kepada perusahaan-perusahaan di industri kripto.<br />\r\n&quot;Ini merupakan kesempatan yang sangat menggembirakan untuk Luno, dan rencana ekspansi kami yang ambisius ke depannya. Semenjak diakuisisi oleh DCG, September tahun lalu, pertumbuhan kami telah diakselerasi secara signifikan. Dengan putaran pendanaan kali ini, kami akan semakin dekat dengan target untuk mencapai 1 miliar pengguna di tahun 2030,&quot; ujar Co-Founder dan CEO of Luno Marcus Swanepoel.</p>\r\n\r\n<p>Luno kini memiliki akses lebih terhadap dana dari investor kali ini ini beserta pengalaman mereka yang sudah sangat matang.</p>\r\n\r\n<p>Keahlian dan mentorship dalam berbagai area fungsional (programming hingga marketing) akan membantu bisnisnya beroperasi dan siap untuk pertumbuhan tahap lanjut.<br />\r\n&nbsp;</p>\r\n', 'D', 'Rabu', '2021-11-17', '10:23:42', 'FRFRFG.jpeg', 0, '', 'Y', 'Y', 0, ''),
 (64, 16, '', 1, 'Tips Sembunyikan Chat WhatsApp Mengganggu Tanpa Blokir Kontak', '', 'tips-sembunyikan-chat-whatsapp-mengganggu-tanpa-blokir-kontak', 'N', 'N', 'N', 'N', '<p>Sering menerima chat WhatsApp yang mengganggu tapi segan memblokir kontaknya? Jangan khawatir karena WhatsApp memiliki fitur yang bisa menyembunyikan chat tanpa perlu memblokir kontak.<br />\r\nWhatsApp belum lama ini merilis fitur arsip baru yang memungkinkan pengguna untuk menyembunyikan chat sekaligus mendiamkan notifikasinya untuk selamanya. Jadi fitur ini akan sangat berguna buat kalian yang, misalnya, sering menerima pesan mengganggu dari mantan pacar.</p>\r\n\r\n<p>Sebelum fitur ini ada, chat WhatsApp yang sudah diarsipkan akan kembali ke inbox ke utama jika menerima pesan baru. Dengan fitur baru ini, chat yang sudah diarsipkan tetap akan disimpan di folder Archived meski menerima pesan baru.</p>\r\n\r\n<p>Kalian juga tidak akan menerima notifikasi kalau ada pesan yang masuk ke chat yang sudah diarsipkan, kecuali kalau kalian di-mention atau pesan kalian dibalas di grup.</p>\r\n\r\n<p>Tanpa panjang lebar lagi, berikut ini cara menyembunyikan chat WhatsApp yang mengganggu tanpa perlu blokir kontak:</p>\r\n\r\n<p>Untuk mengakses chat yang sudah disembunyikan, kalian cukup membuka folder Archived yang ada di bagian atas halaman muka WhatsApp untuk Android atau iOS. Di situ kalian bisa melihat daftar kontak dan grup yang sudah diarsipkan.</p>\r\n\r\n<p>WhatsApp juga memberikan opsi untuk mengembalikan chat dari folder Archived ke kotak masuk utama. Caranya buka folder Archives, ketuk dan tahan kontak atau grup yang ingin dikembalikan, lalu ketuk ikon Archive di pojok kanan atas.</p>\r\n\r\n<p>Kalian juga masih bisa menggunakan fitur arsip model lama di mana chat yang sudah diarsipkan bisa kembali ke kotak masuk utama saat menerima pesan baru. Caranya buka menu pengaturan di aplikasi WhatsApp, pilih opsi Chat, lalu matikan toggle &#39;Keep chats archived&#39;.</p>\r\n\r\n<p>Bagaimana detikers, mudah bukan cara menyembunyikan chat mengganggu di WhatsApp tanpa blokir kontak?<br />\r\n&nbsp;</p>\r\n', 'S', 'Rabu', '2021-11-17', '10:27:54', '4e697f03-dfdd-488a-9c80-b71b62b4bfee_169.jpeg', 0, '', 'Y', 'Y', 0, ''),
-(65, 2, '', 1, 'Syarat Perjalanan di PPKM Jawa-Bali yang Diperpanjang Sampai 29 November', '', 'syarat-perjalanan-di-ppkm-jawabali-yang-diperpanjang-sampai-29-november', 'N', 'N', 'N', 'N', '<p style=\"text-align:justify\">nmendagri Nomor 60 tahun 2021 tentang Pembatasan Pemberlakuan Kegiatan Masyarakat (PPKM) Jawa-Bali level 3, 2, dan 1 tidak memberikan detail aturan syarat perjalanan. Meski begitu, aturan ini dimuat dalam surat edaran Satgas COVID-19 terbaru.<br />\r\nJuru bicara Satgas Penanganan COVID-19 Prof Wiku Adisasmito mengungkap aturan perjalanan yang tertuang dalam surat edaran Satgas COVID-19 berlaku untuk semua level PPKM. Artinya, tidak ada perbedaan aturan perjalanan di masing-masing level PPKM.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Berdasarkan Inmendagri ini PPKM di wilayah Jawa-Bali akan diperpanjang hingga tanggal 29 November dengan ketentuan sebagai berikut, untuk syarat perjalanan dalam negeri yaitu PPDN mengikuti aturan yang dikeluarkan oleh Satgas Penanganan COVID-19 yaitu SE nomor 21 Tahun 2021 tentang ketentuan perjalanan orang dalam negeri pada masa pandemi,&quot; beber Wiku dalam konferensi pers PPKM, Selasa (16/11/2021).</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Surat edaran ini berlaku untuk seluruh level PPKM,&quot; lanjut dia.</p>\r\n\r\n<p style=\"text-align:justify\">Saat kembali dikonfirmasi, menurut keterangan Kepala Bidang Penanganan Kesehatan Satgas COVID-19 Alexander Ginting, aturan syarat perjalanan kini mengacu pada surat edaran Satgas COVID-19 terbaru yang bisa dipantau dalam laman resmi BNPB. Aturan perjalanan terbaru dimuat dalam surat edaran Satgas Nomor 22 Tahun 2021.<br />\r\n&nbsp;</p>\r\n', 'D', 'Rabu', '2021-11-17', '10:32:59', 'potret-mobilitas-warga-kala-jakarta-diklaim-zona-hijau-4_169.jpeg', 0, '', 'Y', 'Y', 1, ''),
+(65, 2, '', 1, 'Syarat Perjalanan di PPKM Jawa-Bali yang Diperpanjang Sampai 29 November', '', 'syarat-perjalanan-di-ppkm-jawabali-yang-diperpanjang-sampai-29-november', 'N', 'N', 'N', 'N', '<p style=\"text-align:justify\">nmendagri Nomor 60 tahun 2021 tentang Pembatasan Pemberlakuan Kegiatan Masyarakat (PPKM) Jawa-Bali level 3, 2, dan 1 tidak memberikan detail aturan syarat perjalanan. Meski begitu, aturan ini dimuat dalam surat edaran Satgas COVID-19 terbaru.<br />\r\nJuru bicara Satgas Penanganan COVID-19 Prof Wiku Adisasmito mengungkap aturan perjalanan yang tertuang dalam surat edaran Satgas COVID-19 berlaku untuk semua level PPKM. Artinya, tidak ada perbedaan aturan perjalanan di masing-masing level PPKM.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Berdasarkan Inmendagri ini PPKM di wilayah Jawa-Bali akan diperpanjang hingga tanggal 29 November dengan ketentuan sebagai berikut, untuk syarat perjalanan dalam negeri yaitu PPDN mengikuti aturan yang dikeluarkan oleh Satgas Penanganan COVID-19 yaitu SE nomor 21 Tahun 2021 tentang ketentuan perjalanan orang dalam negeri pada masa pandemi,&quot; beber Wiku dalam konferensi pers PPKM, Selasa (16/11/2021).</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Surat edaran ini berlaku untuk seluruh level PPKM,&quot; lanjut dia.</p>\r\n\r\n<p style=\"text-align:justify\">Saat kembali dikonfirmasi, menurut keterangan Kepala Bidang Penanganan Kesehatan Satgas COVID-19 Alexander Ginting, aturan syarat perjalanan kini mengacu pada surat edaran Satgas COVID-19 terbaru yang bisa dipantau dalam laman resmi BNPB. Aturan perjalanan terbaru dimuat dalam surat edaran Satgas Nomor 22 Tahun 2021.<br />\r\n&nbsp;</p>\r\n', 'D', 'Rabu', '2021-11-17', '10:32:59', '5c7c890082b8202ac033de3322e4d2b2.jpeg', 0, '', 'Y', 'Y', 1, ''),
 (66, 19, '', 1, 'Makna Jagung Bagi Masyarakat Asli Amerika, Bukan Sekadar Makanan', '', 'makna-jagung-bagi-masyarakat-asli-amerika-bukan-sekadar-makanan', 'N', 'N', 'N', 'N', '<p>Jagung dikenal luas sebagai salah satu sumber karbohidrat yang bisa dijadikan makanan pokok, selain nasi dan kentang. Sejarawan pangan Amerika Serikat, Lois Ellen Frank mengatakan, masyarakat asli Amerika atau yang disebut dengan Indian Amerika, menganggap jagung sebagai salah satu makanan paling penting. &quot;Jagung adalah makanan yang paling penting dan paling mendasar. Di sini kita bisa lihat jagung dicampur dan diolah,&quot; ujar Lois dalam webinar &quot;Pusaka Rasa Nusantara&quot;, Senin (15/11/2021). Jagung yang merupakan bahan dasar dari banyak masakan tradisional suku asli Amerika Serikat itu juga dianggap sebagai budaya yang harus diwariskan. &quot;Kita bisa menguliti jagung dan ini menjadi produk yang dihasilkan melalui proses dan teknik tertentu, yang kemudian bisa diwariskan atau diteruskan secara lisan,&quot; Kata Lois. &nbsp;Ia menjelaskan pada masa lalu, belum ada budaya untuk menulis atau pengetahuan untuk menulis tetapi sekarang perihal jagung sudah dituliskan. Lebih luas, Lois mengatakan bahwa jagung memiliki banyak makna. Jagung diibaratkan sebagai doa, kesucian, ibu, kakak, penyembuh, obat, makanan untuk sehat, seni, dan intisari dari kehidupan.<br />\r\n&quot;Jagung tidak hanya dikaitkan dengan makanan tetapi lebih luas dari makanan, dikaitkan ke setiap aksi atau acara-acara kebudayaan, jadi ada budaya yang dikaitkan dengan budaya tertentu,&quot; kata Lois.<br />\r\nSalah satu penggunaan jagung yang dikaitkan dengan budaya adalah keberadaan jagung pada Kinaalda, sebuah perayaan akil balik atau pubertas bagi Suku Navajo. Serbuk sari jagung juga digunakan dalam acara Apache Sunrise Dance untuk memeringati para anak perempuan yang telah beranjak dewasa.</p>\r\n', 'D', 'Rabu', '2021-11-17', '11:39:39', '619255e9c13d3.jpg', 0, '', 'Y', 'Y', 0, ''),
 (67, 20, '', 1, 'Horor! Sirkuit Mandalika Mampu Membunuh', '', 'horor-sirkuit-mandalika-mampu-membunuh', 'N', 'N', 'N', 'N', '<p style=\"text-align:justify\">Setelah diresmikan oleh Presiden R.I Joko Widodo (Jokowi) Jumat, 12 November 2021, Sirkuit Mandalika menjadi trending topik dunia. Bukan hanya pesona keindahan alam Lombok (NTT) tempat dimana sirkuit Internasional dibangun, namun kecantikan arena balapnya mampu memikat hati siapa saja.</p>\r\n\r\n<p style=\"text-align:justify\">Gelaran WorldSBK Indonesia 2021 di Pertamina Mandalika International Street Circuit tinggal menghitung hari. Sirkuit Mandalika menjadi salah satu lintasan balap terindah di dunia, karena sirkuit ini langsung berbatasan dengan pantai pasir putih, yang ada di Kawasan Ekonomi Khusus Mandalika (KEK Mandalika) di Desa Kuta, Lombok Tengah, Nusa Tenggara Barat.</p>\r\n\r\n<p style=\"text-align:justify\">Situs resmi WSBK menyatakan, Pertamina Mandalika International Street Circuit dirancang sepanjang 4,3 kilometer atau 4.300 meter. Dengan jumlah tikungan di Sirkuit Mandalika mencapai 17, 11 diantaranya mengarah ke kanan dan 6 lain mengarah ke kiri.</p>\r\n\r\n<p style=\"text-align:justify\">Daya tampung sirkuit mencapai 150 ribu hingga 200 ribu orang. Pihak pengelola menyediakan hingga 75 ribu kursi di grandstand dan 138 ribu area berdiri. Dibangun di atas lahan hampir seratus hektar, Sirkuit Mandalika memiliki banyak tempat terbuka. Ini dapat menjadi kesempatan untuk mendatangkan lebih banyak penonton maupun wisatawan di masa depan.</p>\r\n\r\n<p style=\"text-align:justify\">Direktur Konstruksi dan Pengembangan dari Mandalika Grand Prix Associaton (MGPA) Dwianto Eko Wiryanto menyampaikan, aspal yang digunakan untuk pembangunan Sirkuit Mandalika yakni Stone Mastic Asphalt (SMA), yang merupakan campuran aspal terbaik untuk melapisi permukaan atas aspal. Tujuannya, memperkuat struktur lapisan permukaan dengan prinsip kontak stone by stone. Sehingga volume aspal yang dipergunakan pun menjadi kecil.</p>\r\n\r\n<p style=\"text-align:justify\">Saat ini baru ada tiga sirkuit dengan teknologi SMA yaitu Silverstone di Inggris, Yas Marina di Abu Dhabi, dan Phillip Island di Australia. Sementara Sirkuit Mandalika menambah daftar urutan ke-4 dunia.</p>\r\n\r\n<p style=\"text-align:justify\">Dikutip dari pernyataan Mick Doohan, salah satu veteran pembalap MotoGP yang dilansir dari kanal YouTube &#39;Pers Lokal&#39;</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Saya takut ini tempat balapan atau liburan&quot;</p>\r\n\r\n<p style=\"text-align:justify\">Menurutnya, banyak titik krusial Sirkuit Mandalika yang sangat memanjakan mata baik penonton maupun pembalap yang akan berlaga.</p>\r\n\r\n<p style=\"text-align:justify\">Tidak menutup kemungkinan saat penyelenggaraan MotoGP musim ke 2 yang diperkirakan awal tahun 2022 nanti, Mandalika akan menyedot wisatawan mancanegara untuk hadir menyaksikan event balap motor bergengsi itu. Sekaligus membuka mata dunia dengan keeksotisan Pulau Mandalika yang dikelilingi pemandangan laut Samudera Pasifik.</p>\r\n\r\n<p style=\"text-align:justify\"><br />\r\nBos Sirkuit Sepang Malaysia, Razlan Razali mengungkapkan, bisa-bisa pesona Sirkuit Mandalika dapat membunuh pesona Sirkuit Sepang yang selama ini menjadi arena balap pertama dan&nbsp;&nbsp;terindah&nbsp;&nbsp;di kawasan Asia Tenggara. Dengan demikian, beliau juga mengakui keunggulan Sirkuit Mandalika dibandingkan Sepang - Malaysia.</p>\r\n\r\n<p style=\"text-align:justify\"><br />\r\nNb. Dikutip dari berbagai sumber media.</p>\r\n\r\n<p style=\"text-align:justify\">Dirangkum kembali oleh Zie Qarisa Sasmi</p>\r\n', 'mandalika', 'Rabu', '2021-11-17', '16:23:50', 'mandalika.jpeg', 0, '', 'Y', 'Y', 8, ''),
-(68, 20, '', 1, 'Challenge, Meminimalkan Tudingan Tuan Rumah Curang', '', 'challenge-meminimalkan-tudingan-tuan-rumah-curang', 'N', 'N', 'N', 'N', '<p style=\"text-align:justify\">Challenge mulai sering diterapkan dalam pertandingan buku tangkis kelas dunia. Seperti halnya Video Assistant Referee (VAR) dalam pertandingan sepakbola, Challenge juga dapat meminimalkan kontroversi saat bola out atau in.</p>\r\n\r\n<p style=\"text-align:justify\">Dikutip dari situs PB Djarum, challenge adalah kesempatan pemain untuk mengoreksi keputusan wasit maupun hakim garis dengan sistem review atau melihat tayangan ulang. Sistem review yang digunakan oleh wasit maupun hakim garis adalah berupa teknologi bernama hawk-eye.</p>\r\n\r\n<p style=\"text-align:justify\">Alasan di dalam pertandingan bulu tangkis ada challenge karena terkadang ada pemain yang tengah bertanding merasa tidak puas atas keputusan yang dibuat oleh hakim garis atau wasit yang memimpin jalannya pertandingan tersebut.</p>\r\n\r\n<p style=\"text-align:justify\">Oleh karena itu, di dalam pertandingan bulu tangkis, pemain bisa mengajukan challenge. Selain pemain, wasit rupanya dapat mengajukan challenge jika hakim garis tidak melihat jalannya bola dan wasit juga tidak bisa mengambil keputusan. Untuk mengajukan challenge, ada beberapa hal yang harus diperhatikan.</p>\r\n\r\n<p style=\"text-align:justify\">Berikut adalah aturan challenge dalam pertandingan bulu tangkis:</p>\r\n\r\n<p style=\"text-align:justify\">Pemain yang mengajukan challenge harus menyampaikannya segera sesaat setelah keputusan diumumkan oleh wasit.</p>\r\n\r\n<p style=\"text-align:justify\">Pemain dapat menyampaikan niatnya dengan cara mengangkat tangan. Lalu wasit pun mengangkat tangan pertanda mengajukan tayangan ulang instan kepada technical official.</p>\r\n\r\n<p style=\"text-align:justify\">Jika dalam tayangan ulang ternyata keputusan hakim garis atau wasit keliru, maka keputusan yang telah dibuat oleh wasit dianulir tetapi jika dalam tayangan instant ternyata keputusan hakim garis atau wasit benar maka keputusan yang telah dibuat wasit bersifat tetap.</p>\r\n\r\n<p style=\"text-align:justify\">Pemain tidak dapat sesering mungkin mengajukan challenge. Setiap pemain atau pasangan hanya dapat mengajukannya maksimal sebanyak dua kali challenge saja dalam setiap game.</p>\r\n\r\n<p style=\"text-align:justify\">Jika permintaan akan tayangan ulang instan benar, maka pemain atau pasangan tidak kehilangan atas tayangan instan. Tetapi jika hasil challenge dari tayangan ulang instan tidak berhasil, maka pemain atau pasangan akan kehilangan satu kesempatan untuk pengajuan tayangan ulang.</p>\r\n\r\n<p style=\"text-align:justify\">Para pemain atau pasangan tidak akan kehilangan haknya, jika wasit yang mengajukan review tayangan ulang.</p>\r\n', 'Challenge', 'Rabu', '2021-11-17', '16:27:15', 'challenge.jpg', 0, '', 'Y', 'Y', 2, ''),
-(69, 20, '', 1, 'Menunggu Duel Akane Vs An Se Young', '', 'menunggu-duel-akane-vs-an-se-young', 'N', 'N', 'N', 'N', '<p style=\"text-align:justify\">Publik bulutangkis sudah tidak sabar menunggu duel pebulutangkis Jepang Akane Yamaguchi melawan An Se Young dari Korea Selatan di Indonesia Masters 2012.</p>\r\n\r\n<p style=\"text-align:justify\">Di pertandingan pembuka, Akane sukses mengalahkan pemain Indoensia, Ruselli Hartawan. Sedang An Se Young mengkandaskan pebulutangkis Polandia Jordan Hart.</p>\r\n\r\n<p style=\"text-align:justify\">Tampil di International Convention Center, Nusa Dua. Rabu ini, 17 November 2021, An Se Young tak terbendung dan menuntaskan pertandingan hanya dalam waktu 26 menit. Sementara Akane lebih suka bermain santai tanpa banyak mengeluarkan pukulan menyilang yang menjadi andalannya.</p>\r\n\r\n<p style=\"text-align:justify\">Duel Akane versus An Se Young layak ditunggu setelah dua kekalalahn beruntun yang diderita An Se Young di final Denmak Open 2012 dan &nbsp;semi final French Open 2021.</p>\r\n\r\n<p style=\"text-align:justify\">Drama dimulai ketika An Se mundur di game ketiga final Denmark Open karena cedera. Keinginann untuk membalas, tidak terwujud karena di French Open Akane juga tampil trengginas. Bermain di Stade Pierre de Courbertin, Paris,Akane menang rubber set 21-13, 10-21 dan 21-18.</p>\r\n\r\n<p style=\"text-align:justify\">Kini, akankah kedua pebulutangkis yang memiliki banyak folloer dari Indonesia itu akan berjumpa di Indoensia Master 2021. Dan yang paling penting, apakah An Se Young mampu membalas dua kekalahan berikutnya/ Atau justru Akane yang menambah rekor menjadi 5:3?</p>\r\n\r\n<p style=\"text-align:justify\">Menarik ditunggu.</p>\r\n', 'Akane Vs An Se Young', 'Rabu', '2021-11-17', '17:10:04', 'akane2.jpg', 0, '', 'Y', 'Y', 7, '');
+(68, 20, '', 1, 'Challenge, Meminimalkan Tudingan Tuan Rumah Curang', '', 'challenge-meminimalkan-tudingan-tuan-rumah-curang', 'N', 'N', 'N', 'N', '<p style=\"text-align:justify\">Challenge mulai sering diterapkan dalam pertandingan buku tangkis kelas dunia. Seperti halnya Video Assistant Referee (VAR) dalam pertandingan sepakbola, Challenge juga dapat meminimalkan kontroversi saat bola out atau in.</p>\r\n\r\n<p style=\"text-align:justify\">Dikutip dari situs PB Djarum, challenge adalah kesempatan pemain untuk mengoreksi keputusan wasit maupun hakim garis dengan sistem review atau melihat tayangan ulang. Sistem review yang digunakan oleh wasit maupun hakim garis adalah berupa teknologi bernama hawk-eye.</p>\r\n\r\n<p style=\"text-align:justify\">Alasan di dalam pertandingan bulu tangkis ada challenge karena terkadang ada pemain yang tengah bertanding merasa tidak puas atas keputusan yang dibuat oleh hakim garis atau wasit yang memimpin jalannya pertandingan tersebut.</p>\r\n\r\n<p style=\"text-align:justify\">Oleh karena itu, di dalam pertandingan bulu tangkis, pemain bisa mengajukan challenge. Selain pemain, wasit rupanya dapat mengajukan challenge jika hakim garis tidak melihat jalannya bola dan wasit juga tidak bisa mengambil keputusan. Untuk mengajukan challenge, ada beberapa hal yang harus diperhatikan.</p>\r\n\r\n<p style=\"text-align:justify\">Berikut adalah aturan challenge dalam pertandingan bulu tangkis:</p>\r\n\r\n<p style=\"text-align:justify\">Pemain yang mengajukan challenge harus menyampaikannya segera sesaat setelah keputusan diumumkan oleh wasit.</p>\r\n\r\n<p style=\"text-align:justify\">Pemain dapat menyampaikan niatnya dengan cara mengangkat tangan. Lalu wasit pun mengangkat tangan pertanda mengajukan tayangan ulang instan kepada technical official.</p>\r\n\r\n<p style=\"text-align:justify\">Jika dalam tayangan ulang ternyata keputusan hakim garis atau wasit keliru, maka keputusan yang telah dibuat oleh wasit dianulir tetapi jika dalam tayangan instant ternyata keputusan hakim garis atau wasit benar maka keputusan yang telah dibuat wasit bersifat tetap.</p>\r\n\r\n<p style=\"text-align:justify\">Pemain tidak dapat sesering mungkin mengajukan challenge. Setiap pemain atau pasangan hanya dapat mengajukannya maksimal sebanyak dua kali challenge saja dalam setiap game.</p>\r\n\r\n<p style=\"text-align:justify\">Jika permintaan akan tayangan ulang instan benar, maka pemain atau pasangan tidak kehilangan atas tayangan instan. Tetapi jika hasil challenge dari tayangan ulang instan tidak berhasil, maka pemain atau pasangan akan kehilangan satu kesempatan untuk pengajuan tayangan ulang.</p>\r\n\r\n<p style=\"text-align:justify\">Para pemain atau pasangan tidak akan kehilangan haknya, jika wasit yang mengajukan review tayangan ulang.</p>\r\n', 'Challenge', 'Rabu', '2021-11-17', '16:27:15', '3638262978b529530ced292f24604c1c.jpg', 0, '', 'Y', 'Y', 4, ''),
+(69, 20, '', 1, 'Menunggu Duel Akane Vs An Se Young', '', 'menunggu-duel-akane-vs-an-se-young', 'N', 'N', 'N', 'N', '<p style=\"text-align:justify\">Publik bulutangkis sudah tidak sabar menunggu duel pebulutangkis Jepang Akane Yamaguchi melawan An Se Young dari Korea Selatan di Indonesia Masters 2012.</p>\r\n\r\n<p style=\"text-align:justify\">Di pertandingan pembuka, Akane sukses mengalahkan pemain Indoensia, Ruselli Hartawan. Sedang An Se Young mengkandaskan pebulutangkis Polandia Jordan Hart.</p>\r\n\r\n<p style=\"text-align:justify\">Tampil di International Convention Center, Nusa Dua. Rabu ini, 17 November 2021, An Se Young tak terbendung dan menuntaskan pertandingan hanya dalam waktu 26 menit. Sementara Akane lebih suka bermain santai tanpa banyak mengeluarkan pukulan menyilang yang menjadi andalannya.</p>\r\n\r\n<p style=\"text-align:justify\">Duel Akane versus An Se Young layak ditunggu setelah dua kekalalahn beruntun yang diderita An Se Young di final Denmak Open 2012 dan &nbsp;semi final French Open 2021.</p>\r\n\r\n<p style=\"text-align:justify\">Drama dimulai ketika An Se mundur di game ketiga final Denmark Open karena cedera. Keinginann untuk membalas, tidak terwujud karena di French Open Akane juga tampil trengginas. Bermain di Stade Pierre de Courbertin, Paris,Akane menang rubber set 21-13, 10-21 dan 21-18.</p>\r\n\r\n<p style=\"text-align:justify\">Kini, akankah kedua pebulutangkis yang memiliki banyak folloer dari Indonesia itu akan berjumpa di Indoensia Master 2021. Dan yang paling penting, apakah An Se Young mampu membalas dua kekalahan berikutnya/ Atau justru Akane yang menambah rekor menjadi 5:3?</p>\r\n\r\n<p style=\"text-align:justify\">Menarik ditunggu.</p>\r\n', 'Akane Vs An Se Young', 'Rabu', '2021-11-17', '17:10:04', '7b6c0276a338b252788d1b3e0c06387e.jpg', 0, '', 'Y', 'Y', 10, '');
 INSERT INTO `berita` (`id_berita`, `id_kategori`, `username`, `id_users`, `judul`, `youtube`, `judul_seo`, `headline`, `pilihan`, `indepth`, `wawancara`, `isi_berita`, `keterangan_gambar`, `hari`, `tanggal`, `jam`, `gambar`, `dibaca`, `tag`, `status`, `status_lang_news`, `views`, `tag_seo`) VALUES
-(70, 23, '', 1, 'DPRD Setujui Perda RPJMD Kabupaten Demak Tahun 2021-2026', '', 'dprd-setujui-perda-rpjmd-kabupaten-demak-tahun-20212026', 'N', 'N', 'N', 'Y', '<p style=\"text-align:justify\">Dewan Perwakilan Rakyat Daerah (DPRD) Demak kembali mengadakan Rapat Paripurna Ke-39 masa sidang III (ketiga) tahun 2021. Agenda yang dibahas yakni Persetujuan Bersama Bupati dan DPRD Demak terhadap Raperda tentang Rencana Pembangunan Jangka Menengah Daerah (RPJMD) Kabupaten Demak tahun 2021 - 2016 di Aula DPRD Demak, Senin (08/11) sore.</p>\r\n\r\n<p style=\"text-align:justify\">HS Fahrudin Bisri Slamet, dalam pembukaannya mengatakan, setelah dilaksanakannya rapat paripurna penyerahan Raperda tentang RPJMD Kabupaten Demak tahun 2021-2026 pada tanggal 15 Oktober 2021 lalu.</p>\r\n\r\n<p style=\"text-align:justify\">Selanjutnya dibahas oleh rapat Komisi dan rapat Konsultasi Pimpinan DPRD bersama Ketua-ketua Fraksi, Pimpinan Komsi A, B, C dan D, Pimpinan Bapemperda dan Pimpinan Badan Kehormatan DPRD Kabupaten Demak.</p>\r\n\r\n<p style=\"text-align:justify\">Kemudian ia mempersilahkan juru bicara DPRD, H Marwan untuk menyampikan hasil laporannya. &quot;Kepada juru bicara DPRD dipersilahkan,&quot; ucap ketua DPRD yang biasa disapa Slamet.</p>\r\n\r\n<p style=\"text-align:justify\">Dalam laporannya, H Marwan menjelaskan isi tentang RPJMD 2021-2026. Dikatakannya, maksud dan tujuan penyusunan RPJMD menjadi tolok ukur kinerja Kepala Daerah dalam penyelenggaraan pemerintahan dan pembangunan daerah, serta instrumen bagi DPRD dalam melaksanakan fungsi pengawasan serta evaluasi kinerja tahunan pada setiap perangkat daerah.</p>\r\n\r\n<p style=\"text-align:justify\">Ia melanjutkan, atas dasar hasil pembahasan bersama, ada beberapa catatan dan rekomendasi diantaranya, dalam hubungan antar dokumen, pada penyajian sub-sub belum dijelaskan secara terperinci, tentang keselarasan atau hubungan sinergitas antara rancangan akhir dengan beberapa dokumen tersebut.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Sebagai bahan pertimbangan, maka perlu menambahkan kajian keselarasan RPJMD ini dengan Daerah dokumen sekitar. Hal ini bertujuan untuk memberikan gambaran dalam meningkatkan daya saing daerah berdasarkan program-program prioritas di darerah sekitar,&quot; terang Marwan yang juga sebagi ketua Bapemperda.</p>\r\n\r\n<p style=\"text-align:justify\">Kemudian, lanjut Marwan, rekomendasi DPRD atas rancangan awal RPJMD tentang upaya untuk peningkatan Dana Insentif Daerah (DID) tidak diindahkan.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Belum jelas apa strategi Pemerintah Daerah untuk merebutnya setiap tahun, bahkan dalam kerangka pendanaan tahun 2022-2026 DID ditarget nihil, padahal tahun&nbsp; 2022 berdasarkan informasi resmi Kemenkeu DID Kabupaten Demak alokasinya sebesar Rp. 50,2 Milyar lebih,&quot; jelasnya.</p>\r\n\r\n<p style=\"text-align:justify\">Marwan melanjutkan, dalam pembangunan daerah, terkait penanganan rob dan banjir agar dimasukkan dalam program prioritas yang harus diselesaikan di RPJMD Kabupaten Demak.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Dan, juga untuk kebijakan anggaran serta target penanganan luasan wilayah yang terdampak,&quot; pintanya.</p>\r\n\r\n<p style=\"text-align:justify\">Ia menambahkan, dikarenakan situasi pada saat penyusunan Raperda tentang RPJMD Kabuparen Demak tahun 2021-2026 masih dalam kondisi pandemi covid-19 sehingga penentuan asumsi-asumsi kebijakan tidak maksilmal.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Jika diakhir bulan Desember 2021 atau diawal tahun 2022 kondisi _herd community_ (kekebalan masyarakat) sudah tercapai atau kondisi sudah normal, maka Raperda tentang RPJMD Kabupaten Demak tahun 2021-2026 akan direvisi atau disesuaikan saat tahun ke-2 pelaksanaan RPJMD,&quot; terangnya.</p>\r\n\r\n<p style=\"text-align:justify\">Setelah dibacakanya laporan oleh juru bicara dan disusul dengan pembacaan rancangan keputusan DPRD Kabupaten Demak serta berita acara oleh Sekretariat Daerah dan dengan disetujuinya seluruh hadirin sebanyak 36 orang, sehingga menghasilkan kesepakatan dan menyetujui Raperda tentang RPJMD Kabupaten Demak Tahun 2021-2026 untuk ditetapkan menjadi peraturan daerah dengan penyesuaian rekomendasi-rekomnedasi yang telah disampaikan tersebut.</p>\r\n\r\n<p style=\"text-align:justify\">Sementara itu, Bupati Demak, Hj Eisti&#39;anah dalam sambutannya mengatakan, sesuai ketentuan kemendagri nomor 86 tahun 2017 tentang tata cara perencanaaan, pengendalian dan evaluasi pembangunan daerah, tata cara evaluasi rancangan peraturan daerah tentang mencakup pembangunan jangka panjang daerah dan rencana pembangunan jangka menengah daerah, serta tata cara perubahan rencana pembangunan jangka panjang daerah, rencana pembangunan jangka menengah daerah dan rencana kerja&nbsp; pemerintah daerah.</p>\r\n\r\n<p style=\"text-align:justify\">Bahwa Kepala Daerah menyampaikan rancangan peratuaran daerah tentang RPJMD kepada DPRD untuk dibahas dalam rapat pembangunan persetujuan bersama DPRD dan kepala daerah rancangan peraturan Daerah tentang RPJMD.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Alhamdulillah, Raperda RPJMD yang ditetapkan pada tanggal 30 Oktober lalu, pada hari ini telah mencapai persetujuan bersama antara DPRD dan Pemerintah Daerah. Kami sampaikan terimakasih dan apresiasi setinggi-tingginya kepada bapak/ibu pimpinan dan anggota DPRD Kabupaten Demak yang telah membahas dan membedah Raperda tentang RPJMD berasama tim penyusun, dan rekan-rekan Kepala Daerah. Atas hasil tersebut kami siap menindaklanjuti, hal ini merupakan wujud komitmen kami dalam menyusun perencanaan pembangunan yang partispatif,&quot; ucapnya.</p>\r\n\r\n<p style=\"text-align:justify\">Eisti melanjutkan, setelah penyampaikan RPJMD, berdasarkan nota persetujuan bersama akan diserahkan kepada Gubernur untuk di evaluasi.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Besar harapan kami hasil evaluasi tersebut dapat disampaikan pada tanggal 16 November 2021, sehingga target kita untuk menetapkan Perda RPJMD sebelum tanggal 23 Novembber dapat terlaksana,&quot; harapnya.</p>\r\n\r\n<p style=\"text-align:justify\">Rapat ditutup dengan penandatanganan hasil Raperda RPJMD tahun 2021-2026 untuk ditetapkan menjadi Peraturan Daerah Kabupaten Demak oleh Bupati Demak, Hj Eisti&#39;anah didampingi Wakilnya, KH Ali Makhsun beserta Ketua DPRD Demak, HS Fahrudin Bisri Slamet dan Wakilnya Zayinul Fata serta Nur Wahid.</p>\r\n\r\n<p style=\"text-align:justify\">Hadir dalam paripurna tersebut, Forkopimda, Sekretaris Daerah, Sekretaris DPRD, Asisten Sekda, para Kepala Daerah, para Camat se-Kebupaten Demak, para insan Pers dan Media serta tamu undangan yang hadir secara langsung maupun virtual.</p>\r\n', 'DPRD Setujui Perda RPJMD', 'Rabu', '2021-11-17', '17:15:39', '2310b7c68a6e0195fd84496747470305.jpg', 0, '', 'Y', 'Y', 7, ''),
-(71, 23, '', 1, 'Presidential Threshold 20% Lingkaran Setan, Siti Zuhro: Kita Khawatir Rekayasa Calon Tunggal', '', 'presidential-threshold-20-lingkaran-setan-siti-zuhro-kita-khawatir-rekayasa-calon-tunggal', 'N', 'N', 'N', 'N', '<p style=\"text-align:justify\"><strong>Jakarta</strong>,&nbsp;<a href=\"http://metasatu.com/\" target=\"_blank\">metasatu.com</a>&nbsp;&mdash; Prof. R Siti Zuhro menyebut Presidential Threshold 20% ini jika diteruskan akan menjadi lingkaran setan, di mana partai-partai besar akan terus berkuasa, bahkan lebih parahnya yang dikhawatirkan justru adanya rekayasa calon presiden tunggal.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Kemungkinan besar ini menjadi lingkaran setan di mana partai besar akan terus berkuasa seperti ini, karena memang peluang itu tidak setara,&quot; ungkap Pengamat dan peneliti LIPI, Prof Siti Zuhro, pada dalam diskusi &#39;Pilpres 2024: Menyoal Presidential Threshold&#39; yang diadakan oleh forum guru besar dan doktor Insan Cinta, Minggu (14/11).</p>\r\n\r\n<p style=\"text-align:justify\">Peluang adanya poros ketiga memang tidak menutup kemungkinan, kata Prof Siti. Jika melihat datanya, perolehan suara nasional parpol tunjukkan PDIP nomor 1 dengan 19,33%, kedua Golkar 12,31%, ketiga Gerindra 12,57%, lalu PKB 9,96%, NasDem 9,01%, PKS 8,21% Demokrat 7,77%, PAN 6,8% dan PPP 4,52%. Maka belum tentu hanya akan ada 2 koalisi, bisa jadi terbentuk 3 kubu koalisi meski pun akan sangat sulit terjadi.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Misal simulasi ini, ini analisis awal ya jadi sifatnya cair enggak bisa disimpulkan ini misal PDIP bisa sama Gerindra 2 parpol sudah cukup. Lalu Golkar, NasDem dan PKB. Demokrat, PKS ditambah PAN dan PPP ini cukup,&quot; katanya.</p>\r\n\r\n<p style=\"text-align:justify\">Tentu saja berangkat dari pengalaman pilpres tahun 2019. Sekalipun didorong untuk lahirnya poros ke 3 hal itu nyatanya sulit diwujudkan, lantaran adanya pertimbangan resiko yang harus ditanggung.</p>\r\n\r\n<p style=\"text-align:justify\">Lebih dari itu Prof Siti Zuhro rupanya bukan sekedar menghawatirkan adanya dua kubu yang akan bertarung di pilpres 2024 nanti, melainkan lebih dari itu, akan jauh lebih buruk apabila nanti yang justru terjadi malah hanya ada calon tunggal seperti yang sering terjadi di pilkada-pilkada sebelumnya. Di mana semua partai-partai besar berkumpul menjadi satu.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Adanya kompetisi konsentrasi yang lebih maka tadi jadi tidak pada dua pasangan calon saja yang kita khawatirkan, tidak 2 Pasangan calon kan nanti bisa-bisa tunggal calonnya kan seperti ada di Pilkada,&quot; ungkapnya.</p>\r\n\r\n<p style=\"text-align:justify\">Untuk menghindari terjadinya rekayasa pencalonan yang mengarah pada calon tunggal, Prof Siti menyarankan perlu ada pembatasan syarat pencalonan presiden dan wakil presiden yang tidak boleh melebihi 30%. Dengan kata lain, untuk menjaga sistem demokrasi, koalisi partai yang terbangun di parlemen tidak boleh lebih dari 30% agar tidak terjadi persekongkolan politik yang mengarah kan calon yang kuat secara elektabilitas menguasai koalisi.</p>\r\n\r\n<p style=\"text-align:justify\">Penyebab Terlambatnya Proses Pembangunan Jalan Lingkar Luar di Kabupaten Barito Timur</p>\r\n\r\n<p style=\"text-align:justify\">Penulis Syahrial Wahyudi</p>\r\n\r\n<p style=\"text-align:justify\">Pemerintah Daerah Kabupaten Barito Timur Kalimantan Tengah telah melakukan proyek pembangunan jalan lingkar luar dari tahun 2020 yang di bantu anggota TNI.</p>\r\n\r\n<p style=\"text-align:justify\">Proyek pembangunan jalan lingkar luar ini nantinya akan menjadi akses bagi masyarakat yang ingin ke arah Kabupaten Muara Teweh dengan waktu tempuh yang lebih singkat. Selain itu juga dapat&nbsp; mengurangi padatnya arus lalu lintas di dalam kota karena truk/kendaraan berat akan di alihkan ke jalur lingkar luar.</p>\r\n\r\n<p style=\"text-align:justify\">Sedangkan proses pengerasan jalan tersebut sudah terlaksana sejak Oktober 2021 lalu.</p>\r\n\r\n<p style=\"text-align:justify\">Target penyelesaian proyek ini adalah Desember tahun 2021. Namun terjadi keterlambatan dikarenakan cuaca ekstrim yang terjadi di Indonesia, khususnya di Kabupaten Barito Timur Kalimantan Tengah.</p>\r\n\r\n<p style=\"text-align:justify\">Berdasarkan prediksi BMKG (Badan Meteorologi Klimatologi dan Geofisika) cuaca Ekstrim ini akan terjadi hingga awal tahun 2022.</p>\r\n\r\n<p style=\"text-align:justify\">Semoga di awal tahun nanti Proyek Pembangunan jalan Lingkar Luar tersebut dapat diselesaikan agar warga masyarakat&nbsp; bisa segera menikmatinya.</p>\r\n', 'siti zuhro', 'Rabu', '2021-11-17', '17:18:33', 'sitizuhroswesa.jpg', 0, '', 'Y', 'Y', 10, ''),
-(72, 23, '', 1, 'Keasyikan Menonton Drakor, Pria Ini Bunuh Istrrinya', '', 'keasyikan-menonton-drakor-pria-ini-bunuh-istrrinya', 'N', 'N', 'Y', 'N', '<p style=\"text-align:justify\"><strong>Jakarta</strong>, Metasatu.com &ndash; Kematian tragis kembali menimpa SS (22) warga Kapuk Pulo, Cengkareng, Jakarta Barat, Selasa (16/11/2021). Kematian SS masih menyimpan tanda tanya bagi warga sekitar. Karena sejauh ini, Polda Jakarta Barat masih menyelidiki kasus kematian SS yang merupakan istri dari PP.</p>\r\n\r\n<p style=\"text-align:justify\">Kematian SS merupakan misteri bagi warga sekitar. Bagaimana tidak? Dua hari yang lalu, PP dan SS baru kembali dari kampung halamannya di bagian Timur, Indonesia.</p>\r\n\r\n<p style=\"text-align:justify\">Akan tetapi, tadi pagi sekitar pukul 06.00 WIB, PP sudah dibawa oleh beberapa Polisi menuju Polsek Cengkareng, Jakarta Barat untuk menindaklanjuti kematian tragis istrinya.</p>\r\n\r\n<p style=\"text-align:justify\">Berdasarkan keterangan dari Bripda, Muthiah Alhasany yang menangani kasus tersebut menyatakan penyebab kematian SS adalah ketidakpuasan PP saat menyaksikan adengan romantis dari aktor dan aktris Korea yang merupakan tontonan favorit PP setiap hari.</p>\r\n\r\n<p style=\"text-align:justify\">Lebih lanjut, Bripda, Muthiah Alhasany menegaskan bahwa PP yang terdampak PHK dari perusahaannya akibat Pandemi global tidak memiliki kuota yang cukup untuk menikmati drama Korea, selain ia juga mengalami depresi. Gegara bisikan tetangga.</p>\r\n\r\n<p style=\"text-align:justify\">Kronologia Pembunuhan</p>\r\n\r\n<p style=\"text-align:justify\">Sekitar pukul 05.30 WIB, berdasarkan keterangan dari beberapa warga sekitar yang melihat SS sudah kembali dari pasar Darurat, kapuk, Cengkareng, Jakarta Barat dengan membawa beberapa barang belajaan.</p>\r\n\r\n<p style=\"text-align:justify\">Beberapa menit kemudian, SS berteriak minta tolong. Akan tetapi, Pak Andri yang merupakan tetangga sekaligus saksi tidak mengubrisnya. Karena setiap hari juga SS terkadang berteriak begitu. Jadi, Pak Andri berusaha untuk berpikiran positif saja.</p>\r\n\r\n<p style=\"text-align:justify\">Namun yang menjadi pertanyaan dari Pak Andri adalah mengapa pagi-pagi begini rumah PP sudah dikerumunin oleh warga sekitar dan Polisi? Apa yang sebenarnya terjadi?</p>\r\n\r\n<p style=\"text-align:justify\">Sementara, keterangan lanjut dari pelaku (PP) yakni ia tidak bermaksud untuk membunuh istrinya. Tapi, istrinya sendiri yang bawel dan tidak mengikuti perintah darinya.</p>\r\n\r\n<p style=\"text-align:justify\">Tanpa sadar, PP mendorong SS. Dorongan PP sangat keras sehingga membuat SS kehilangan kendali. Akibatnya, SS jatuh dan kepalanya terbentur dengan lantai.</p>\r\n\r\n<p style=\"text-align:justify\">Akhirnya, sesuatu yang tidak diinginkan oleh PP benar-benar terjadi yakni ia harus kehilangan istri tercintanya.</p>\r\n\r\n<p style=\"text-align:justify\">kibat dari perbuatan PP ini, Polda Jakarta Barat memberikan hukuman penjara bagi PP selama 10 tahun. Hukuman itu akan berkurang, jika seandainya keluarga dari SS memberikan pengampunan bagi PP.</p>\r\n\r\n<p style=\"text-align:justify\">Akan tetapi, PP merasa itu akan mustahil. Karena mertuanya saja tidak merestui hubungan mereka. Apalagi dengan kejadian seperti ini, mertuanya pasti berusaha dengan cara apa pun untuk tidak mengeluarkan PP dari balik jeruji besi penjara.</p>\r\n\r\n<p style=\"text-align:justify\">Untuk itu, PP sudah pasrah dan ia berjanji untuk menjalani hukuman penjara selama 10 tahun akibat dari perbuatannya sendiri.</p>\r\n', 'Drakor', 'Rabu', '2021-11-17', '17:20:35', 'drakor.jpg', 0, '', 'Y', 'Y', 21, '');
+(70, 23, '', 1, 'DPRD Setujui Perda RPJMD Kabupaten Demak Tahun 2021-2026', '', 'dprd-setujui-perda-rpjmd-kabupaten-demak-tahun-20212026', 'N', 'N', 'N', 'Y', '<p style=\"text-align:justify\">Dewan Perwakilan Rakyat Daerah (DPRD) Demak kembali mengadakan Rapat Paripurna Ke-39 masa sidang III (ketiga) tahun 2021. Agenda yang dibahas yakni Persetujuan Bersama Bupati dan DPRD Demak terhadap Raperda tentang Rencana Pembangunan Jangka Menengah Daerah (RPJMD) Kabupaten Demak tahun 2021 - 2016 di Aula DPRD Demak, Senin (08/11) sore.</p>\r\n\r\n<p style=\"text-align:justify\">HS Fahrudin Bisri Slamet, dalam pembukaannya mengatakan, setelah dilaksanakannya rapat paripurna penyerahan Raperda tentang RPJMD Kabupaten Demak tahun 2021-2026 pada tanggal 15 Oktober 2021 lalu.</p>\r\n\r\n<p style=\"text-align:justify\">Selanjutnya dibahas oleh rapat Komisi dan rapat Konsultasi Pimpinan DPRD bersama Ketua-ketua Fraksi, Pimpinan Komsi A, B, C dan D, Pimpinan Bapemperda dan Pimpinan Badan Kehormatan DPRD Kabupaten Demak.</p>\r\n\r\n<p style=\"text-align:justify\">Kemudian ia mempersilahkan juru bicara DPRD, H Marwan untuk menyampikan hasil laporannya. &quot;Kepada juru bicara DPRD dipersilahkan,&quot; ucap ketua DPRD yang biasa disapa Slamet.</p>\r\n\r\n<p style=\"text-align:justify\">Dalam laporannya, H Marwan menjelaskan isi tentang RPJMD 2021-2026. Dikatakannya, maksud dan tujuan penyusunan RPJMD menjadi tolok ukur kinerja Kepala Daerah dalam penyelenggaraan pemerintahan dan pembangunan daerah, serta instrumen bagi DPRD dalam melaksanakan fungsi pengawasan serta evaluasi kinerja tahunan pada setiap perangkat daerah.</p>\r\n\r\n<p style=\"text-align:justify\">Ia melanjutkan, atas dasar hasil pembahasan bersama, ada beberapa catatan dan rekomendasi diantaranya, dalam hubungan antar dokumen, pada penyajian sub-sub belum dijelaskan secara terperinci, tentang keselarasan atau hubungan sinergitas antara rancangan akhir dengan beberapa dokumen tersebut.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Sebagai bahan pertimbangan, maka perlu menambahkan kajian keselarasan RPJMD ini dengan Daerah dokumen sekitar. Hal ini bertujuan untuk memberikan gambaran dalam meningkatkan daya saing daerah berdasarkan program-program prioritas di darerah sekitar,&quot; terang Marwan yang juga sebagi ketua Bapemperda.</p>\r\n\r\n<p style=\"text-align:justify\">Kemudian, lanjut Marwan, rekomendasi DPRD atas rancangan awal RPJMD tentang upaya untuk peningkatan Dana Insentif Daerah (DID) tidak diindahkan.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Belum jelas apa strategi Pemerintah Daerah untuk merebutnya setiap tahun, bahkan dalam kerangka pendanaan tahun 2022-2026 DID ditarget nihil, padahal tahun&nbsp; 2022 berdasarkan informasi resmi Kemenkeu DID Kabupaten Demak alokasinya sebesar Rp. 50,2 Milyar lebih,&quot; jelasnya.</p>\r\n\r\n<p style=\"text-align:justify\">Marwan melanjutkan, dalam pembangunan daerah, terkait penanganan rob dan banjir agar dimasukkan dalam program prioritas yang harus diselesaikan di RPJMD Kabupaten Demak.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Dan, juga untuk kebijakan anggaran serta target penanganan luasan wilayah yang terdampak,&quot; pintanya.</p>\r\n\r\n<p style=\"text-align:justify\">Ia menambahkan, dikarenakan situasi pada saat penyusunan Raperda tentang RPJMD Kabuparen Demak tahun 2021-2026 masih dalam kondisi pandemi covid-19 sehingga penentuan asumsi-asumsi kebijakan tidak maksilmal.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Jika diakhir bulan Desember 2021 atau diawal tahun 2022 kondisi _herd community_ (kekebalan masyarakat) sudah tercapai atau kondisi sudah normal, maka Raperda tentang RPJMD Kabupaten Demak tahun 2021-2026 akan direvisi atau disesuaikan saat tahun ke-2 pelaksanaan RPJMD,&quot; terangnya.</p>\r\n\r\n<p style=\"text-align:justify\">Setelah dibacakanya laporan oleh juru bicara dan disusul dengan pembacaan rancangan keputusan DPRD Kabupaten Demak serta berita acara oleh Sekretariat Daerah dan dengan disetujuinya seluruh hadirin sebanyak 36 orang, sehingga menghasilkan kesepakatan dan menyetujui Raperda tentang RPJMD Kabupaten Demak Tahun 2021-2026 untuk ditetapkan menjadi peraturan daerah dengan penyesuaian rekomendasi-rekomnedasi yang telah disampaikan tersebut.</p>\r\n\r\n<p style=\"text-align:justify\">Sementara itu, Bupati Demak, Hj Eisti&#39;anah dalam sambutannya mengatakan, sesuai ketentuan kemendagri nomor 86 tahun 2017 tentang tata cara perencanaaan, pengendalian dan evaluasi pembangunan daerah, tata cara evaluasi rancangan peraturan daerah tentang mencakup pembangunan jangka panjang daerah dan rencana pembangunan jangka menengah daerah, serta tata cara perubahan rencana pembangunan jangka panjang daerah, rencana pembangunan jangka menengah daerah dan rencana kerja&nbsp; pemerintah daerah.</p>\r\n\r\n<p style=\"text-align:justify\">Bahwa Kepala Daerah menyampaikan rancangan peratuaran daerah tentang RPJMD kepada DPRD untuk dibahas dalam rapat pembangunan persetujuan bersama DPRD dan kepala daerah rancangan peraturan Daerah tentang RPJMD.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Alhamdulillah, Raperda RPJMD yang ditetapkan pada tanggal 30 Oktober lalu, pada hari ini telah mencapai persetujuan bersama antara DPRD dan Pemerintah Daerah. Kami sampaikan terimakasih dan apresiasi setinggi-tingginya kepada bapak/ibu pimpinan dan anggota DPRD Kabupaten Demak yang telah membahas dan membedah Raperda tentang RPJMD berasama tim penyusun, dan rekan-rekan Kepala Daerah. Atas hasil tersebut kami siap menindaklanjuti, hal ini merupakan wujud komitmen kami dalam menyusun perencanaan pembangunan yang partispatif,&quot; ucapnya.</p>\r\n\r\n<p style=\"text-align:justify\">Eisti melanjutkan, setelah penyampaikan RPJMD, berdasarkan nota persetujuan bersama akan diserahkan kepada Gubernur untuk di evaluasi.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Besar harapan kami hasil evaluasi tersebut dapat disampaikan pada tanggal 16 November 2021, sehingga target kita untuk menetapkan Perda RPJMD sebelum tanggal 23 Novembber dapat terlaksana,&quot; harapnya.</p>\r\n\r\n<p style=\"text-align:justify\">Rapat ditutup dengan penandatanganan hasil Raperda RPJMD tahun 2021-2026 untuk ditetapkan menjadi Peraturan Daerah Kabupaten Demak oleh Bupati Demak, Hj Eisti&#39;anah didampingi Wakilnya, KH Ali Makhsun beserta Ketua DPRD Demak, HS Fahrudin Bisri Slamet dan Wakilnya Zayinul Fata serta Nur Wahid.</p>\r\n\r\n<p style=\"text-align:justify\">Hadir dalam paripurna tersebut, Forkopimda, Sekretaris Daerah, Sekretaris DPRD, Asisten Sekda, para Kepala Daerah, para Camat se-Kebupaten Demak, para insan Pers dan Media serta tamu undangan yang hadir secara langsung maupun virtual.</p>\r\n', 'DPRD Setujui Perda RPJMD', 'Rabu', '2021-11-17', '17:15:39', '2310b7c68a6e0195fd84496747470305.jpg', 0, '', 'Y', 'Y', 9, ''),
+(71, 23, '', 1, 'Presidential Threshold 20% Lingkaran Setan, Siti Zuhro: Kita Khawatir Rekayasa Calon Tunggal', '', 'presidential-threshold-20-lingkaran-setan-siti-zuhro-kita-khawatir-rekayasa-calon-tunggal', 'N', 'N', 'N', 'N', '<p style=\"text-align:justify\"><strong>Jakarta</strong>,&nbsp;<a href=\"http://metasatu.com/\" target=\"_blank\">metasatu.com</a>&nbsp;&mdash; Prof. R Siti Zuhro menyebut Presidential Threshold 20% ini jika diteruskan akan menjadi lingkaran setan, di mana partai-partai besar akan terus berkuasa, bahkan lebih parahnya yang dikhawatirkan justru adanya rekayasa calon presiden tunggal.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Kemungkinan besar ini menjadi lingkaran setan di mana partai besar akan terus berkuasa seperti ini, karena memang peluang itu tidak setara,&quot; ungkap Pengamat dan peneliti LIPI, Prof Siti Zuhro, pada dalam diskusi &#39;Pilpres 2024: Menyoal Presidential Threshold&#39; yang diadakan oleh forum guru besar dan doktor Insan Cinta, Minggu (14/11).</p>\r\n\r\n<p style=\"text-align:justify\">Peluang adanya poros ketiga memang tidak menutup kemungkinan, kata Prof Siti. Jika melihat datanya, perolehan suara nasional parpol tunjukkan PDIP nomor 1 dengan 19,33%, kedua Golkar 12,31%, ketiga Gerindra 12,57%, lalu PKB 9,96%, NasDem 9,01%, PKS 8,21% Demokrat 7,77%, PAN 6,8% dan PPP 4,52%. Maka belum tentu hanya akan ada 2 koalisi, bisa jadi terbentuk 3 kubu koalisi meski pun akan sangat sulit terjadi.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Misal simulasi ini, ini analisis awal ya jadi sifatnya cair enggak bisa disimpulkan ini misal PDIP bisa sama Gerindra 2 parpol sudah cukup. Lalu Golkar, NasDem dan PKB. Demokrat, PKS ditambah PAN dan PPP ini cukup,&quot; katanya.</p>\r\n\r\n<p style=\"text-align:justify\">Tentu saja berangkat dari pengalaman pilpres tahun 2019. Sekalipun didorong untuk lahirnya poros ke 3 hal itu nyatanya sulit diwujudkan, lantaran adanya pertimbangan resiko yang harus ditanggung.</p>\r\n\r\n<p style=\"text-align:justify\">Lebih dari itu Prof Siti Zuhro rupanya bukan sekedar menghawatirkan adanya dua kubu yang akan bertarung di pilpres 2024 nanti, melainkan lebih dari itu, akan jauh lebih buruk apabila nanti yang justru terjadi malah hanya ada calon tunggal seperti yang sering terjadi di pilkada-pilkada sebelumnya. Di mana semua partai-partai besar berkumpul menjadi satu.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Adanya kompetisi konsentrasi yang lebih maka tadi jadi tidak pada dua pasangan calon saja yang kita khawatirkan, tidak 2 Pasangan calon kan nanti bisa-bisa tunggal calonnya kan seperti ada di Pilkada,&quot; ungkapnya.</p>\r\n\r\n<p style=\"text-align:justify\">Untuk menghindari terjadinya rekayasa pencalonan yang mengarah pada calon tunggal, Prof Siti menyarankan perlu ada pembatasan syarat pencalonan presiden dan wakil presiden yang tidak boleh melebihi 30%. Dengan kata lain, untuk menjaga sistem demokrasi, koalisi partai yang terbangun di parlemen tidak boleh lebih dari 30% agar tidak terjadi persekongkolan politik yang mengarah kan calon yang kuat secara elektabilitas menguasai koalisi.</p>\r\n\r\n<p style=\"text-align:justify\">Penyebab Terlambatnya Proses Pembangunan Jalan Lingkar Luar di Kabupaten Barito Timur</p>\r\n\r\n<p style=\"text-align:justify\">Penulis Syahrial Wahyudi</p>\r\n\r\n<p style=\"text-align:justify\">Pemerintah Daerah Kabupaten Barito Timur Kalimantan Tengah telah melakukan proyek pembangunan jalan lingkar luar dari tahun 2020 yang di bantu anggota TNI.</p>\r\n\r\n<p style=\"text-align:justify\">Proyek pembangunan jalan lingkar luar ini nantinya akan menjadi akses bagi masyarakat yang ingin ke arah Kabupaten Muara Teweh dengan waktu tempuh yang lebih singkat. Selain itu juga dapat&nbsp; mengurangi padatnya arus lalu lintas di dalam kota karena truk/kendaraan berat akan di alihkan ke jalur lingkar luar.</p>\r\n\r\n<p style=\"text-align:justify\">Sedangkan proses pengerasan jalan tersebut sudah terlaksana sejak Oktober 2021 lalu.</p>\r\n\r\n<p style=\"text-align:justify\">Target penyelesaian proyek ini adalah Desember tahun 2021. Namun terjadi keterlambatan dikarenakan cuaca ekstrim yang terjadi di Indonesia, khususnya di Kabupaten Barito Timur Kalimantan Tengah.</p>\r\n\r\n<p style=\"text-align:justify\">Berdasarkan prediksi BMKG (Badan Meteorologi Klimatologi dan Geofisika) cuaca Ekstrim ini akan terjadi hingga awal tahun 2022.</p>\r\n\r\n<p style=\"text-align:justify\">Semoga di awal tahun nanti Proyek Pembangunan jalan Lingkar Luar tersebut dapat diselesaikan agar warga masyarakat&nbsp; bisa segera menikmatinya.</p>\r\n', 'siti zuhro', 'Rabu', '2021-11-17', '17:18:33', '4e0b8a3cf708c817498fddc05f44c59d.jpg', 0, '', 'Y', 'Y', 11, ''),
+(72, 23, '', 1, 'Keasyikan Menonton Drakor, Pria Ini Bunuh Istrrinya', '', 'keasyikan-menonton-drakor-pria-ini-bunuh-istrrinya', 'N', 'N', 'Y', 'N', '<p style=\"text-align:justify\"><strong>Jakarta</strong>, Metasatu.com &ndash; Kematian tragis kembali menimpa SS (22) warga Kapuk Pulo, Cengkareng, Jakarta Barat, Selasa (16/11/2021). Kematian SS masih menyimpan tanda tanya bagi warga sekitar. Karena sejauh ini, Polda Jakarta Barat masih menyelidiki kasus kematian SS yang merupakan istri dari PP.</p>\r\n\r\n<p style=\"text-align:justify\">Kematian SS merupakan misteri bagi warga sekitar. Bagaimana tidak? Dua hari yang lalu, PP dan SS baru kembali dari kampung halamannya di bagian Timur, Indonesia.</p>\r\n\r\n<p style=\"text-align:justify\">Akan tetapi, tadi pagi sekitar pukul 06.00 WIB, PP sudah dibawa oleh beberapa Polisi menuju Polsek Cengkareng, Jakarta Barat untuk menindaklanjuti kematian tragis istrinya.</p>\r\n\r\n<p style=\"text-align:justify\">Berdasarkan keterangan dari Bripda, Muthiah Alhasany yang menangani kasus tersebut menyatakan penyebab kematian SS adalah ketidakpuasan PP saat menyaksikan adengan romantis dari aktor dan aktris Korea yang merupakan tontonan favorit PP setiap hari.</p>\r\n\r\n<p style=\"text-align:justify\">Lebih lanjut, Bripda, Muthiah Alhasany menegaskan bahwa PP yang terdampak PHK dari perusahaannya akibat Pandemi global tidak memiliki kuota yang cukup untuk menikmati drama Korea, selain ia juga mengalami depresi. Gegara bisikan tetangga.</p>\r\n\r\n<p style=\"text-align:justify\">Kronologia Pembunuhan</p>\r\n\r\n<p style=\"text-align:justify\">Sekitar pukul 05.30 WIB, berdasarkan keterangan dari beberapa warga sekitar yang melihat SS sudah kembali dari pasar Darurat, kapuk, Cengkareng, Jakarta Barat dengan membawa beberapa barang belajaan.</p>\r\n\r\n<p style=\"text-align:justify\">Beberapa menit kemudian, SS berteriak minta tolong. Akan tetapi, Pak Andri yang merupakan tetangga sekaligus saksi tidak mengubrisnya. Karena setiap hari juga SS terkadang berteriak begitu. Jadi, Pak Andri berusaha untuk berpikiran positif saja.</p>\r\n\r\n<p style=\"text-align:justify\">Namun yang menjadi pertanyaan dari Pak Andri adalah mengapa pagi-pagi begini rumah PP sudah dikerumunin oleh warga sekitar dan Polisi? Apa yang sebenarnya terjadi?</p>\r\n\r\n<p style=\"text-align:justify\">Sementara, keterangan lanjut dari pelaku (PP) yakni ia tidak bermaksud untuk membunuh istrinya. Tapi, istrinya sendiri yang bawel dan tidak mengikuti perintah darinya.</p>\r\n\r\n<p style=\"text-align:justify\">Tanpa sadar, PP mendorong SS. Dorongan PP sangat keras sehingga membuat SS kehilangan kendali. Akibatnya, SS jatuh dan kepalanya terbentur dengan lantai.</p>\r\n\r\n<p style=\"text-align:justify\">Akhirnya, sesuatu yang tidak diinginkan oleh PP benar-benar terjadi yakni ia harus kehilangan istri tercintanya.</p>\r\n\r\n<p style=\"text-align:justify\">kibat dari perbuatan PP ini, Polda Jakarta Barat memberikan hukuman penjara bagi PP selama 10 tahun. Hukuman itu akan berkurang, jika seandainya keluarga dari SS memberikan pengampunan bagi PP.</p>\r\n\r\n<p style=\"text-align:justify\">Akan tetapi, PP merasa itu akan mustahil. Karena mertuanya saja tidak merestui hubungan mereka. Apalagi dengan kejadian seperti ini, mertuanya pasti berusaha dengan cara apa pun untuk tidak mengeluarkan PP dari balik jeruji besi penjara.</p>\r\n\r\n<p style=\"text-align:justify\">Untuk itu, PP sudah pasrah dan ia berjanji untuk menjalani hukuman penjara selama 10 tahun akibat dari perbuatannya sendiri.</p>\r\n', 'Drakor', 'Rabu', '2021-11-17', '17:20:35', 'drakor.jpg', 0, '', 'Y', 'Y', 23, '');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `cerbung_bab_db`
+-- Table structure for table `cerbung_bab_db`
 --
 
 CREATE TABLE `cerbung_bab_db` (
@@ -207,7 +205,7 @@ CREATE TABLE `cerbung_bab_db` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `cerbung_bab_db`
+-- Dumping data for table `cerbung_bab_db`
 --
 
 INSERT INTO `cerbung_bab_db` (`id_cerbung_bab`, `id_cerbung`, `judul_cerbung_bab`, `judul_cerbung_bab_seo`, `status_cerbung_bab`, `status_lang_cerbung_bab`, `isi_cerbung`, `tanggal_posting_bab`, `username`, `id_users`, `views`) VALUES
@@ -292,7 +290,7 @@ INSERT INTO `cerbung_bab_db` (`id_cerbung_bab`, `id_cerbung`, `judul_cerbung_bab
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `cerbung_db`
+-- Table structure for table `cerbung_db`
 --
 
 CREATE TABLE `cerbung_db` (
@@ -317,7 +315,7 @@ CREATE TABLE `cerbung_db` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `cerbung_db`
+-- Dumping data for table `cerbung_db`
 --
 
 INSERT INTO `cerbung_db` (`id_cerbung`, `judul_cerbung`, `judul_cerbung_seo`, `pratinjau_cerbung`, `ket_gambar_cerbung`, `nama_tokoh_cerbung`, `tag_cerbung`, `tag_seo_cerbung`, `id_kategori_cerbung`, `foto_cerbung`, `usernames`, `id_users`, `headline_cerbung`, `status_cerbung`, `id_status_bab`, `hari`, `tanggal`, `jam`) VALUES
@@ -336,7 +334,7 @@ INSERT INTO `cerbung_db` (`id_cerbung`, `judul_cerbung`, `judul_cerbung_seo`, `p
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `download`
+-- Table structure for table `download`
 --
 
 CREATE TABLE `download` (
@@ -348,7 +346,7 @@ CREATE TABLE `download` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `download`
+-- Dumping data for table `download`
 --
 
 INSERT INTO `download` (`id_download`, `judul`, `nama_file`, `tgl_posting`, `hits`) VALUES
@@ -374,7 +372,7 @@ INSERT INTO `download` (`id_download`, `judul`, `nama_file`, `tgl_posting`, `hit
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `featured`
+-- Table structure for table `featured`
 --
 
 CREATE TABLE `featured` (
@@ -384,7 +382,7 @@ CREATE TABLE `featured` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `featured`
+-- Dumping data for table `featured`
 --
 
 INSERT INTO `featured` (`id_featured`, `no_urut`, `judul_featured`) VALUES
@@ -398,7 +396,7 @@ INSERT INTO `featured` (`id_featured`, `no_urut`, `judul_featured`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gallery`
+-- Table structure for table `gallery`
 --
 
 CREATE TABLE `gallery` (
@@ -412,7 +410,7 @@ CREATE TABLE `gallery` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `gallery`
+-- Dumping data for table `gallery`
 --
 
 INSERT INTO `gallery` (`id_gallery`, `id_album`, `username`, `jdl_gallery`, `gallery_seo`, `keterangan`, `gbr_gallery`) VALUES
@@ -446,7 +444,7 @@ INSERT INTO `gallery` (`id_gallery`, `id_album`, `username`, `jdl_gallery`, `gal
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `halamanstatis`
+-- Table structure for table `halamanstatis`
 --
 
 CREATE TABLE `halamanstatis` (
@@ -463,7 +461,7 @@ CREATE TABLE `halamanstatis` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `halamanstatis`
+-- Dumping data for table `halamanstatis`
 --
 
 INSERT INTO `halamanstatis` (`id_halaman`, `judul`, `judul_seo`, `isi_halaman`, `tgl_posting`, `gambar`, `username`, `dibaca`, `jam`, `hari`) VALUES
@@ -473,7 +471,7 @@ INSERT INTO `halamanstatis` (`id_halaman`, `judul`, `judul_seo`, `isi_halaman`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `header`
+-- Table structure for table `header`
 --
 
 CREATE TABLE `header` (
@@ -485,7 +483,7 @@ CREATE TABLE `header` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `header`
+-- Dumping data for table `header`
 --
 
 INSERT INTO `header` (`id_header`, `judul`, `url`, `gambar`, `tgl_posting`) VALUES
@@ -496,7 +494,7 @@ INSERT INTO `header` (`id_header`, `judul`, `url`, `gambar`, `tgl_posting`) VALU
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `hubungi`
+-- Table structure for table `hubungi`
 --
 
 CREATE TABLE `hubungi` (
@@ -511,7 +509,7 @@ CREATE TABLE `hubungi` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `hubungi`
+-- Dumping data for table `hubungi`
 --
 
 INSERT INTO `hubungi` (`id_hubungi`, `nama`, `email`, `subjek`, `pesan`, `tanggal`, `jam`, `dibaca`) VALUES
@@ -524,7 +522,7 @@ INSERT INTO `hubungi` (`id_hubungi`, `nama`, `email`, `subjek`, `pesan`, `tangga
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `identitas`
+-- Table structure for table `identitas`
 --
 
 CREATE TABLE `identitas` (
@@ -542,7 +540,7 @@ CREATE TABLE `identitas` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `identitas`
+-- Dumping data for table `identitas`
 --
 
 INSERT INTO `identitas` (`id_identitas`, `nama_website`, `email`, `url`, `facebook`, `rekening`, `no_telp`, `meta_deskripsi`, `meta_keyword`, `favicon`, `maps`) VALUES
@@ -551,7 +549,7 @@ INSERT INTO `identitas` (`id_identitas`, `nama_website`, `email`, `url`, `facebo
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `identitas_web`
+-- Table structure for table `identitas_web`
 --
 
 CREATE TABLE `identitas_web` (
@@ -564,7 +562,7 @@ CREATE TABLE `identitas_web` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `identitas_web`
+-- Dumping data for table `identitas_web`
 --
 
 INSERT INTO `identitas_web` (`id_identitas_web`, `tentang_kami_db`, `kontak_kami_db`, `syarat_db`, `faq_db`, `pedoman_db`) VALUES
@@ -573,7 +571,7 @@ INSERT INTO `identitas_web` (`id_identitas_web`, `tentang_kami_db`, `kontak_kami
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `iklanatas`
+-- Table structure for table `iklanatas`
 --
 
 CREATE TABLE `iklanatas` (
@@ -587,7 +585,7 @@ CREATE TABLE `iklanatas` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `iklanatas`
+-- Dumping data for table `iklanatas`
 --
 
 INSERT INTO `iklanatas` (`id_iklanatas`, `judul`, `username`, `url`, `gambar`, `status_iklan`, `tgl_posting`) VALUES
@@ -599,7 +597,7 @@ INSERT INTO `iklanatas` (`id_iklanatas`, `judul`, `username`, `url`, `gambar`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `iklantengah`
+-- Table structure for table `iklantengah`
 --
 
 CREATE TABLE `iklantengah` (
@@ -614,7 +612,7 @@ CREATE TABLE `iklantengah` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `katajelek`
+-- Table structure for table `katajelek`
 --
 
 CREATE TABLE `katajelek` (
@@ -625,7 +623,7 @@ CREATE TABLE `katajelek` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `katajelek`
+-- Dumping data for table `katajelek`
 --
 
 INSERT INTO `katajelek` (`id_jelek`, `kata`, `username`, `ganti`) VALUES
@@ -638,7 +636,7 @@ INSERT INTO `katajelek` (`id_jelek`, `kata`, `username`, `ganti`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori`
+-- Table structure for table `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -652,7 +650,7 @@ CREATE TABLE `kategori` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `kategori`
+-- Dumping data for table `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `username`, `kategori_seo`, `aktif`, `sidebar`, `icon`) VALUES
@@ -662,9 +660,8 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `username`, `kategori_se
 (5, 'Daerah', 'yonbayu', 'daerah', 'Y', 0, '21'),
 (6, 'Internasional', 'yonbayu', 'internasional', 'Y', 0, '11'),
 (7, 'Politik', 'yonbayu', 'politik', 'Y', 0, '21'),
-(8, 'Parlemen', '', 'parlemen', 'Y', 0, '2'),
-(9, 'Pilpres', '', 'pilpres', 'Y', 0, '12'),
-(10, 'Pilkada', '', 'pilkada', 'Y', 0, '32'),
+(8, 'Hukum', '', 'hukum', 'Y', 0, '2'),
+(28, 'keamanan', '', 'keamanan', 'Y', 0, ''),
 (11, 'Kesehatan', '', 'kesehatan', 'Y', 0, '23'),
 (12, 'Pendidikan', '', 'pendidikan', 'Y', 0, '23'),
 (13, 'Ekonomi', '', 'ekonomi', 'Y', 0, '22'),
@@ -675,14 +672,16 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `username`, `kategori_se
 (18, 'Humaniora', '', 'humaniora', 'Y', 0, '22'),
 (19, 'Budaya', '', 'budaya', 'Y', 0, '33'),
 (20, 'Olahraga', '', 'olahraga', 'Y', 0, ''),
-(21, 'Sosmed', '', 'sosmed', 'Y', 0, ''),
-(22, 'Opini', '', 'opini', 'Y', 0, ''),
-(23, 'Muda', '', 'muda', 'Y', 0, '');
+(23, 'Viral', '', 'viral', 'Y', 0, 'a'),
+(24, 'feature', '', 'feature', 'Y', 0, ''),
+(25, 'komunitas', '', 'komunitas', 'Y', 0, ''),
+(26, 'Gaya Hidup', '', 'gaya-hidup', 'Y', 0, ''),
+(27, 'Showbiz', '', 'showbiz', 'Y', 0, '');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori_cerbung`
+-- Table structure for table `kategori_cerbung`
 --
 
 CREATE TABLE `kategori_cerbung` (
@@ -694,7 +693,7 @@ CREATE TABLE `kategori_cerbung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kategori_cerbung`
+-- Dumping data for table `kategori_cerbung`
 --
 
 INSERT INTO `kategori_cerbung` (`id_kategori_cerbung`, `nama_kategori_cerbung`, `kategori_seo_cerbung`, `status_kategori_cerbung`, `username`) VALUES
@@ -707,7 +706,7 @@ INSERT INTO `kategori_cerbung` (`id_kategori_cerbung`, `nama_kategori_cerbung`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori_usia`
+-- Table structure for table `kategori_usia`
 --
 
 CREATE TABLE `kategori_usia` (
@@ -719,7 +718,7 @@ CREATE TABLE `kategori_usia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kategori_usia`
+-- Dumping data for table `kategori_usia`
 --
 
 INSERT INTO `kategori_usia` (`id_kategori_usia`, `nama_kategori_usia`, `kategori_seo_usia`, `username`, `waktu`) VALUES
@@ -729,7 +728,7 @@ INSERT INTO `kategori_usia` (`id_kategori_usia`, `nama_kategori_usia`, `kategori
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `komentar`
+-- Table structure for table `komentar`
 --
 
 CREATE TABLE `komentar` (
@@ -745,7 +744,7 @@ CREATE TABLE `komentar` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `komentar`
+-- Dumping data for table `komentar`
 --
 
 INSERT INTO `komentar` (`id_komentar`, `id_berita`, `nama_komentar`, `url`, `isi_komentar`, `tgl`, `jam_komentar`, `aktif`, `email`) VALUES
@@ -767,7 +766,7 @@ INSERT INTO `komentar` (`id_komentar`, `id_berita`, `nama_komentar`, `url`, `isi
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `komentarvid`
+-- Table structure for table `komentarvid`
 --
 
 CREATE TABLE `komentarvid` (
@@ -782,7 +781,7 @@ CREATE TABLE `komentarvid` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `komentarvid`
+-- Dumping data for table `komentarvid`
 --
 
 INSERT INTO `komentarvid` (`id_komentar`, `id_video`, `nama_komentar`, `url`, `isi_komentar`, `tgl`, `jam_komentar`, `aktif`) VALUES
@@ -795,7 +794,7 @@ INSERT INTO `komentarvid` (`id_komentar`, `id_video`, `nama_komentar`, `url`, `i
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `logo`
+-- Table structure for table `logo`
 --
 
 CREATE TABLE `logo` (
@@ -804,7 +803,7 @@ CREATE TABLE `logo` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `logo`
+-- Dumping data for table `logo`
 --
 
 INSERT INTO `logo` (`id_logo`, `gambar`) VALUES
@@ -813,7 +812,7 @@ INSERT INTO `logo` (`id_logo`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `menu`
+-- Table structure for table `menu`
 --
 
 CREATE TABLE `menu` (
@@ -827,7 +826,7 @@ CREATE TABLE `menu` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `menu`
+-- Dumping data for table `menu`
 --
 
 INSERT INTO `menu` (`id_menu`, `id_parent`, `nama_menu`, `link`, `aktif`, `position`, `urutan`) VALUES
@@ -862,7 +861,7 @@ INSERT INTO `menu` (`id_menu`, `id_parent`, `nama_menu`, `link`, `aktif`, `posit
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `modul`
+-- Table structure for table `modul`
 --
 
 CREATE TABLE `modul` (
@@ -880,7 +879,7 @@ CREATE TABLE `modul` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `modul`
+-- Dumping data for table `modul`
 --
 
 INSERT INTO `modul` (`id_modul`, `nama_modul`, `username`, `link`, `static_content`, `gambar`, `publish`, `status`, `aktif`, `urutan`, `link_seo`) VALUES
@@ -897,7 +896,7 @@ INSERT INTO `modul` (`id_modul`, `nama_modul`, `username`, `link`, `static_conte
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mod_alamat`
+-- Table structure for table `mod_alamat`
 --
 
 CREATE TABLE `mod_alamat` (
@@ -906,7 +905,7 @@ CREATE TABLE `mod_alamat` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `mod_alamat`
+-- Dumping data for table `mod_alamat`
 --
 
 INSERT INTO `mod_alamat` (`id_alamat`, `alamat`) VALUES
@@ -915,7 +914,7 @@ INSERT INTO `mod_alamat` (`id_alamat`, `alamat`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mod_ym`
+-- Table structure for table `mod_ym`
 --
 
 CREATE TABLE `mod_ym` (
@@ -928,7 +927,7 @@ CREATE TABLE `mod_ym` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pasangiklan`
+-- Table structure for table `pasangiklan`
 --
 
 CREATE TABLE `pasangiklan` (
@@ -941,7 +940,7 @@ CREATE TABLE `pasangiklan` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `pasangiklan`
+-- Dumping data for table `pasangiklan`
 --
 
 INSERT INTO `pasangiklan` (`id_pasangiklan`, `judul`, `username`, `url`, `gambar`, `tgl_posting`) VALUES
@@ -951,7 +950,7 @@ INSERT INTO `pasangiklan` (`id_pasangiklan`, `judul`, `username`, `url`, `gambar
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `playlist`
+-- Table structure for table `playlist`
 --
 
 CREATE TABLE `playlist` (
@@ -964,7 +963,7 @@ CREATE TABLE `playlist` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `playlist`
+-- Dumping data for table `playlist`
 --
 
 INSERT INTO `playlist` (`id_playlist`, `jdl_playlist`, `username`, `playlist_seo`, `gbr_playlist`, `aktif`) VALUES
@@ -974,7 +973,7 @@ INSERT INTO `playlist` (`id_playlist`, `jdl_playlist`, `username`, `playlist_seo
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `poling`
+-- Table structure for table `poling`
 --
 
 CREATE TABLE `poling` (
@@ -987,7 +986,7 @@ CREATE TABLE `poling` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `poling`
+-- Dumping data for table `poling`
 --
 
 INSERT INTO `poling` (`id_poling`, `pilihan`, `status`, `username`, `rating`, `aktif`) VALUES
@@ -1001,7 +1000,7 @@ INSERT INTO `poling` (`id_poling`, `pilihan`, `status`, `username`, `rating`, `a
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `sekilasinfo`
+-- Table structure for table `sekilasinfo`
 --
 
 CREATE TABLE `sekilasinfo` (
@@ -1013,7 +1012,7 @@ CREATE TABLE `sekilasinfo` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `sekilasinfo`
+-- Dumping data for table `sekilasinfo`
 --
 
 INSERT INTO `sekilasinfo` (`id_sekilas`, `info`, `tgl_posting`, `gambar`, `aktif`) VALUES
@@ -1025,7 +1024,7 @@ INSERT INTO `sekilasinfo` (`id_sekilas`, `info`, `tgl_posting`, `gambar`, `aktif
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `statistik`
+-- Table structure for table `statistik`
 --
 
 CREATE TABLE `statistik` (
@@ -1036,7 +1035,7 @@ CREATE TABLE `statistik` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `statistik`
+-- Dumping data for table `statistik`
 --
 
 INSERT INTO `statistik` (`ip`, `tanggal`, `hits`, `online`) VALUES
@@ -1405,7 +1404,7 @@ INSERT INTO `statistik` (`ip`, `tanggal`, `hits`, `online`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `status_bab`
+-- Table structure for table `status_bab`
 --
 
 CREATE TABLE `status_bab` (
@@ -1414,7 +1413,7 @@ CREATE TABLE `status_bab` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `status_bab`
+-- Dumping data for table `status_bab`
 --
 
 INSERT INTO `status_bab` (`id_status_bab`, `nama_status_bab`) VALUES
@@ -1424,7 +1423,7 @@ INSERT INTO `status_bab` (`id_status_bab`, `nama_status_bab`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tag`
+-- Table structure for table `tag`
 --
 
 CREATE TABLE `tag` (
@@ -1437,7 +1436,7 @@ CREATE TABLE `tag` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `tag`
+-- Dumping data for table `tag`
 --
 
 INSERT INTO `tag` (`id_tag`, `nama_tag`, `username`, `id_users`, `tag_seo`, `count`) VALUES
@@ -1554,12 +1553,13 @@ INSERT INTO `tag` (`id_tag`, `nama_tag`, `username`, `id_users`, `tag_seo`, `cou
 (111, 'resensifilmmisteri', 'timrisalah', 0, 'resensifilmmisteri', 0),
 (112, 'ceritamisteri urbanlegend', 'timrisalah', 0, 'ceritamisteri-urbanlegend', 0),
 (113, 'ceritami', 'yonbayu', 0, 'ceritami', 0),
-(114, 'aaa', '', 1, 'aaa', 0);
+(114, 'aaa', '', 1, 'aaa', 0),
+(115, '', '', 1, '--', 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tagvid`
+-- Table structure for table `tagvid`
 --
 
 CREATE TABLE `tagvid` (
@@ -1571,7 +1571,7 @@ CREATE TABLE `tagvid` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `tagvid`
+-- Dumping data for table `tagvid`
 --
 
 INSERT INTO `tagvid` (`id_tag`, `nama_tag`, `username`, `tag_seo`, `count`) VALUES
@@ -1582,7 +1582,7 @@ INSERT INTO `tagvid` (`id_tag`, `nama_tag`, `username`, `tag_seo`, `count`) VALU
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tag_cerbung`
+-- Table structure for table `tag_cerbung`
 --
 
 CREATE TABLE `tag_cerbung` (
@@ -1594,7 +1594,7 @@ CREATE TABLE `tag_cerbung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tag_cerbung`
+-- Dumping data for table `tag_cerbung`
 --
 
 INSERT INTO `tag_cerbung` (`id_tag_cerbung`, `nama_tag_cerbung`, `username`, `tag_seo_cerbung`, `count`) VALUES
@@ -1638,7 +1638,7 @@ INSERT INTO `tag_cerbung` (`id_tag_cerbung`, `nama_tag_cerbung`, `username`, `ta
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_comment`
+-- Table structure for table `tbl_comment`
 --
 
 CREATE TABLE `tbl_comment` (
@@ -1652,7 +1652,7 @@ CREATE TABLE `tbl_comment` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_comment`
+-- Dumping data for table `tbl_comment`
 --
 
 INSERT INTO `tbl_comment` (`id_komentar`, `reply`, `nama_lengkap`, `alamat_email`, `isi_pesan`, `tanggal_komentar`, `jam_komentar`) VALUES
@@ -1675,7 +1675,7 @@ INSERT INTO `tbl_comment` (`id_komentar`, `reply`, `nama_lengkap`, `alamat_email
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `templates`
+-- Table structure for table `templates`
 --
 
 CREATE TABLE `templates` (
@@ -1688,7 +1688,7 @@ CREATE TABLE `templates` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `templates`
+-- Dumping data for table `templates`
 --
 
 INSERT INTO `templates` (`id_templates`, `judul`, `username`, `pembuat`, `folder`, `aktif`) VALUES
@@ -1698,7 +1698,7 @@ INSERT INTO `templates` (`id_templates`, `judul`, `username`, `pembuat`, `folder
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -1715,7 +1715,7 @@ CREATE TABLE `users` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id_users`, `username`, `password`, `nama_lengkap`, `email`, `no_telp`, `foto`, `level`, `blokir`, `id_session`) VALUES
@@ -1724,7 +1724,7 @@ INSERT INTO `users` (`id_users`, `username`, `password`, `nama_lengkap`, `email`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users_modul`
+-- Table structure for table `users_modul`
 --
 
 CREATE TABLE `users_modul` (
@@ -1734,7 +1734,7 @@ CREATE TABLE `users_modul` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `users_modul`
+-- Dumping data for table `users_modul`
 --
 
 INSERT INTO `users_modul` (`id_umod`, `id_session`, `id_modul`) VALUES
@@ -1788,7 +1788,7 @@ INSERT INTO `users_modul` (`id_umod`, `id_session`, `id_modul`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `video`
+-- Table structure for table `video`
 --
 
 CREATE TABLE `video` (
@@ -1809,7 +1809,7 @@ CREATE TABLE `video` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data untuk tabel `video`
+-- Dumping data for table `video`
 --
 
 INSERT INTO `video` (`id_video`, `id_playlist`, `username`, `jdl_video`, `video_seo`, `keterangan`, `gbr_video`, `video`, `youtube`, `dilihat`, `hari`, `tanggal`, `jam`, `tagvid`) VALUES
@@ -1820,7 +1820,7 @@ INSERT INTO `video` (`id_video`, `id_playlist`, `username`, `jdl_video`, `video_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `view_berita`
+-- Table structure for table `view_berita`
 --
 
 CREATE TABLE `view_berita` (
@@ -1836,503 +1836,461 @@ CREATE TABLE `view_berita` (
 --
 
 --
--- Indeks untuk tabel `agenda`
+-- Indexes for table `agenda`
 --
 ALTER TABLE `agenda`
   ADD PRIMARY KEY (`id_agenda`);
 
 --
--- Indeks untuk tabel `album`
+-- Indexes for table `album`
 --
 ALTER TABLE `album`
   ADD PRIMARY KEY (`id_album`);
 
 --
--- Indeks untuk tabel `background`
+-- Indexes for table `background`
 --
 ALTER TABLE `background`
   ADD PRIMARY KEY (`id_background`);
 
 --
--- Indeks untuk tabel `banner`
+-- Indexes for table `banner`
 --
 ALTER TABLE `banner`
   ADD PRIMARY KEY (`id_banner`);
 
 --
--- Indeks untuk tabel `berita`
+-- Indexes for table `berita`
 --
 ALTER TABLE `berita`
   ADD PRIMARY KEY (`id_berita`);
 
 --
--- Indeks untuk tabel `cerbung_bab_db`
+-- Indexes for table `cerbung_bab_db`
 --
 ALTER TABLE `cerbung_bab_db`
   ADD PRIMARY KEY (`id_cerbung_bab`);
 
 --
--- Indeks untuk tabel `cerbung_db`
+-- Indexes for table `cerbung_db`
 --
 ALTER TABLE `cerbung_db`
   ADD PRIMARY KEY (`id_cerbung`);
 
 --
--- Indeks untuk tabel `download`
+-- Indexes for table `download`
 --
 ALTER TABLE `download`
   ADD PRIMARY KEY (`id_download`);
 
 --
--- Indeks untuk tabel `featured`
+-- Indexes for table `featured`
 --
 ALTER TABLE `featured`
   ADD PRIMARY KEY (`id_featured`);
 
 --
--- Indeks untuk tabel `gallery`
+-- Indexes for table `gallery`
 --
 ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id_gallery`);
 
 --
--- Indeks untuk tabel `halamanstatis`
+-- Indexes for table `halamanstatis`
 --
 ALTER TABLE `halamanstatis`
   ADD PRIMARY KEY (`id_halaman`);
 
 --
--- Indeks untuk tabel `header`
+-- Indexes for table `header`
 --
 ALTER TABLE `header`
   ADD PRIMARY KEY (`id_header`);
 
 --
--- Indeks untuk tabel `hubungi`
+-- Indexes for table `hubungi`
 --
 ALTER TABLE `hubungi`
   ADD PRIMARY KEY (`id_hubungi`);
 
 --
--- Indeks untuk tabel `identitas`
+-- Indexes for table `identitas`
 --
 ALTER TABLE `identitas`
   ADD PRIMARY KEY (`id_identitas`);
 
 --
--- Indeks untuk tabel `identitas_web`
+-- Indexes for table `identitas_web`
 --
 ALTER TABLE `identitas_web`
   ADD PRIMARY KEY (`id_identitas_web`);
 
 --
--- Indeks untuk tabel `iklanatas`
+-- Indexes for table `iklanatas`
 --
 ALTER TABLE `iklanatas`
   ADD PRIMARY KEY (`id_iklanatas`);
 
 --
--- Indeks untuk tabel `iklantengah`
+-- Indexes for table `iklantengah`
 --
 ALTER TABLE `iklantengah`
   ADD PRIMARY KEY (`id_iklantengah`);
 
 --
--- Indeks untuk tabel `katajelek`
+-- Indexes for table `katajelek`
 --
 ALTER TABLE `katajelek`
   ADD PRIMARY KEY (`id_jelek`);
 
 --
--- Indeks untuk tabel `kategori`
+-- Indexes for table `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indeks untuk tabel `kategori_cerbung`
+-- Indexes for table `kategori_cerbung`
 --
 ALTER TABLE `kategori_cerbung`
   ADD PRIMARY KEY (`id_kategori_cerbung`);
 
 --
--- Indeks untuk tabel `kategori_usia`
+-- Indexes for table `kategori_usia`
 --
 ALTER TABLE `kategori_usia`
   ADD PRIMARY KEY (`id_kategori_usia`);
 
 --
--- Indeks untuk tabel `komentar`
+-- Indexes for table `komentar`
 --
 ALTER TABLE `komentar`
   ADD PRIMARY KEY (`id_komentar`);
 
 --
--- Indeks untuk tabel `komentarvid`
+-- Indexes for table `komentarvid`
 --
 ALTER TABLE `komentarvid`
   ADD PRIMARY KEY (`id_komentar`);
 
 --
--- Indeks untuk tabel `logo`
+-- Indexes for table `logo`
 --
 ALTER TABLE `logo`
   ADD PRIMARY KEY (`id_logo`);
 
 --
--- Indeks untuk tabel `menu`
+-- Indexes for table `menu`
 --
 ALTER TABLE `menu`
   ADD PRIMARY KEY (`id_menu`);
 
 --
--- Indeks untuk tabel `modul`
+-- Indexes for table `modul`
 --
 ALTER TABLE `modul`
   ADD PRIMARY KEY (`id_modul`);
 
 --
--- Indeks untuk tabel `mod_alamat`
+-- Indexes for table `mod_alamat`
 --
 ALTER TABLE `mod_alamat`
   ADD PRIMARY KEY (`id_alamat`);
 
 --
--- Indeks untuk tabel `mod_ym`
+-- Indexes for table `mod_ym`
 --
 ALTER TABLE `mod_ym`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `pasangiklan`
+-- Indexes for table `pasangiklan`
 --
 ALTER TABLE `pasangiklan`
   ADD PRIMARY KEY (`id_pasangiklan`);
 
 --
--- Indeks untuk tabel `playlist`
+-- Indexes for table `playlist`
 --
 ALTER TABLE `playlist`
   ADD PRIMARY KEY (`id_playlist`);
 
 --
--- Indeks untuk tabel `poling`
+-- Indexes for table `poling`
 --
 ALTER TABLE `poling`
   ADD PRIMARY KEY (`id_poling`);
 
 --
--- Indeks untuk tabel `sekilasinfo`
+-- Indexes for table `sekilasinfo`
 --
 ALTER TABLE `sekilasinfo`
   ADD PRIMARY KEY (`id_sekilas`);
 
 --
--- Indeks untuk tabel `status_bab`
+-- Indexes for table `status_bab`
 --
 ALTER TABLE `status_bab`
   ADD PRIMARY KEY (`id_status_bab`);
 
 --
--- Indeks untuk tabel `tag`
+-- Indexes for table `tag`
 --
 ALTER TABLE `tag`
   ADD PRIMARY KEY (`id_tag`);
 
 --
--- Indeks untuk tabel `tagvid`
+-- Indexes for table `tagvid`
 --
 ALTER TABLE `tagvid`
   ADD PRIMARY KEY (`id_tag`);
 
 --
--- Indeks untuk tabel `tag_cerbung`
+-- Indexes for table `tag_cerbung`
 --
 ALTER TABLE `tag_cerbung`
   ADD PRIMARY KEY (`id_tag_cerbung`);
 
 --
--- Indeks untuk tabel `tbl_comment`
+-- Indexes for table `tbl_comment`
 --
 ALTER TABLE `tbl_comment`
   ADD PRIMARY KEY (`id_komentar`);
 
 --
--- Indeks untuk tabel `templates`
+-- Indexes for table `templates`
 --
 ALTER TABLE `templates`
   ADD PRIMARY KEY (`id_templates`);
 
 --
--- Indeks untuk tabel `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_users`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- Indeks untuk tabel `users_modul`
+-- Indexes for table `users_modul`
 --
 ALTER TABLE `users_modul`
   ADD PRIMARY KEY (`id_umod`);
 
 --
--- Indeks untuk tabel `video`
+-- Indexes for table `video`
 --
 ALTER TABLE `video`
   ADD PRIMARY KEY (`id_video`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `agenda`
+-- AUTO_INCREMENT for table `agenda`
 --
 ALTER TABLE `agenda`
   MODIFY `id_agenda` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
-
 --
--- AUTO_INCREMENT untuk tabel `album`
+-- AUTO_INCREMENT for table `album`
 --
 ALTER TABLE `album`
   MODIFY `id_album` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
-
 --
--- AUTO_INCREMENT untuk tabel `background`
+-- AUTO_INCREMENT for table `background`
 --
 ALTER TABLE `background`
   MODIFY `id_background` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
--- AUTO_INCREMENT untuk tabel `banner`
+-- AUTO_INCREMENT for table `banner`
 --
 ALTER TABLE `banner`
   MODIFY `id_banner` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
-
 --
--- AUTO_INCREMENT untuk tabel `berita`
+-- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
   MODIFY `id_berita` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
-
 --
--- AUTO_INCREMENT untuk tabel `cerbung_bab_db`
+-- AUTO_INCREMENT for table `cerbung_bab_db`
 --
 ALTER TABLE `cerbung_bab_db`
   MODIFY `id_cerbung_bab` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
 --
--- AUTO_INCREMENT untuk tabel `cerbung_db`
+-- AUTO_INCREMENT for table `cerbung_db`
 --
 ALTER TABLE `cerbung_db`
   MODIFY `id_cerbung` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
-
 --
--- AUTO_INCREMENT untuk tabel `download`
+-- AUTO_INCREMENT for table `download`
 --
 ALTER TABLE `download`
   MODIFY `id_download` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
-
 --
--- AUTO_INCREMENT untuk tabel `featured`
+-- AUTO_INCREMENT for table `featured`
 --
 ALTER TABLE `featured`
   MODIFY `id_featured` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
 --
--- AUTO_INCREMENT untuk tabel `gallery`
+-- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
   MODIFY `id_gallery` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=259;
-
 --
--- AUTO_INCREMENT untuk tabel `halamanstatis`
+-- AUTO_INCREMENT for table `halamanstatis`
 --
 ALTER TABLE `halamanstatis`
   MODIFY `id_halaman` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
-
 --
--- AUTO_INCREMENT untuk tabel `header`
+-- AUTO_INCREMENT for table `header`
 --
 ALTER TABLE `header`
   MODIFY `id_header` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
 --
--- AUTO_INCREMENT untuk tabel `hubungi`
+-- AUTO_INCREMENT for table `hubungi`
 --
 ALTER TABLE `hubungi`
   MODIFY `id_hubungi` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
-
 --
--- AUTO_INCREMENT untuk tabel `identitas`
+-- AUTO_INCREMENT for table `identitas`
 --
 ALTER TABLE `identitas`
   MODIFY `id_identitas` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
--- AUTO_INCREMENT untuk tabel `identitas_web`
+-- AUTO_INCREMENT for table `identitas_web`
 --
 ALTER TABLE `identitas_web`
   MODIFY `id_identitas_web` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
--- AUTO_INCREMENT untuk tabel `iklanatas`
+-- AUTO_INCREMENT for table `iklanatas`
 --
 ALTER TABLE `iklanatas`
   MODIFY `id_iklanatas` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
-
 --
--- AUTO_INCREMENT untuk tabel `iklantengah`
+-- AUTO_INCREMENT for table `iklantengah`
 --
 ALTER TABLE `iklantengah`
   MODIFY `id_iklantengah` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
 --
--- AUTO_INCREMENT untuk tabel `katajelek`
+-- AUTO_INCREMENT for table `katajelek`
 --
 ALTER TABLE `katajelek`
   MODIFY `id_jelek` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
 --
--- AUTO_INCREMENT untuk tabel `kategori`
+-- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
-
+  MODIFY `id_kategori` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
--- AUTO_INCREMENT untuk tabel `kategori_cerbung`
+-- AUTO_INCREMENT for table `kategori_cerbung`
 --
 ALTER TABLE `kategori_cerbung`
   MODIFY `id_kategori_cerbung` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
--- AUTO_INCREMENT untuk tabel `kategori_usia`
+-- AUTO_INCREMENT for table `kategori_usia`
 --
 ALTER TABLE `kategori_usia`
   MODIFY `id_kategori_usia` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
--- AUTO_INCREMENT untuk tabel `komentar`
+-- AUTO_INCREMENT for table `komentar`
 --
 ALTER TABLE `komentar`
   MODIFY `id_komentar` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
-
 --
--- AUTO_INCREMENT untuk tabel `komentarvid`
+-- AUTO_INCREMENT for table `komentarvid`
 --
 ALTER TABLE `komentarvid`
   MODIFY `id_komentar` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
-
 --
--- AUTO_INCREMENT untuk tabel `logo`
+-- AUTO_INCREMENT for table `logo`
 --
 ALTER TABLE `logo`
   MODIFY `id_logo` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
 --
--- AUTO_INCREMENT untuk tabel `menu`
+-- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
   MODIFY `id_menu` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
-
 --
--- AUTO_INCREMENT untuk tabel `modul`
+-- AUTO_INCREMENT for table `modul`
 --
 ALTER TABLE `modul`
   MODIFY `id_modul` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
-
 --
--- AUTO_INCREMENT untuk tabel `mod_alamat`
+-- AUTO_INCREMENT for table `mod_alamat`
 --
 ALTER TABLE `mod_alamat`
   MODIFY `id_alamat` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
--- AUTO_INCREMENT untuk tabel `mod_ym`
+-- AUTO_INCREMENT for table `mod_ym`
 --
 ALTER TABLE `mod_ym`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT untuk tabel `pasangiklan`
+-- AUTO_INCREMENT for table `pasangiklan`
 --
 ALTER TABLE `pasangiklan`
   MODIFY `id_pasangiklan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
 --
--- AUTO_INCREMENT untuk tabel `playlist`
+-- AUTO_INCREMENT for table `playlist`
 --
 ALTER TABLE `playlist`
   MODIFY `id_playlist` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
-
 --
--- AUTO_INCREMENT untuk tabel `poling`
+-- AUTO_INCREMENT for table `poling`
 --
 ALTER TABLE `poling`
   MODIFY `id_poling` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
-
 --
--- AUTO_INCREMENT untuk tabel `sekilasinfo`
+-- AUTO_INCREMENT for table `sekilasinfo`
 --
 ALTER TABLE `sekilasinfo`
   MODIFY `id_sekilas` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
 --
--- AUTO_INCREMENT untuk tabel `status_bab`
+-- AUTO_INCREMENT for table `status_bab`
 --
 ALTER TABLE `status_bab`
   MODIFY `id_status_bab` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
--- AUTO_INCREMENT untuk tabel `tag`
+-- AUTO_INCREMENT for table `tag`
 --
 ALTER TABLE `tag`
-  MODIFY `id_tag` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
-
+  MODIFY `id_tag` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 --
--- AUTO_INCREMENT untuk tabel `tagvid`
+-- AUTO_INCREMENT for table `tagvid`
 --
 ALTER TABLE `tagvid`
   MODIFY `id_tag` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
-
 --
--- AUTO_INCREMENT untuk tabel `tag_cerbung`
+-- AUTO_INCREMENT for table `tag_cerbung`
 --
 ALTER TABLE `tag_cerbung`
   MODIFY `id_tag_cerbung` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
-
 --
--- AUTO_INCREMENT untuk tabel `tbl_comment`
+-- AUTO_INCREMENT for table `tbl_comment`
 --
 ALTER TABLE `tbl_comment`
   MODIFY `id_komentar` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
 --
--- AUTO_INCREMENT untuk tabel `templates`
+-- AUTO_INCREMENT for table `templates`
 --
 ALTER TABLE `templates`
   MODIFY `id_templates` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
-
 --
--- AUTO_INCREMENT untuk tabel `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
 --
--- AUTO_INCREMENT untuk tabel `users_modul`
+-- AUTO_INCREMENT for table `users_modul`
 --
 ALTER TABLE `users_modul`
   MODIFY `id_umod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
-
 --
--- AUTO_INCREMENT untuk tabel `video`
+-- AUTO_INCREMENT for table `video`
 --
 ALTER TABLE `video`
   MODIFY `id_video` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=186;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

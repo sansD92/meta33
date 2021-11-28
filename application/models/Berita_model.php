@@ -353,16 +353,16 @@ return $this->db->get('Video')->num_rows();
     $query = $this->db->get($this->table,$per_page,$dari);
     return $query->result();
   }
-  function get_all_terbaru22($per_page,$dari)
+  function get_all_terbaru22($per_page,$dari,$offset)
   {
-    $this->db->offset(6);
+
     $this->db->where('headline', 'Y');
     $this->db->or_where('pilihan', 'Y');
     $this->db->or_where('status', 'Y');
     $this->db->order_by($this->id, 'DESC');
     $this->db->join('kategori', 'kategori.id_kategori = berita.id_kategori','inner');
     $this->db->join('users', 'users.id_users = berita.id_users','inner');
-    $query = $this->db->get($this->table,$per_page,$dari);
+    $query = $this->db->get($this->table,$per_page,$dari,$offset);
     return $query->result();
   }
   // get all

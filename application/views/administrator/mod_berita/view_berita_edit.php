@@ -25,7 +25,10 @@
 
           if($this->session->level=='admin') {
 
-            echo " <tr><th scope='row'>Headline</th>               <td>"; if ($rows['headline']=='Y'){ echo "<input type='radio' name='e' value='Y' checked> Ya &nbsp; <input type='radio' name='e' value='N'> Tidak"; }else{ echo "<input type='radio' name='e' value='Y'> Ya &nbsp; <input type='radio' name='e' value='N' checked> Tidak"; } echo "</td></tr>
+            echo " 
+            <tr><th width='120px' scope='row'>Judul url</th>    <td><input type='text' class='form-control' name='b' value='$rows[judul_seo]' disabled 
+ sumber: https://www.posciety.com/cara-nonaktifkan-input-form-tidak-bisa-di-klik/ required></td></tr>
+            <tr><th scope='row'>Headline</th>               <td>"; if ($rows['headline']=='Y'){ echo "<input type='radio' name='e' value='Y' checked> Ya &nbsp; <input type='radio' name='e' value='N'> Tidak"; }else{ echo "<input type='radio' name='e' value='Y'> Ya &nbsp; <input type='radio' name='e' value='N' checked> Tidak"; } echo "</td></tr>
                      <tr><th scope='row'>Pilihan</th>               <td>"; if ($rows['pilihan']=='Y'){ echo "<input type='radio' name='pl' value='Y' checked> Ya &nbsp; <input type='radio' name='pl' value='N'> Tidak"; }else{ echo "<input type='radio' name='pl' value='Y'> Ya &nbsp; <input type='radio' name='pl' value='N' checked> Tidak"; } echo "</td></tr>
                       ";
                                 }
