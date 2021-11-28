@@ -315,5 +315,138 @@ public function detail(){
 
 		));
 
-	}	
+	}
+
+	public function pilihan()
+	{
+		$data['title'] = " PILIHAN";
+		$this->load->library('pagination');
+		$page1 = 'Y';
+		/* menghitung jumlah total data */
+		$jumlah = $this->Berita_model->total_rows();
+
+		// Mengatur base_url
+		$config['base_url'] = base_url().'artikel/pilihan/halaman/';
+		//menghitung total baris
+		$config['total_rows'] = $jumlah;
+		//mengatur total data yang tampil per halamannya
+		$config['per_page'] = 10	;
+		// tag pagination bootstrap
+		$config['full_tag_open']    = "<ul class='pagination'>";
+		$config['full_tag_close']   = "</ul>";
+		$config['num_tag_open']     = "<li>";
+		$config['num_tag_close']    = "</li>";
+		$config['cur_tag_open']     = "<li class='disabled'><li class='active'><a href='#'>";
+		$config['cur_tag_close']    = "<span class='sr-only'></span></a></li>";
+		$config['next_link']        = "Selanjutnya";
+		$config['next_tag_open']    = "<li>";
+		$config['next_tagl_close']  = "</li>";
+		$config['prev_link']        = "Sebelumnya";
+		$config['prev_tag_open']    = "<li>";
+		$config['prev_tagl_close']  = "</li>";
+		$config['first_link']       = "Awal";
+		$config['first_tag_open']   = "<li>";
+		$config['first_tagl_close'] = "</li>";
+		$config['last_link']        = 'Terakhir';
+		$config['last_tag_open']    = "<li>";
+		$config['last_tagl_close']  = "</li>";
+
+		// mengambil uri segment ke-4
+		$dari = $this->uri->segment('4');
+		/* memanggil model untuk ditampilkan pada masing2 modul*/
+		
+		
+			 
+		$data['post_terbaru'] 						= $this->Berita_model->get_all_pilihan($config['per_page'],$dari);
+		$this->pagination->initialize($config);
+		$this->load->view('fronts/pilihan/index', $data);
+	}
+	public function fokus()
+	{
+		$data['title'] = " FOKUS";
+		$this->load->library('pagination');
+		$page1 = 'Y';
+		/* menghitung jumlah total data */
+		$jumlah = $this->Berita_model->total_rows();
+
+		// Mengatur base_url
+		$config['base_url'] = base_url().'artikel/fokus/halaman/';
+		//menghitung total baris
+		$config['total_rows'] = $jumlah;
+		//mengatur total data yang tampil per halamannya
+		$config['per_page'] = 5	;
+		// tag pagination bootstrap
+		$config['full_tag_open']    = "<ul class='pagination'>";
+		$config['full_tag_close']   = "</ul>";
+		$config['num_tag_open']     = "<li>";
+		$config['num_tag_close']    = "</li>";
+		$config['cur_tag_open']     = "<li class='disabled'><li class='active'><a href='#'>";
+		$config['cur_tag_close']    = "<span class='sr-only'></span></a></li>";
+		$config['next_link']        = "Selanjutnya";
+		$config['next_tag_open']    = "<li>";
+		$config['next_tagl_close']  = "</li>";
+		$config['prev_link']        = "Sebelumnya";
+		$config['prev_tag_open']    = "<li>";
+		$config['prev_tagl_close']  = "</li>";
+		$config['first_link']       = "Awal";
+		$config['first_tag_open']   = "<li>";
+		$config['first_tagl_close'] = "</li>";
+		$config['last_link']        = 'Terakhir';
+		$config['last_tag_open']    = "<li>";
+		$config['last_tagl_close']  = "</li>";
+
+		// mengambil uri segment ke-4
+		$dari = $this->uri->segment('4');
+		/* memanggil model untuk ditampilkan pada masing2 modul*/
+		
+		
+			 
+		$data['post_terbaru'] 						= $this->Berita_model->get_all_fokus($config['per_page'],$dari);
+		$this->pagination->initialize($config);
+		$this->load->view('fronts/fokus/index', $data);
+	}
+	public function sorot()
+	{
+		$data['title'] = " SOROT";
+		$this->load->library('pagination');
+		$page1 = 'Y';
+		/* menghitung jumlah total data */
+		$jumlah = $this->Berita_model->total_rows();
+
+		// Mengatur base_url
+		$config['base_url'] = base_url().'artikel/sorot/halaman/';
+		//menghitung total baris
+		$config['total_rows'] = $jumlah;
+		//mengatur total data yang tampil per halamannya
+		$config['per_page'] = 5	;
+		// tag pagination bootstrap
+		$config['full_tag_open']    = "<ul class='pagination'>";
+		$config['full_tag_close']   = "</ul>";
+		$config['num_tag_open']     = "<li>";
+		$config['num_tag_close']    = "</li>";
+		$config['cur_tag_open']     = "<li class='disabled'><li class='active'><a href='#'>";
+		$config['cur_tag_close']    = "<span class='sr-only'></span></a></li>";
+		$config['next_link']        = "Selanjutnya";
+		$config['next_tag_open']    = "<li>";
+		$config['next_tagl_close']  = "</li>";
+		$config['prev_link']        = "Sebelumnya";
+		$config['prev_tag_open']    = "<li>";
+		$config['prev_tagl_close']  = "</li>";
+		$config['first_link']       = "Awal";
+		$config['first_tag_open']   = "<li>";
+		$config['first_tagl_close'] = "</li>";
+		$config['last_link']        = 'Terakhir';
+		$config['last_tag_open']    = "<li>";
+		$config['last_tagl_close']  = "</li>";
+
+		// mengambil uri segment ke-4
+		$dari = $this->uri->segment('4');
+		/* memanggil model untuk ditampilkan pada masing2 modul*/
+		
+		
+			 
+		$data['post_terbaru'] 						= $this->Berita_model->get_all_sorot($config['per_page'],$dari);
+		$this->pagination->initialize($config);
+		$this->load->view('fronts/sorot/index', $data);
+	}			
 }

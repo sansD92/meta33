@@ -116,7 +116,7 @@
 
 					 ?>
 					<div class="ts-grid-box ts-grid-content">
-						<a class="post-cat ts-orange-bg" href="#">Fokus</a>
+						<a class="post-cat ts-orange-bg" href="<?php echo base_url("artikel/fokus ") ?>">Fokus</a>
 						<div class="ts-post-thumb">
 							<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
 								<img class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
@@ -141,7 +141,7 @@
 
 					 ?>
 					<div class="ts-grid-box ts-grid-content">
-						<a class="post-cat ts-pink-bg" href="#">Sorot</a>
+						<a class="post-cat ts-pink-bg" href="<?php echo base_url("artikel/sorot ") ?>">Sorot</a>
 						<div class="ts-post-thumb">
 							<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
 								<img class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">

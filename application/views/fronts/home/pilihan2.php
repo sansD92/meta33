@@ -9,7 +9,7 @@
   <!-- col end -->
   <div class="col-lg-9 col-md-8">
     <div class="ts-grid-box most-populer-item">
-      <a href=""><h2 class="ts-title">Berita Pilihan</h2></a>
+      <a href="<?php echo base_url()?>artikel/pilihan"><h2 class="ts-title">Berita Pilihan</h2></a>
 
       <div class="most-populers owl-carousel">
         <?php
@@ -18,7 +18,7 @@
          $jdl = character_limiter($post_new->judul,30);
           ?>
         <div class="item">
-          <a class="post-cat ts-orange-bg" href="#"><?php echo $post_new->nama_kategori ?></a>
+          <a class="post-cat ts-orange-bg" href="<?php echo base_url("artikel/kategori/$post_new->kategori_seo ") ?>"><?php echo $post_new->nama_kategori ?></a>
           <div class="ts-post-thumb">
             <a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
               <img style="height:100px"class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">

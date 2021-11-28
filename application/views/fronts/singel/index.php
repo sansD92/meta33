@@ -69,7 +69,7 @@
 								
 								<li class="author">
 									<a href="#">
-										<img src="<?php echo base_url()?>asset/frontend/images/avater/author.png" alt=""> <?php echo "$rows[nama_lengkap]"; ?>
+										<img src="<?php echo base_url()?>asset/foto_user/<?php echo "$rows[foto]"; ?>" alt=""> <?php echo "$rows[nama_lengkap]"; ?>
 									</a>
 								</li>
 								<li>
@@ -79,14 +79,16 @@
 								<li>
 									<a href="#" class="post-cat ts-yellow-bg"><?php echo "$rows[nama_kategori]"; ?></a>
 								</li>
-								 
-								
+								 <?php if ($rows['pilihan']=='Y'){ $status2 = '<span class="">PILIHAN</span>'; }else{ $status2 = ''; } ?>
+								<li>
+									<a href="<?php echo base_url()?>artikel/pilihan" class="post-cat ts-yellow-bg"><?php echo $status2; ?></a>
+								</li>
 							</ul>
 						</div>
 						<!-- single post header end-->
 						<div class="post-content-area">
 							<div class="post-media post-featured-image">
-								<a href="<?php echo base_url()?>asset/frontend/images/news/travel/travel2.jpg" class="gallery-popup">
+								<a href="<?php echo base_url()?>asset/foto_berita/<?php echo "$rows[gambar]"; ?>" class="gallery-popup">
 									<img src="<?php echo base_url()?>asset/foto_berita/<?php echo "$rows[gambar]"; ?>" class="img-fluid" alt="">
 								</a>
 							</div>
