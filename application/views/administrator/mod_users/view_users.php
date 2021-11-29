@@ -24,7 +24,7 @@
                     foreach ($record as $row){
                     if ($row['foto'] == ''){ $foto ='blank.png'; }else{ $foto = $row['foto']; }
                     echo "<tr><td>$no</td>
-                              <td>$row[username]</td>
+                              <td>$row[email]</td>
                               <td>$row[nama_lengkap]</td>
                               <td>$row[email]</td>
                               <td><img style='border:1px solid #cecece' width='40px' class='img-circle' src='".base_url()."asset/foto_user/$foto'></td>
