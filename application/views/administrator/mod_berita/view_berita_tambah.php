@@ -12,6 +12,9 @@
                   <tbody>
                     <input type='hidden' name='id' value=''>
                     <tr><th width='120px' scope='row'>Judul Artikel</th>    <td><input type='text' class='form-control' name='b' required></td></tr>
+                     <tr><th width='120px' scope='row'>Penulis</th>    <td><input type='text' class='form-control' name='penulis' required></td></tr>
+                      <tr><th width='120px' scope='row'>Editor</th>    <td><input type='text' class='form-control' name='editor' required></td></tr>
+
                     <tr><th scope='row'>Kategori</th>               <td><select name='a' class='form-control' required>
                                                                             <option value='' selected>- Pilih Kategori -</option>";
                                                                             foreach ($record as $row){
@@ -26,6 +29,8 @@
             echo "
                     <tr><th scope='row'>Headline</th>               <td><input type='radio' name='e' value='Y'> Ya &nbsp; <input type='radio' name='e' value='N' checked> Tidak</td></tr>
                     <tr><th scope='row'>Pilihan</th>               <td><input type='radio' name='pl' value='Y'> Ya &nbsp; <input type='radio' name='pl' value='N' checked> Tidak</td></tr>
+                     <tr><th scope='row'>fokus</th>               <td><input type='radio' name='ind' value='Y'> Ya &nbsp; <input type='radio' name='pl' value='N' checked> Tidak</td></tr>
+                      <tr><th scope='row'>sorot</th>               <td><input type='radio' name='wwc' value='Y'> Ya &nbsp; <input type='radio' name='pl' value='N' checked> Tidak</td></tr>
                     ";
                                 }
               echo "

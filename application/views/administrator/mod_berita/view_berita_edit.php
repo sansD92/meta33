@@ -12,6 +12,8 @@
                   <tbody>
                     <input type='hidden' name='id' value='$rows[id_berita]'>
                     <tr><th width='120px' scope='row'>Judul Artikel</th>    <td><input type='text' class='form-control' name='b' value='$rows[judul]' required></td></tr>
+                     <tr><th width='120px' scope='row'>Penulis</th>    <td><input type='text' class='form-control' name='penulis' value='$rows[penulis]' required></td></tr>
+                      <tr><th width='120px' scope='row'>Editor</th>    <td><input type='text' class='form-control' name='editor' value='$rows[editor]' required></td></tr>
                     <tr><th scope='row'>Kategori</th>               <td><select name='a' class='form-control' required>";
                                                                             foreach ($record as $row){
                                                                                 if ($rows['id_kategori'] == $row['id_kategori']){

@@ -67,10 +67,9 @@
 							<h2 class="post-title lg"><?php echo "$rows[judul]"; ?></h2>
 							<ul class="post-meta-info">
 								
-								<li class="author">
-									<a href="#">
-										<img src="<?php echo base_url()?>asset/foto_user/<?php echo "$rows[foto]"; ?>" alt=""> <?php echo "$rows[nama_lengkap]"; ?>
-									</a>
+								<li>
+									
+									Penulis : <?php echo "$rows[penulis]"; ?> | Editor : <?php echo "$rows[editor]"; ?>
 								</li>
 								<li>
 									<i class="fa fa-clock-o"></i>
@@ -79,9 +78,18 @@
 								<li>
 									<a href="#" class="post-cat ts-yellow-bg"><?php echo "$rows[nama_kategori]"; ?></a>
 								</li>
-								 <?php if ($rows['pilihan']=='Y'){ $status2 = '<span class="">PILIHAN</span>'; }else{ $status2 = ''; } ?>
+								 <?php if ($rows['pilihan']=='Y'){ $status2 = '<a class="post-cat ts-yellow-bg">PILIHAN</a>'; }else{ $status2 = ''; } ?>
+								 <?php if ($rows['indepth']=='Y'){ $status3 = '<a class="post-cat ts-yellow-bg">FOKUS</a>'; }else{ $status3 = ''; } ?>
+								  <?php if ($rows['wawancara']=='Y'){ $status4 = '<a class="post-cat ts-yellow-bg">SOROT</a>'; }else{ $status4 = ''; } ?>
 								<li>
-									<a href="<?php echo base_url()?>artikel/pilihan" class="post-cat ts-yellow-bg"><?php echo $status2; ?></a>
+									<a href="<?php echo base_url()?>artikel/pilihan" ><?php echo $status2; ?></a>
+								</li>
+								
+								<li>
+									<a href="<?php echo base_url()?>artikel/fokus" ><?php echo $status3; ?></a>
+								</li>
+									<li>
+									<a href="<?php echo base_url()?>artikel/sorot" ><?php echo $status4; ?></a>
 								</li>
 							</ul>
 						</div>
