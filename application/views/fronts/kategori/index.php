@@ -106,7 +106,7 @@
 										</h3>
 										<ul class='post-meta-info'>
 											<li>
-												<a href='#'> $r[nama_lengkap]</a>
+												<a href='#'> Penulis : $r[penulis]</a>
 											</li>
 											<li>
 												<i class='fa fa-clock-o'></i>

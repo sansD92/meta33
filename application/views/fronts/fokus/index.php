@@ -81,7 +81,7 @@
 							<div class='row mb-10'>
 								<div class='col-md-4'>
 									<div class='ts-post-thumb'>
-										<a  class='post-cat ts-yellow-bg'><?php echo $row->nama_kategori ?></a>
+										<a style="color: #fff;" class='post-cat ts-yellow-bg'>Fokus | <?php echo $row->nama_kategori ?></a>
 										<a href='<?php echo base_url("detail/$row->id_berita/$row->judul_seo ") ?>'>
 											<img style='width: 100%;height: 150px;'class='img-fluid' src='<?php echo base_url()?>asset/foto_berita/<?php echo $row->gambar ?>'>
 										</a>
@@ -96,11 +96,8 @@
 											<a href='<?php echo base_url("detail/$row->id_berita/$row->judul_seo ") ?>'><?php echo $row->judul ?></a>
 										</h3>
 										<ul class='post-meta-info'>
-																						<li>
-									<a href="<?php echo base_url("artikel/fokus ") ?>" class="post-cat ts-yellow-bg">Fokus</a>
-								</li>
 											<li>
-												<a > <?php echo $row->nama_lengkap ?></a>
+												<a >Penulis : <?php echo $row->penulis ?></a>
 											</li>
 											<li>
 												<i class='fa fa-clock-o'></i>

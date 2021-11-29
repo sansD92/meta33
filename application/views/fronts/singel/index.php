@@ -78,9 +78,13 @@
 								<li>
 									<a href="#" class="post-cat ts-yellow-bg"><?php echo "$rows[nama_kategori]"; ?></a>
 								</li>
+								<?php if ($rows['headline']=='Y'){ $status = '<a class="post-cat ts-yellow-bg">HEADLINE</a>'; }else{ $status = ''; } ?>
 								 <?php if ($rows['pilihan']=='Y'){ $status2 = '<a class="post-cat ts-yellow-bg">PILIHAN</a>'; }else{ $status2 = ''; } ?>
 								 <?php if ($rows['indepth']=='Y'){ $status3 = '<a class="post-cat ts-yellow-bg">FOKUS</a>'; }else{ $status3 = ''; } ?>
 								  <?php if ($rows['wawancara']=='Y'){ $status4 = '<a class="post-cat ts-yellow-bg">SOROT</a>'; }else{ $status4 = ''; } ?>
+								  <li>
+									<a href="" ><?php echo $status; ?></a>
+								</li>
 								<li>
 									<a href="<?php echo base_url()?>artikel/pilihan" ><?php echo $status2; ?></a>
 								</li>
@@ -97,7 +101,7 @@
 						<div class="post-content-area">
 							<div class="post-media post-featured-image">
 								<a href="<?php echo base_url()?>asset/foto_berita/<?php echo "$rows[gambar]"; ?>" class="gallery-popup">
-									<img src="<?php echo base_url()?>asset/foto_berita/<?php echo "$rows[gambar]"; ?>" class="img-fluid" alt="">
+									<img style="width: 100%"src="<?php echo base_url()?>asset/foto_berita/<?php echo "$rows[gambar]"; ?>" class="img-fluid" alt="">
 								</a>
 							</div>
 							<div class="entry-content">

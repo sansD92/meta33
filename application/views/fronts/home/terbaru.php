@@ -25,7 +25,8 @@
 							<div class="row mb-10">
 								<div class="col-md-4">
 									<div class="ts-post-thumb">
-										<a href="#">
+										<a class="post-cat ts-orange-bg" href="<?php echo base_url("artikel/kategori/$post_new->kategori_seo ") ?>"><?php echo $post_new->nama_kategori ?></a>
+										<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
 											<img class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
 										</a>
 									</div>
@@ -37,10 +38,9 @@
 											<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a>
 										</h3>
 										<ul class="post-meta-info">
+											
 											<li>
-											<a class="post-cat ts-orange-bg" href="<?php echo base_url("artikel/kategori/$post_new->kategori_seo") ?>"><?php echo $post_new->nama_kategori ?></a></li>
-											<li>
-												<a href=""><?php echo $post_new->nama_lengkap ?></a>
+												<a href="">Penulis : <?php echo $post_new->penulis ?></a>
 											</li>
 											<li>
 												<i class="fa fa-clock-o"></i>
@@ -75,6 +75,7 @@
 							<div class="row mb-10">
 								<div class="col-md-4">
 									<div class="ts-post-thumb">
+										<a class="post-cat ts-orange-bg" href="<?php echo base_url("artikel/kategori/$post_new->kategori_seo ") ?>"><?php echo $post_new->nama_kategori ?></a>
 										<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
 											<img style="height: 150px; width: 100%;"class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
 										</a>
@@ -87,10 +88,8 @@
 											<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a>
 										</h3>
 										<ul class="post-meta-info">
-											<li>
-											<a class="post-cat ts-orange-bg" href="<?php echo base_url("artikel/kategori/$post_new->kategori_seo") ?>"><?php echo $post_new->nama_kategori ?></a></li>
-											<li>
-												<a href=""><?php echo $post_new->nama_lengkap ?></a>
+										<li>
+												<a href="">Penulis : <?php echo $post_new->penulis ?></a>
 											</li>
 											<li>
 												<i class="fa fa-clock-o"></i>
@@ -118,6 +117,7 @@
 							<div class="row mb-10">
 								<div class="col-md-4">
 									<div class="ts-post-thumb">
+										<a class="post-cat ts-orange-bg" href="<?php echo base_url("artikel/kategori/$post_new->kategori_seo ") ?>"><?php echo $post_new->nama_kategori ?></a>
 										<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
 											<img style="height: 150px; width: 100%;"class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
 										</a>
@@ -131,9 +131,7 @@
 										</h3>
 										<ul class="post-meta-info">
 											<li>
-											<a class="post-cat ts-orange-bg" href="<?php echo base_url("artikel/kategori/$post_new->kategori_seo") ?>"><?php echo $post_new->nama_kategori ?></a></li>
-											<li>
-												<a href=""><?php echo $post_new->nama_lengkap ?></a>
+												<a href="">Penulis : <?php echo $post_new->penulis ?></a>
 											</li>
 											<li>
 												<i class="fa fa-clock-o"></i>
