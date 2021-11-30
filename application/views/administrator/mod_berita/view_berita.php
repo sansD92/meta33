@@ -47,8 +47,9 @@
             <td>$row[nama_kategori]</td>
 
             <td>$row[penulis]</td>
-            <td>$row[headline] $row[pilihan] $row[indepth] $row[wawancara]</td>
+
             <td>$row[views]</td>
+            <td>$row[headline] $row[pilihan] $row[indepth] $row[wawancara]</td>
                               <td>$status</td>
                                ";
                                 }
