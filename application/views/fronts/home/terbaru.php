@@ -32,7 +32,7 @@
 									</div>
 								</div>
 								<!-- col lg end-->
-								<div class="col-md-8">
+								<div style="margin-top:30px" class="col-md-8">
 									<div class="post-content">
 										<h3 class="post-title md">
 											<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a>
@@ -82,7 +82,7 @@
 									</div>
 								</div>
 								<!-- col lg end-->
-								<div class="col-md-8">
+								<div style="margin-top:30px" class="col-md-8">
 									<div class="post-content">
 										<h3 class="post-title md">
 											<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a>
@@ -124,7 +124,7 @@
 									</div>
 								</div>
 								<!-- col lg end-->
-								<div class="col-md-8">
+								<div style="margin-top:30px" class="col-md-8">
 									<div class="post-content">
 										<h3 class="post-title md">
 											<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a>
