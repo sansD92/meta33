@@ -79,7 +79,7 @@
 
 					 ?>
 						<div class="item" style="background-image:url(<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>)">
-							<a style="margin-top: 10px;font-size: 14px; color: #fff;" class="post-cat ts-orange-bg" >Headline | <?php echo $post_new->nama_kategori ?></a>
+							<a style="margin-top: 25px;font-size: 14px; color: #fff;" class="post-cat ts-orange-bg" >Headline | <?php echo $post_new->nama_kategori ?></a>
 							<div class="overlay-post-content">
 								<div class="post-content">
 									<h2 class="post-title lg">
