@@ -17,6 +17,7 @@
                           <th>Kategori</th>
                           <!-- <th>Isi Opini</th> -->
                         <th>Penulis</th>
+                        <th>View</th>
                         <th>Status</th>
                         <?php } ?>
                         <th style='width:75px'>Action</th>
@@ -45,6 +46,7 @@
             <td>$row[nama_kategori]</td>
 
             <td>$row[penulis]</td>
+            <td>$row[views]</td>
                               <td>$status</td>
                                ";
                                 }
