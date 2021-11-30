@@ -35,7 +35,7 @@ class Main extends CI_Controller {
 			")->result();
 			$data['showbiz'] = $this->db->query("select *, a.id_users as users from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y' and (a.id_kategori = '27') ORDER BY  id_berita desc limit 3 
 			")->result();
-			$data['berita_terbaru22'] 						= $this->Berita_model->get_all_terbaru2($config['per_page'],$dari);
+			
 		$this->pagination->initialize($config);
 			$this->load->view('fronts/index',$data);
 
