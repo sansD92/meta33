@@ -44,7 +44,7 @@
             echo "
             <td>$row[nama_kategori]</td>
 
-            <td>$row[nama_lengkap]</td>
+            <td>$row[penulis]</td>
                               <td>$status</td>
                                ";
                                 }
