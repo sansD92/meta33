@@ -373,16 +373,21 @@ return $this->db->get('Video')->num_rows();
     $query = $this->db->get($this->table,$per_page,$dari);
     return $query->result();
   }
-  function get_all_terbaru22($per_page,$dari,$offset)
+   public function get_all_terbaru23($per_page,$dari){
+        return $this->db->query("select *, a.id_users as users from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y' and pilihan = 'N' and headline = 'N' and indepth = 'N' and wawancara = 'N' and NOT a.id_kategori = '20' and NOT a.id_kategori = '23' and NOT a.id_kategori = '26' and NOT a.id_kategori = '27' ORDER BY  id_berita desc limit 3 ");
+    }
+  function get_all_terbaru22($per_page,$dari)
   {
 
-    $this->db->where('headline', 'Y');
-    $this->db->or_where('pilihan', 'Y');
-    $this->db->or_where('status', 'Y');
+    $this->db->where('headline', 'N');
+    $this->db->or_where('pilihan', 'N');
+    $this->db->or_where('status', 'N');
+    $this->db->or_where('indepth', 'N');
+    $this->db->or_where('wawancara', 'N');
     $this->db->order_by($this->id, 'DESC');
     $this->db->join('kategori', 'kategori.id_kategori = berita.id_kategori','inner');
     $this->db->join('users', 'users.id_users = berita.id_users','inner');
-    $query = $this->db->get($this->table,$per_page,$dari,$offset);
+    $query = $this->db->get($this->table,$per_page,$dari);
     return $query->result();
   }
   // get all
