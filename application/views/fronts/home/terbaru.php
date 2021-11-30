@@ -24,10 +24,10 @@
           ?>
 							<div class="row mb-10">
 								<div class="col-md-4">
-									<div style="max-height: 160px;" class="ts-post-thumb">
+									<div class="ts-post-thumb">
 										<a class="post-cat ts-orange-bg" href="<?php echo base_url("artikel/kategori/$post_new->kategori_seo ") ?>"><?php echo $post_new->nama_kategori ?></a>
 										<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
-											<img style="width: 100%;"class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
+											<img class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
 										</a>
 									</div>
 								</div>
