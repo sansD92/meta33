@@ -74,7 +74,7 @@
 						<div class="post-list">
 							<!-- ts title end-->
 							  <?php
-       foreach ($berita_terbaru22 as $post_new)
+       foreach ($berita_page as $post_new)
        {
          $jdl = character_limiter($post_new->judul,30);
           ?>

@@ -84,7 +84,8 @@ class Main extends CI_Controller {
 			
 			$data['berita_pilihan'] = $this->db->query("select *, a.id_users as users from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y' and pilihan = 'Y' ORDER BY  id_berita desc limit 4
 			")->result();
-
+				$data['berita_page'] = $this->db->query("select *, a.id_users as users from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y' and pilihan = 'N' and headline = 'N' and indepth = 'N' and wawancara = 'N' and NOT a. id_kategori = '20' and NOT a. id_kategori = '23' and NOT a. id_kategori = '26' and NOT a. id_kategori = '27' ORDER BY  id_berita desc 
+			",$config['per_page'],$dari)->result();
 			
 			$data['berita_terbaru22'] 						= $this->Berita_model->get_all_terbaru22($config['per_page'],$dari);
 		$this->pagination->initialize($config);
