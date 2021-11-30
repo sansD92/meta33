@@ -21,7 +21,7 @@
             </a>
             <div class="media-body align-self-center">
               <h3 class="post-title">
-                <a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $jdl ?></a>
+                <a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a>
               </h3>
               <span class="post-date-info">
                 <i class="fa fa-clock-o"></i>
@@ -57,7 +57,7 @@
             </a>
             <div class="media-body align-self-center">
               <h3 class="post-title">
-                <a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $jdl ?></a>
+                <a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a>
               </h3>
               <span class="post-date-info">
                 <i class="fa fa-clock-o"></i>

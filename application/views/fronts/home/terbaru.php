@@ -23,17 +23,17 @@
          $jdl = character_limiter($post_new->judul,30);
           ?>
 							<div class="row mb-10">
-								<div class="col-md-4">
-									<div class="ts-post-thumb">
+								<div style="max-height:150px" class="col-md-4">
+									<div  class="ts-post-thumb">
 										<a class="post-cat ts-orange-bg" href="<?php echo base_url("artikel/kategori/$post_new->kategori_seo ") ?>"><?php echo $post_new->nama_kategori ?></a>
 										<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
-											<img class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
+											<img style="width: 100%;" class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
 										</a>
 									</div>
 								</div>
 								<!-- col lg end-->
-								<div style="margin-top:30px" class="col-md-8">
-									<div class="post-content">
+								<div style="padding-bottom: 15px;padding-top: 25px;" class="col-md-8">
+									<div class="post-content ">
 										<h3 class="post-title md">
 											<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a>
 										</h3>
@@ -74,15 +74,15 @@
           ?>
 							<div class="row mb-10">
 								<div class="col-md-4">
-									<div class="ts-post-thumb">
+									<div  class="ts-post-thumb">
 										<a class="post-cat ts-orange-bg" href="<?php echo base_url("artikel/kategori/$post_new->kategori_seo ") ?>"><?php echo $post_new->nama_kategori ?></a>
 										<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
-											<img style="height: 150px; width: 100%;"class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
+											<img style="width: 100%; "class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
 										</a>
 									</div>
 								</div>
 								<!-- col lg end-->
-								<div style="margin-top:30px" class="col-md-8">
+								<div style="padding-bottom: 15px;padding-top: 25px;" class="col-md-8">
 									<div class="post-content">
 										<h3 class="post-title md">
 											<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a>
@@ -119,12 +119,12 @@
 									<div class="ts-post-thumb">
 										<a class="post-cat ts-orange-bg" href="<?php echo base_url("artikel/kategori/$post_new->kategori_seo ") ?>"><?php echo $post_new->nama_kategori ?></a>
 										<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>">
-											<img style="height: 150px; width: 100%;"class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
+											<img style=" width: 100%;"class="img-fluid" src="<?php echo base_url()?>asset/foto_berita/<?php echo $post_new->gambar ?>" alt="">
 										</a>
 									</div>
 								</div>
 								<!-- col lg end-->
-								<div style="margin-top:30px" class="col-md-8">
+								<div style="padding-bottom: 15px;padding-top: 25px;" class="col-md-8">
 									<div class="post-content">
 										<h3 class="post-title md">
 											<a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a>
