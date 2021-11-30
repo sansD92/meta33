@@ -19,7 +19,7 @@ class Main extends CI_Controller {
 			$data['berita_wawancara'] = $this->db->query("select *, a.id_users as users from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y' and wawancara = 'Y' ORDER BY  id_berita desc limit 1
 			")->result();
 
-			$data['berita_terbaru'] = $this->db->query("select *, a.id_users as users from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y' and pilihan = 'N'  ORDER BY  id_berita desc limit 3
+			$data['berita_terbaru'] = $this->db->query("select *, a.id_users as users from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y' and pilihan = 'N' and headline = 'N' and indepth = 'N' and wawancara = 'N' ORDER BY  id_berita desc limit 3
 			")->result();
 			$data['berita_terbaru2'] = $this->db->query("select *, a.id_users as users from berita a join users b on a.id_users = b.id_users join kategori c on a.id_kategori = c.id_kategori where a.status = 'Y' and pilihan = 'N' and headline = 'N' and indepth = 'N' and wawancara = 'N' ORDER BY  id_berita desc limit 3 offset 6
 			")->result();
