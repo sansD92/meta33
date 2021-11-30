@@ -18,6 +18,7 @@
                           <!-- <th>Isi Opini</th> -->
                         <th>Penulis</th>
                         <th>View</th>
+                        <th>t</th>
                         <th>Status</th>
                         <?php } ?>
                         <th style='width:75px'>Action</th>
@@ -46,6 +47,7 @@
             <td>$row[nama_kategori]</td>
 
             <td>$row[penulis]</td>
+            <td>$row[headline] $row[pilihan] $row[indepth] $row[wawancara]</td>
             <td>$row[views]</td>
                               <td>$status</td>
                                ";
