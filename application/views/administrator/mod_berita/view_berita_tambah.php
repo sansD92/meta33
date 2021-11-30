@@ -29,8 +29,8 @@
             echo "
                     <tr><th scope='row'>Headline</th>               <td><input type='radio' name='e' value='Y'> Ya &nbsp; <input type='radio' name='e' value='N' checked> Tidak</td></tr>
                     <tr><th scope='row'>Pilihan</th>               <td><input type='radio' name='pl' value='Y'> Ya &nbsp; <input type='radio' name='pl' value='N' checked> Tidak</td></tr>
-                     <tr><th scope='row'>fokus</th>               <td><input type='radio' name='ind' value='Y'> Ya &nbsp; <input type='radio' name='pl' value='N' checked> Tidak</td></tr>
-                      <tr><th scope='row'>sorot</th>               <td><input type='radio' name='wwc' value='Y'> Ya &nbsp; <input type='radio' name='pl' value='N' checked> Tidak</td></tr>
+                     <tr><th scope='row'>fokus</th>               <td><input type='radio' name='ind' value='Y'> Ya &nbsp; <input type='radio' name='ind' value='N' checked> Tidak</td></tr>
+                      <tr><th scope='row'>sorot</th>               <td><input type='radio' name='wwc' value='Y'> Ya &nbsp; <input type='radio' name='wwc' value='N' checked> Tidak</td></tr>
                     ";
                                 }
               echo "
