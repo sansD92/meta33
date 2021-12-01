@@ -130,6 +130,17 @@
 					<!--single post end -->
 					<div class="comments-form ts-grid-box">
 
+						 <?php
+						   if(!isset($login_button))
+						   {
+
+							
+						   }
+						   else
+						   {
+							echo '<div align="center">'.$login_button . '</div>';
+						   }
+						   ?>
 						<h3 class="comments-counter">Comments</h3>
 						
 						
